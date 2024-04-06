@@ -19,19 +19,17 @@ const Logo = dynamic(() => import("./atoms/Logo"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const NavItem = dynamic(() => import("./molecules/NavItem"));
-const Modal = dynamic(() => import("./molecules/Modal"));
+const Modal = dynamic(() => import("./molecules/Modal"));  
 const IconBar = dynamic(() => import("./molecules/IconBar"));
 const SplashScreen = dynamic(() => import("./molecules/SplashScreen"));
 const HeaderContent = dynamic(() => import("./molecules/HeaderContent"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
-const Menu = dynamic(() => import("./organisms/Menu"));
 const ImageModal = dynamic(() => import("./organisms/ImageModal"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
-const AboutView = dynamic(() => import("./templates/AboutView"));
 
 export {
   PageHead,
@@ -52,13 +50,11 @@ export {
   ExchangeIcon,
   CloseIcon,
   Modal,
-  Menu,
   DownloadIcon,
   IconBar,
   SplashScreen,
   LandingView,
   ImageShimmer,
   HeaderContent,
-  AboutView,
   ImageModal
 }
