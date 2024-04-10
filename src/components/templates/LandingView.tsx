@@ -1,10 +1,6 @@
-import { motion } from "framer-motion";
-import { Dispatch, SetStateAction, FC, useContext } from "react";
-import { slideDown } from "@constants";
-import { IconBar } from "@components";
+import { Dispatch, SetStateAction, FC } from "react";
 import { handleAssetLoad } from "@utils";
 import Image from "next/image";
-import { ViewContext } from "@contexts";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
@@ -12,21 +8,24 @@ interface Props {
 
 const LandingView: FC<Props> = (props: Props) => {
   const { setAssets } = props;
-  const { showView } = useContext(ViewContext);
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
-      <motion.div {...slideDown(showView)}>
+      {/* our project */}
+      <div
+        id="home"
+        className="relative h-screen w-screen bg-black overflow-hidden"
+      >
         <Image
-          src="/images/logo.png"
+          src="/images/temp.png"
           alt="EXP"
-          width={400}
-          height={400}
-          className="px-2 lg:px-20 2xl:px-0"
+          fill
+          className="object-cover opacity-10 overflow-hidden"
           onLoadingComplete={() => handleAssetLoad(0, setAssets)}
         />
-      </motion.div>
-      <IconBar className="lg:hidden absolute bottom-3" />
+      </div>
+      {/* about */}
+      <div id="about" className="relative h-screen w-screen "></div>
     </div>
   );
 };

@@ -27,6 +27,7 @@ const HeaderContent = dynamic(() => import("./molecules/HeaderContent"));
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
 const ImageModal = dynamic(() => import("./organisms/ImageModal"));
+const Menu = dynamic(() => import("./organisms/Menu"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -56,5 +57,6 @@ export {
   LandingView,
   ImageShimmer,
   HeaderContent,
-  ImageModal
+  ImageModal,
+  Menu
 }

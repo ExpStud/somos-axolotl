@@ -28,9 +28,15 @@ module.exports = {
           DEFAULT: "#896B56",
           dark: "#41240F",
         },
+        "somos-teal": {
+          DEFAULT: "#25BDB5",
+          light: "#3CD8D1",
+          600: "#1E9993",
+          700: "#1B8883",
+          800: "#187772",
+        },
         "somos-orange": "#FFB93E",
         "somos-red": "#FE6375",
-        "somos-teal": "#25BDB5",
         //template
         "custom-black": "#121212",
       },

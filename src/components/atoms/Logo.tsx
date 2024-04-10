@@ -10,14 +10,14 @@ const Logo: FC = () => {
       className="my-0 flex items-center gap-2 cursor-pointer"
       {...enterAnimation}
     >
-      <Link href="/">
+      <Link href="#home">
         <Image
-          src="/images/logo.png"
-          height={35}
-          width={35}
-          alt="Logo"
+          src="/images/logos/sm.svg"
+          height={34.31}
+          width={84}
+          alt="Somos Axolotl"
           priority
-          className="transition-all duration-300 opacity-80 hover:opacity-100"
+          className="transition-200 hover:opacity-80 hover:shadow-lg"
         />
       </Link>
     </motion.div>
