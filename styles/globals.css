@@ -44,19 +44,22 @@ a {
 
 @layer base {
   html {
-    @apply scroll-smooth bg-main bg-cover bg-fixed bg-custom-black text-somos-white font-primary;
+    @apply scroll-smooth bg-main bg-cover bg-fixed bg-somos-white text-somos-brown font-primary;
   }
   h1 {
-    @apply font-primary;
+    @apply text-somos-brown-dark text-2xl md:text-[40px];
   }
   h2 {
-    @apply font-primary uppercase text-5xl md:text-[64px];
+    @apply text-somos-brown-dark text-2xl md:text-[40px];
   }
+  /* h3 {
+    @apply text-white text-xs lg:text-xl;
+  } */
   h3 {
-    @apply font-primary uppercase text-4xl md:text-[54px];
+    @apply text-somos-brown-dark text-base;
   }
-  h4 {
-    @apply font-primary uppercase text-2xl md:text-3xl;
+  p {
+    @apply text-sm;
   }
 }
 
