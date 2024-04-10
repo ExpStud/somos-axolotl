@@ -4,29 +4,32 @@
 
 @font-face {
   font-family: Karl;
-  src: url('../public/fonts/Karl-Regular.otf') format('truetype');
+  src: url("../public/fonts/Karl-Regular.otf") format("truetype");
 }
 @font-face {
-  font-family: 'Helvetica Neue Bold';
-  src: url('/public/fonts/helveticaneue/HelveticaNeue\ Bold.tff') format('truetype');
+  font-family: "Helvetica Neue Bold";
+  src: url("/public/fonts/helveticaneue/HelveticaNeue\ Bold.tff")
+    format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue Medium';
-  src: url('/public/fonts/helveticaneue/HelveticaNeue\ Medium.ttf') format('truetype');
+  font-family: "Helvetica Neue Medium";
+  src: url("/public/fonts/helveticaneue/HelveticaNeue\ Medium.ttf")
+    format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue Light';
-  src: url('/public/fonts/helveticaneue/HelveticaNeue\ Light.ttf') format('truetype');
+  font-family: "Helvetica Neue Light";
+  src: url("/public/fonts/helveticaneue/HelveticaNeue\ Light.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Helvetica Neue Light Italic';
-  src: url('/public/fonts/helveticaneue/HelveticaNeueIt.ttf') format('truetype');
+  font-family: "Helvetica Neue Light Italic";
+  src: url("/public/fonts/helveticaneue/HelveticaNeueIt.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
@@ -41,7 +44,7 @@ a {
 
 @layer base {
   html {
-    @apply scroll-smooth bg-main bg-cover bg-fixed bg-custom-black text-custom-white font-primary;
+    @apply scroll-smooth bg-main bg-cover bg-fixed bg-custom-black text-somos-white font-primary;
   }
   h1 {
     @apply font-primary;
@@ -73,16 +76,16 @@ html {
 
 /* Wallet Adapter */
 
-.wallet-adapter-modal-wrapper { 
+.wallet-adapter-modal-wrapper {
   @apply !rounded-sm !bg-opacity-90 !uppercase;
 }
-.wallet-adapter-modal-wrapper h1{ 
+.wallet-adapter-modal-wrapper h1 {
   @apply !text-white;
 }
-.wallet-adapter-button { 
+.wallet-adapter-button {
   @apply hover:!bg-opacity-100;
 }
-.wallet-adapter-modal-button-close{
+.wallet-adapter-modal-button-close {
   @apply !bg-transparent;
 }
 
@@ -117,15 +120,15 @@ html {
 }
 
 /* Animations */
-.transition-1000{
+.transition-1000 {
   @apply transition-all duration-1000;
 }
-.transition-500{
+.transition-500 {
   @apply transition-all duration-500;
 }
-.transition-300{
+.transition-300 {
   @apply transition-all duration-300;
 }
-.transition-200{
+.transition-200 {
   @apply transition-all duration-300;
 }

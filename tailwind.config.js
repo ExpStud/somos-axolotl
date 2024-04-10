@@ -23,13 +23,16 @@ module.exports = {
         italic: "italic", // Add "italic" style to the font family
       },
       colors: {
+        "somos-white": "#FFFCF3",
+        "somos-brown": {
+          DEFAULT: "#896B56",
+          dark: "#41240F",
+        },
+        "somos-orange": "#FFB93E",
+        "somos-red": "#FE6375",
+        "somos-teal": "#25BDB5",
         //template
         "custom-black": "#121212",
-        "custom-white": "#F3F1EA",
-        "custom-yellow": "#FFBA21",
-        "custom-green": "#56BC78",
-        "custom-orange": "#FF5722",
-        "custom-red": "#DF1D00",
       },
       screens: {
         "2xs": "360px",
