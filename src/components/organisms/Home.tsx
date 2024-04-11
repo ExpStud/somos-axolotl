@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, FC } from "react";
 import { handleAssetLoad } from "@utils";
 import Image from "next/image";
+import Gallery from "../molecules/Gallery";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
@@ -12,7 +13,7 @@ const Home: FC<Props> = (props: Props) => {
   return (
     <div
       id="home"
-      className="relative h-screen w-screen bg-black overflow-hidden px-6 md:px-20 lg:px-[15vw] pt-[15svh] md:pt-[20svh] z-0"
+      className="flex flex-col items-center relative min-h-screen w-screen bg-black overflow-hidden px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[20svh] z-0"
     >
       {/* TODO: add bg video */}
       <Image
@@ -23,7 +24,7 @@ const Home: FC<Props> = (props: Props) => {
         onLoadingComplete={() => handleAssetLoad(0, setAssets)}
       />
       {/* content */}
-      <div className="flex flex-col md:flex-row gap-20 justify-center lg:justify-between items-center md:items-end max-w-[1200px]">
+      <div className="flex flex-col md:flex-row gap-16 md:gap-20 lg:gap-0 justify-center md:justify-between items-center md:items-end max-w-[1200px] pb-12 md:pb-20 md:w-full">
         <Image
           src="/images/logos/lg.svg"
           height={162.04}
@@ -45,10 +46,11 @@ const Home: FC<Props> = (props: Props) => {
             In publishing and graphic design, Lorem ipsum is a placeholder text
             commonly used to demonstrate the visual form of a document or a
             typeface In publishing and graphic design, Lorem ipsum is a
-            placeholder text commonly used to{" "}
+            placeholder text commonly used to
           </p>
         </div>
       </div>
+      <Gallery />
     </div>
   );
 };

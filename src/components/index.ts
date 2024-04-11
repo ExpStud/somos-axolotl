@@ -23,6 +23,7 @@ const Modal = dynamic(() => import("./molecules/Modal"));
 const IconBar = dynamic(() => import("./molecules/IconBar"));
 const SplashScreen = dynamic(() => import("./molecules/SplashScreen"));
 const HeaderContent = dynamic(() => import("./molecules/HeaderContent"));
+const Gallery = dynamic(() => import("./molecules/Gallery"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
@@ -60,5 +61,6 @@ export {
   HeaderContent,
   ImageModal,
   Menu,
-  Home
+  Home,
+  Gallery
 }

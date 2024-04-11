@@ -13,9 +13,14 @@ module.exports = {
         poppins: ["Poppins-Light"],
         "poppins-light": ["Poppins-Light"],
         "poppins-regular": ["Poppins-Regular"],
-        "poppins-medium": ["Poppins-Medium"],
+        "poppins-medium": ["Poppins-Light"],
         "poppins-semibold": ["Poppins-SemiBold"],
         "poppins-bold": ["Poppins-Bold"],
+      },
+      fontWeight: {
+        light: 400, //font-helvetica-neue font-light
+        medium: 400,
+        bold: 700,
       },
       fontStyle: {
         italic: "italic", // Add "italic" style to the font family
@@ -39,7 +44,7 @@ module.exports = {
         "custom-black": "#121212",
       },
       screens: {
-        "2xs": "360px",
+        "2xs": "380px",
         xs: "460px",
         "3xl": "2160px",
         "4xl": "3000px",

@@ -46,10 +46,10 @@ a {
     @apply scroll-smooth bg-main bg-cover bg-fixed bg-somos-white text-somos-brown font-poppins;
   }
   h1 {
-    @apply text-somos-brown-dark text-2xl md:text-[40px];
+    @apply text-somos-brown-dark text-2xl md:text-[40px] font-poppins-semibold;
   }
   h2 {
-    @apply text-somos-brown-dark text-2xl md:text-[40px];
+    @apply text-somos-brown-dark text-2xl md:text-[40px] font-poppins-semibold;
   }
   /* h3 {
     @apply text-white text-xs lg:text-xl;
