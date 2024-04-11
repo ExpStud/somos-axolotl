@@ -1,7 +1,5 @@
 import { FC, useState } from "react";
-import { CloseIcon, Logo, Menu, MenuIcon } from "@components";
-import { AnimatePresence, motion } from "framer-motion";
-import { fastExitAnimation } from "src/constants";
+import { Logo } from "@components";
 import Link from "next/link";
 
 const HeaderContent: FC = () => {
@@ -11,10 +9,7 @@ const HeaderContent: FC = () => {
       <Logo />
       {/* desktop */}
       <div className="flex items-end gap-8">
-        <Link
-          href="#about"
-          className="hidden md:block text-white transition-200  hover:text-opacity-80"
-        >
+        <Link href="#about" className="white-hover hidden md:block text-white">
           About
         </Link>
         <button className="text-sm md:text-base rounded-xl w-[98px] md:w-[124px] h-[36px] md:h-[40px] transition-200 bg-somos-teal hover:bg-somos-teal-600 active:bg-somos-teal-800 text-white ">
