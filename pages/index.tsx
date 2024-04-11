@@ -7,11 +7,7 @@ const Home: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([false]);
   const [winWidth, winHeight] = useWindowSize();
   return (
-    <PageLayout
-      footer={false}
-      assets={assets}
-      headerType={winWidth < 1024 ? "fixed" : "absolute"}
-    >
+    <PageLayout footer={false} assets={assets} headerType={"fixed"}>
       <LandingView setAssets={setAssets} />
     </PageLayout>
   );

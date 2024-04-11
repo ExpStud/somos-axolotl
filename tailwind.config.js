@@ -10,14 +10,12 @@ module.exports = {
         "white-gradient": `linear-gradient(360.58deg, #FFFFFF 43.76%, rgba(255, 255, 255, 0) 106.82%)`,
       },
       fontFamily: {
-        primary: ["Karl"],
-        karl: ["Karl"],
-        "helvetica-neue": "Helvetica Neue",
-      },
-      fontWeight: {
-        light: 400, //font-helvetica-neue font-light
-        medium: 400,
-        bold: 700,
+        poppins: ["Poppins-Light"],
+        "poppins-light": ["Poppins-Light"],
+        "poppins-regular": ["Poppins-Regular"],
+        "poppins-medium": ["Poppins-Medium"],
+        "poppins-semibold": ["Poppins-SemiBold"],
+        "poppins-bold": ["Poppins-Bold"],
       },
       fontStyle: {
         italic: "italic", // Add "italic" style to the font family
@@ -42,7 +40,7 @@ module.exports = {
       },
       screens: {
         "2xs": "360px",
-        xs: "420px",
+        xs: "460px",
         "3xl": "2160px",
         "4xl": "3000px",
       },

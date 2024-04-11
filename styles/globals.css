@@ -3,35 +3,34 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: Karl;
-  src: url("../public/fonts/Karl-Regular.otf") format("truetype");
-}
-@font-face {
-  font-family: "Helvetica Neue Bold";
-  src: url("/public/fonts/helveticaneue/HelveticaNeue\ Bold.tff")
-    format("truetype");
-  font-weight: 700;
+  font-family: 'Poppins-Light';
+  src: url('../public/fonts/poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica Neue Medium";
-  src: url("/public/fonts/helveticaneue/HelveticaNeue\ Medium.ttf")
-    format("truetype");
+  font-family: 'Poppins-Regular';
+  src: url('../public/fonts/poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('../public/fonts/poppins/Poppins-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica Neue Light";
-  src: url("/public/fonts/helveticaneue/HelveticaNeue\ Light.ttf")
-    format("truetype");
-  font-weight: 400;
+  font-family: 'Poppins-SemiBold';
+  src: url('../public/fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica Neue Light Italic";
-  src: url("/public/fonts/helveticaneue/HelveticaNeueIt.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
+  font-family: 'Poppins-Bold';
+  src: url('../public/fonts/poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 a {
   color: inherit;
@@ -44,7 +43,7 @@ a {
 
 @layer base {
   html {
-    @apply scroll-smooth bg-main bg-cover bg-fixed bg-somos-white text-somos-brown font-primary;
+    @apply scroll-smooth bg-main bg-cover bg-fixed bg-somos-white text-somos-brown font-poppins;
   }
   h1 {
     @apply text-somos-brown-dark text-2xl md:text-[40px];
