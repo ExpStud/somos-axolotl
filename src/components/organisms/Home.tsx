@@ -13,7 +13,7 @@ const Home: FC<Props> = (props: Props) => {
   return (
     <div
       id="home"
-      className="flex flex-col items-center relative min-h-screen w-screen bg-black overflow-hidden px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[20svh] z-0"
+      className="flex flex-col items-center relative min-h-screen lg:h-[100svh] w-screen bg-black overflow-hidden px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[23svh] lg:pt-[20svh] z-0  "
     >
       {/* TODO: add bg video */}
       <Image
@@ -24,7 +24,7 @@ const Home: FC<Props> = (props: Props) => {
         onLoadingComplete={() => handleAssetLoad(0, setAssets)}
       />
       {/* content */}
-      <div className="flex flex-col md:flex-row gap-16 md:gap-20 lg:gap-0 justify-center md:justify-between items-center md:items-end max-w-[1200px] pb-12 md:pb-20 md:w-full">
+      <div className="flex flex-col md:flex-row gap-16 md:gap-14 lg:gap-0 justify-center lg:justify-between items-center md:items-end max-w-[1200px] 3xl:max-w-[1600px] pb-14 md:pb-20 lg:pb-20 3xl:pb-[10svh] md:w-full">
         <Image
           src="/images/logos/lg.svg"
           height={162.04}

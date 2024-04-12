@@ -18,7 +18,7 @@ const Modal: FC<Props> = (props: Props) => {
   return (
     <motion.div
       key="image-modal"
-      className="fixed inset-0 backdrop-blur-sm z-50 w-screen h-screen "
+      className="fixed inset-0 backdrop-blur-sm z-50 w-screenh-[100svh] "
       onClick={componentProps.onClick}
       {...scaleExitAnimation}
     >
