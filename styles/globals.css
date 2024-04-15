@@ -125,6 +125,9 @@ html {
 .transition-1000 {
   @apply transition-all duration-1000;
 }
+.transition-700 {
+  @apply transition-all duration-700;
+}
 .transition-500 {
   @apply transition-all duration-500;
 }
@@ -136,6 +139,23 @@ html {
 }
 
 /* custom */
-.white-hover {
+.hover-opacity {
   @apply transition-200 hover:opacity-60 active:opacity-30;
 }
+.hover-less-opacity {
+  @apply transition-200 hover:opacity-70 active:opacity-40;
+}
+
+.inner-padding {
+  @apply px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[23svh] lg:pt-[20svh] ;
+}
+
+.max-width {
+  @apply max-w-[1200px] 3xl:max-w-[1600px];
+}
+
+.opaque-gradient {
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #FFFCF3 100%);
+
+}
+

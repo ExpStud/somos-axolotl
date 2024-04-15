@@ -13,7 +13,7 @@ const Home: FC<Props> = (props: Props) => {
   return (
     <div
       id="home"
-      className="flex flex-col items-center relative min-h-screen lg:h-[100svh] w-screen bg-black overflow-hidden px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[23svh] lg:pt-[20svh] z-0  "
+      className="inner-padding flex flex-col items-center relative min-h-screen lg:h-[100svh] w-screen bg-black overflow-hidden z-0"
     >
       {/* TODO: add bg video */}
       <Image
@@ -24,7 +24,7 @@ const Home: FC<Props> = (props: Props) => {
         onLoad={() => handleAssetLoad(0, setAssets)}
       />
       {/* content */}
-      <div className="flex flex-col md:flex-row gap-16 md:gap-14 lg:gap-0 justify-center lg:justify-between items-center md:items-end max-w-[1200px] 3xl:max-w-[1600px] pb-14 md:pb-20 lg:pb-20 3xl:pb-[10svh] md:w-full">
+      <div className="max-width flex flex-col md:flex-row gap-16 md:gap-14 lg:gap-0 justify-center lg:justify-between items-center md:items-end  pb-14 md:pb-20 lg:pb-20 3xl:pb-[10svh] md:w-full">
         <Image
           src="/images/logos/lg.svg"
           height={162.04}
@@ -38,9 +38,9 @@ const Home: FC<Props> = (props: Props) => {
             <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px]">
               Our Project
             </h2>
-            <button className="white-hover text-white border-[0.85px] border-white w-[103px] md:w-[74px] h-[27.6px] md:h-[24px] text-xs">
+            <div className="row-centered text-white border-[0.85px] border-white w-[103px] md:w-[74px] h-[27.6px] md:h-[24px] text-xs">
               Vision
-            </button>
+            </div>
           </div>
           <p className="text-white xs:max-w-[293px]">
             In publishing and graphic design, Lorem ipsum is a placeholder text

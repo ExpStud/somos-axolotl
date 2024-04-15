@@ -17,7 +17,7 @@ const Logo: FC = () => {
           width={84}
           alt="Somos Axolotl"
           priority
-          className="w-[60px] md:w-auto white-hover hover:shadow-lg"
+          className="w-[60px] md:w-auto hover-opacity hover:shadow-lg"
         />
       </Link>
     </motion.div>

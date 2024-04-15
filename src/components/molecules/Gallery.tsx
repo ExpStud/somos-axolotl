@@ -28,7 +28,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="relative w-[90vw] md:w-[80vw] lg:w-[70vw] h-[200px] md:h-[320px] lg:h-[420px] aspect-[16/9] mb-6 text-white max-w-[1200px] 3xl:max-w-[1600px] px-6 md:px-20 lg:px-[15vw]">
+    <div className="max-width relative w-[90vw] md:w-[80vw] lg:w-[70vw] h-[200px] md:h-[320px] lg:h-[420px] aspect-[16/9] mb-6 text-white px-6 md:px-20 lg:px-[15vw]">
       <AnimatePresence>
         {currentIndex % 2 === 0 && (
           <GalleryItem index={currentIndex} images={images} key="zero" />
@@ -42,7 +42,7 @@ const Gallery: React.FC = () => {
       {/* buttons */}
       <div
         onClick={prevImage}
-        className="absolute -top-7 right-28 cursor-pointer py-2"
+        className="hover-opacity absolute -top-7 right-28 cursor-pointer py-2"
       >
         <Image
           src="/images/icons/arrow-left.svg"
@@ -54,7 +54,7 @@ const Gallery: React.FC = () => {
       </div>
       <div
         onClick={nextImage}
-        className="absolute -top-7 right-1 cursor-pointer py-2"
+        className="hover-opacity absolute -top-7 right-1 cursor-pointer py-2"
       >
         <Image
           src="/images/icons/arrow-right.svg"

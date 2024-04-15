@@ -24,12 +24,14 @@ const IconBar = dynamic(() => import("./molecules/IconBar"));
 const SplashScreen = dynamic(() => import("./molecules/SplashScreen"));
 const HeaderContent = dynamic(() => import("./molecules/HeaderContent"));
 const Gallery = dynamic(() => import("./molecules/Gallery"));
+const TextDropdown = dynamic(() => import("./molecules/TextDropdown"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
 const ImageModal = dynamic(() => import("./organisms/ImageModal"));
 const Menu = dynamic(() => import("./organisms/Menu"));
 const Home = dynamic(() => import("./organisms/Home"));
+const Description = dynamic(() => import("./organisms/Description"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -62,5 +64,7 @@ export {
   ImageModal,
   Menu,
   Home,
-  Gallery
+  Gallery,
+  Description,
+  TextDropdown
 }
