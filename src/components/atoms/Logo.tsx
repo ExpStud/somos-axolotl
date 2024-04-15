@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { midClickAnimation, enterAnimation } from "@constants";
+import { enterAnimation } from "@constants";
 import Link from "next/link";
 
 const Logo: FC = () => {

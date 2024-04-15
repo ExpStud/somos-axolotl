@@ -9,6 +9,7 @@ const ExchangeIcon = dynamic(() => import("./@icons/ExchangeIcon"));
 const MenuIcon = dynamic(() => import("./@icons/MenuIcon"));
 const CloseIcon = dynamic(() => import("./@icons/CloseIcon"));
 const DownloadIcon = dynamic(() => import("./@icons/DownloadIcon"));
+const PatternSVG = dynamic(() => import("./@icons/PatternSVG"));
 //atoms
 const NumberInput = dynamic(() => import("./atoms/NumberInput"));
 const TextInput = dynamic(() => import("./atoms/TextInput"));
@@ -66,5 +67,6 @@ export {
   Home,
   Gallery,
   Description,
-  TextDropdown
+  TextDropdown,
+  PatternSVG
 }

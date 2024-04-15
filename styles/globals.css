@@ -151,11 +151,16 @@ html {
 }
 
 .max-width {
-  @apply max-w-[1200px] 3xl:max-w-[1600px];
+  @apply max-w-[1200px] 3xl:max-w-[1400px];
 }
 
 .opaque-gradient {
   background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #FFFCF3 100%);
-
 }
+
+.-rotate-36 {
+  --tw-rotate: -36deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 
