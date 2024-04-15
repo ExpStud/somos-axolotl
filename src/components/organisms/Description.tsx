@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Description: FC = () => {
   return (
-    <div className="inner-padding relative min-h-[100svh]  3xl:h-auto  3xl:min-h-auto w-screen flex justify-center">
+    <div className="inner-padding relative min-h-[100svh] w-screen flex justify-center">
       <div className="max-width flex flex-col lg:flex-row no-wrap pt-20 3xl:justify-between w-full">
         <div className="flex flex-col gap-2 max-w-[500px]">
           <div className="row-centered text-somos-red border-[0.85px] border-somos-red w-[96px] h-[24px] text-xs ">

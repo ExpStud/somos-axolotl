@@ -33,6 +33,7 @@ const ImageModal = dynamic(() => import("./organisms/ImageModal"));
 const Menu = dynamic(() => import("./organisms/Menu"));
 const Home = dynamic(() => import("./organisms/Home"));
 const Description = dynamic(() => import("./organisms/Description"));
+const Infographics = dynamic(() => import("./organisms/Infographics"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -68,5 +69,6 @@ export {
   Gallery,
   Description,
   TextDropdown,
-  PatternSVG
+  PatternSVG,
+  Infographics
 }
