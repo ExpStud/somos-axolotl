@@ -1,5 +1,32 @@
 import { Variants } from "framer-motion";
 
+//custom
+
+export const galleryAnimation:Variants = {
+  initial: { 
+    opacity: 0, 
+    translateX: 50,
+    transition: { 
+      duration: 0.4, 
+      ease: "easeInOut" 
+    } 
+  },
+  animate: { opacity: 1, 
+    translateX: 0,
+    transition: { 
+      duration: 0.4, 
+      ease: "easeInOut" 
+    } 
+  },
+  exit: { opacity: 0, 
+    translateX: -50,
+    transition: { 
+      duration: 0.4, 
+      ease: "easeInOut" 
+    } 
+  },
+};
+
 //click animations
 export const largeClickAnimation = {
   whileHover: { scale: 1.1 },

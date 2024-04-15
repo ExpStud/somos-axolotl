@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { exitAnimation, midExitAnimation } from "src/constants";
 
 type ImageData = {
   src: string;
@@ -28,44 +29,16 @@ const Gallery: React.FC = () => {
 
   return (
     <div className="relative w-[90vw] md:w-[80vw] lg:w-[70vw] h-[200px] md:h-[320px] lg:h-[420px] aspect-[16/9] mb-6 text-white max-w-[1200px] 3xl:max-w-[1600px] px-6 md:px-20 lg:px-[15vw]">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {currentIndex % 2 === 0 && (
-          <motion.div
-            key="zero"
-            initial={{ opacity: 1, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-          >
-            <Image
-              src={images[currentIndex].src}
-              alt={images[currentIndex].caption}
-              fill
-              className="object-cover rounded-[32px] aspect-[16/9]"
-            />
-          </motion.div>
+          <GalleryItem index={currentIndex} images={images} key="zero" />
         )}
         {currentIndex % 2 === 1 && (
-          <motion.div
-            key="one"
-            initial={{ opacity: 1, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-          >
-            <Image
-              src={images[currentIndex].src}
-              alt={images[currentIndex].caption}
-              fill
-              className="object-cover rounded-[32px] aspect-[16/9]"
-            />
-          </motion.div>
+          <GalleryItem index={currentIndex} images={images} key="one" />
         )}
       </AnimatePresence>
       {/* caption */}
-      <div className="absolute -top-7 left-1 font-poppins-semibold text-sm italic">
-        {images[currentIndex].caption}
-      </div>
+
       {/* buttons */}
       <div
         onClick={prevImage}
@@ -92,6 +65,27 @@ const Gallery: React.FC = () => {
         />
       </div>
     </div>
+  );
+};
+
+interface GalleryItemProps {
+  index: number;
+  images: ImageData[];
+}
+const GalleryItem: React.FC<GalleryItemProps> = (props: GalleryItemProps) => {
+  const { index, images } = props;
+  return (
+    <motion.div {...midExitAnimation}>
+      <Image
+        src={images[index].src}
+        alt={images[index].caption}
+        fill
+        className="object-cover rounded-[32px] aspect-[16/9]"
+      />
+      <div className="absolute -top-7 left-1 font-poppins-semibold text-sm italic">
+        {images[index].caption}
+      </div>
+    </motion.div>
   );
 };
 
