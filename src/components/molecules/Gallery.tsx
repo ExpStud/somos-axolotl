@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 type ImageData = {
   src: string;
@@ -27,25 +28,69 @@ const Gallery: React.FC = () => {
 
   return (
     <div className="relative w-[90vw] md:w-[80vw] lg:w-[70vw] h-[200px] md:h-[320px] lg:h-[420px] aspect-[16/9] mb-6 text-white max-w-[1200px] 3xl:max-w-[1600px] px-6 md:px-20 lg:px-[15vw]">
-      {/* <div className="relative w-[688px] h-[396px] pb-4 text-white max-w-[1200px] px-6 md:px-20 lg:px-[15vw]"> */}
-      <Image
-        src={images[currentIndex].src}
-        alt={images[currentIndex].caption}
-        fill
-        className="object-cover rounded-[10px] aspect-[16/9] "
-        // className="w-[1200px] h-[400px] aspect-[12/3] object-cover rounded-[10px]"
-        // width={1200}
-        // height={400}
-      />
+      <AnimatePresence mode="wait">
+        {currentIndex % 2 === 0 && (
+          <motion.div
+            key="zero"
+            initial={{ opacity: 1, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <Image
+              src={images[currentIndex].src}
+              alt={images[currentIndex].caption}
+              fill
+              className="object-cover rounded-[32px] aspect-[16/9]"
+            />
+          </motion.div>
+        )}
+        {currentIndex % 2 === 1 && (
+          <motion.div
+            key="one"
+            initial={{ opacity: 1, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+          >
+            <Image
+              src={images[currentIndex].src}
+              alt={images[currentIndex].caption}
+              fill
+              className="object-cover rounded-[32px] aspect-[16/9]"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* caption */}
       <div className="absolute -top-7 left-1 font-poppins-semibold text-sm italic">
         {images[currentIndex].caption}
       </div>
-      <button onClick={prevImage} className="absolute -top-7 right-14">
-        Prev
-      </button>
-      <button onClick={nextImage} className="absolute -top-7 right-1">
-        Next
-      </button>
+      {/* buttons */}
+      <div
+        onClick={prevImage}
+        className="absolute -top-7 right-28 cursor-pointer py-2"
+      >
+        <Image
+          src="/images/icons/arrow-left.svg"
+          height={2}
+          width={40}
+          alt="Back"
+          priority
+        />
+      </div>
+      <div
+        onClick={nextImage}
+        className="absolute -top-7 right-1 cursor-pointer py-2"
+      >
+        <Image
+          src="/images/icons/arrow-right.svg"
+          height={2}
+          width={40}
+          alt="Next"
+          priority
+        />
+      </div>
     </div>
   );
 };

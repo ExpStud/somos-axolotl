@@ -11,7 +11,9 @@ const LandingView: FC<Props> = (props: Props) => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center">
       <Home setAssets={setAssets} />
-      <div id="about" className="relativeh-[100svh] w-screen "></div>
+      <div id="about" className="relative min-h-[100svh] w-screen ">
+        <h2 className="">The Axolotl story.</h2>
+      </div>
     </div>
   );
 };

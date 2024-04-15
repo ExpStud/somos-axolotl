@@ -21,7 +21,7 @@ const Home: FC<Props> = (props: Props) => {
         alt="EXP"
         fill
         className="object-cover opacity-20 overflow-hidden -z-10"
-        onLoadingComplete={() => handleAssetLoad(0, setAssets)}
+        onLoad={() => handleAssetLoad(0, setAssets)}
       />
       {/* content */}
       <div className="flex flex-col md:flex-row gap-16 md:gap-14 lg:gap-0 justify-center lg:justify-between items-center md:items-end max-w-[1200px] 3xl:max-w-[1600px] pb-14 md:pb-20 lg:pb-20 3xl:pb-[10svh] md:w-full">
