@@ -37,12 +37,11 @@ const Gallery: React.FC = () => {
           <GalleryItem index={currentIndex} images={images} key="one" />
         )}
       </AnimatePresence>
-      {/* caption */}
 
       {/* buttons */}
       <div
         onClick={prevImage}
-        className="hover-opacity absolute -top-7 right-28 cursor-pointer py-2"
+        className="hover-opacity absolute -top-7 right-20 md:right-28 cursor-pointer py-2"
       >
         <Image
           src="/images/icons/arrow-left.svg"
