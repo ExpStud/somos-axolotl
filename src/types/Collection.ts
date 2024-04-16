@@ -1,4 +1,14 @@
+//somos
+export type InfographicsDataType = {
+  title: string;
+  content: string[];
+  displayImage: string;
+  expandedImage: string;
+};
 
+
+
+//template
 export interface Collection {
   id: number;
   name: string;

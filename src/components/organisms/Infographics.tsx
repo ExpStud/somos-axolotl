@@ -1,41 +1,10 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { PatternSVG } from "@components";
 import Image from "next/image";
-import { useWindowSize } from "src/hooks";
-
-export type InfographicsDataType = {
-  title: string;
-  content: string[];
-  displayImage: string;
-  expandedImage: string;
-};
-
-export const infographicsData: InfographicsDataType[] = [
-  {
-    title: "The story",
-    content: [
-      "The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly.",
-    ],
-    displayImage: "/images/temp.png",
-    expandedImage: "/images/temp.png",
-  },
-  {
-    title: "The story",
-    content: [
-      "The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly.",
-    ],
-    displayImage: "/meta.png",
-    expandedImage: "/meta.png",
-  },
-  {
-    title: "The story",
-    content: [
-      "The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly.",
-    ],
-    displayImage: "/images/temp.png",
-    expandedImage: "/images/temp.png",
-  },
-];
+import { useWindowSize } from "@hooks";
+import { ViewContext } from "@contexts";
+import { InfographicsDataType } from "@types";
+import { infographicsData } from "@constants";
 
 const Infographics: FC = () => {
   return (
@@ -62,18 +31,25 @@ const InfographicsCard: FC<Props> = (props: Props) => {
   const { data } = props;
   const [winWidth, winHeight] = useWindowSize();
 
+  const { setShowModal } = useContext(ViewContext);
+
   return (
     <div
-      className="relative rounded-[32px] cursor-pointer overflow-hidden"
+      className="relative rounded-[32px] cursor-pointer overflow-hidden flex flex-col justify-end px-8 py-6 gap-4"
       style={{
         width: winWidth >= 1024 ? 400 * 0.9 : 228,
         height: winWidth >= 1024 ? 600 * 0.9 : 342,
       }}
+      onClick={() => setShowModal(data)}
     >
+      <h3 className="text-white text-xs lg:text-xl font-poppins-semibold">
+        {data.title}
+      </h3>
+      <p className="text-white text-xs lg:text-base">{data.content[0]}</p>
       <Image
         src={data.displayImage}
         alt="Axolotl"
-        className="object-cover rounded-[32px] transition-500 hover:scale-110"
+        className="absolute object-cover rounded-[32px] transition-500 hover:scale-110 -z-[1]"
         fill
       />
     </div>

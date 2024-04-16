@@ -54,9 +54,9 @@ a {
   /* h3 {
     @apply text-white text-xs lg:text-xl;
   } */
-  h3 {
+  /* h3 {
     @apply text-somos-brown-dark text-base;
-  }
+  } */
   p {
     @apply text-sm;
   }

@@ -1,6 +1,10 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { FC, ReactNode, useEffect, HTMLAttributes } from "react";
-import { midClickAnimation, scaleExitAnimation } from "@constants";
+import {
+  modalFadeAnimation,
+  midClickAnimation,
+  scaleExitAnimation,
+} from "@constants";
 import Image from "next/image";
 interface Props extends HTMLAttributes<HTMLDivElement> {
   show: boolean;
@@ -12,20 +16,31 @@ const Modal: FC<Props> = (props: Props) => {
   //stop page scroll (when modal or menu open)
   useEffect(() => {
     if (show) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [show]);
 
   return (
     <motion.div
       key="image-modal"
-      className="fixed inset-0 backdrop-blur-sm z-50 w-screenh-[100svh] "
+      className="fixed inset-0 backdrop-blur z-50 w-screen h-[100svh] "
       onClick={componentProps.onClick}
       {...scaleExitAnimation}
     >
+      {/* {show && (
+        <AnimatePresence mode="wait">
+          <motion.div
+            {...modalFadeAnimation}
+            className="absolute -z-[1] inset-0 bg-[#C7C7C7] bg-opacity-50 w-screen h-[100svh]"
+          />
+        </AnimatePresence>
+      )} */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`md:bg-opacity-90 absolute left-1/2 top-1 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 overflow-clip
-        bg-main bg-cover rounded-3xl border-[3px] border-somos-white-2 w-[98%] h-[85%] md:h-[90%] lg:h-[60vh] lg:w-[100vh] xl:w-[120vh] 3xl:h-[50vh] 3xl:w-[70vh] ${className}`}
+        className={`absolute left-1/2 top-1 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 overflow-clip bg-black 
+        bg-main bg-cover rounded-[32px] w-[98%] h-[85%] md:h-[90%] lg:h-[60vh] lg:w-[100vh] xl:w-[120vh] 3xl:h-[50vh] 3xl:w-[70vh] ${className}`}
       >
         <motion.div
           className="fixed top-1 md:top-5 right-1 md:right-6 cursor-pointer"

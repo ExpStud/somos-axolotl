@@ -6,9 +6,10 @@ import {
   SplashScreen,
   ImageModal,
 } from "@components";
-import { enterAnimation } from "@constants";
+import { enterAnimation, modalFadeAnimation } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewContext } from "@contexts";
+import { InfographicsDataType } from "@types";
 
 interface Props {
   children: ReactNode;
@@ -31,7 +32,7 @@ const PageLayout: FC<Props> = (props: Props) => {
 
   //context for splash screen & modals
   const [showView, setShowView] = useState<boolean>(false);
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<InfographicsDataType | null>(null);
   const value = {
     showView,
     setShowView,
@@ -40,7 +41,7 @@ const PageLayout: FC<Props> = (props: Props) => {
   };
 
   return (
-    <ViewContext.Provider value={value}>
+    <ViewContext.Provider value={{ ...value, showModal: null }}>
       <div
         className={`flex flex-col min-h-[100svh] h-full justify-between overflow-none ${
           fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
@@ -74,8 +75,8 @@ const PageLayout: FC<Props> = (props: Props) => {
           {showModal && (
             <ImageModal
               key="image-modal"
-              show={showModal}
-              close={() => setShowModal(false)}
+              show={showModal !== null}
+              close={() => setShowModal(null)}
             />
           )}
         </AnimatePresence>

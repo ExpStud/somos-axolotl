@@ -1,7 +1,11 @@
 import { Variants } from "framer-motion";
 
 //custom
-
+export const modalFadeAnimation = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.4, ease: "easeInOut", delay: 0.4 } },
+  exit: { opacity: 0, transition: { duration: 0.2, ease: "easeInOut", delay: 0 } },
+};
 export const galleryAnimation:Variants = {
   initial: { 
     opacity: 0, 
@@ -97,9 +101,9 @@ export const fastEnterAnimation = {
 
 export const scaleExitAnimation = {
   initial: { opacity: 0, scale: 0.5 },
-  animate: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0.5 },
-  transition: { duration: 0.4, ease: "easeInOut" },
+  animate: { opacity: 1, scale: 1,transition: { duration: 0.3, ease: "easeInOut" }},
+  exit: { opacity: 0, scale: 0.75, transition: { duration: 0.2, ease: "easeInOut", delay: 0.5 }},
+  
 };
 //variants
 export const arrowVariants: Variants = {
@@ -213,6 +217,6 @@ export const imageDropAnimation = (
 ) => ({
   initial: { y: -40, opacity: 0.25 },
   animate: { y: animate ? -20 : 0, opacity: 1 },
-  eyit: { x: -40 },
+  exit: { x: -40 },
   transition: { duration: 0.45, ease: "easeInOut", delay: delay ?? 0 },
 });
