@@ -76,6 +76,7 @@ const PageLayout: FC<Props> = (props: Props) => {
             <ImageModal
               key="image-modal"
               show={showModal !== null}
+              data={showModal}
               close={() => setShowModal(null)}
             />
           )}

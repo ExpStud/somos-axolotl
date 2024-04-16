@@ -14,7 +14,7 @@ const Infographics: FC = () => {
         <span className="text-somos-orange">lorem ipsum,</span>{" "}
         <span className="text-somos-teal">loremipsu ipsunnk</span>
       </h2>
-      <div className="relative flex flex-row justify-center gap-6 w-screen overflow-x-auto">
+      <div className="relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-6">
         {infographicsData.map((data, index) => (
           <InfographicsCard data={data} key={index} />
         ))}
@@ -35,13 +35,14 @@ const InfographicsCard: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className="relative rounded-[32px] cursor-pointer overflow-hidden flex flex-col justify-end px-8 py-6 gap-4"
+      className="info-gradient relative rounded-[32px] cursor-pointer overflow-hidden flex flex-col justify-end px-8 py-6 gap-3 min-w-[228px] min-h-[342px]"
       style={{
         width: winWidth >= 1024 ? 400 * 0.9 : 228,
         height: winWidth >= 1024 ? 600 * 0.9 : 342,
       }}
       onClick={() => setShowModal(data)}
     >
+      <Image src={data.icon} alt="Icon" width={72} height={72} />
       <h3 className="text-white text-xs lg:text-xl font-poppins-semibold">
         {data.title}
       </h3>

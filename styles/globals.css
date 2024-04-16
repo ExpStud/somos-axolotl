@@ -175,4 +175,9 @@ html {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-
+.modal-gradient { 
+  background: linear-gradient(180.07deg, rgba(0, 0, 0, 0.33) 13.28%, rgba(0, 0, 0, 0.69) 67.71%);
+}
+.info-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.5%, rgba(0, 0, 0, 0.69) 77.5%);
+}

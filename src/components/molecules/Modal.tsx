@@ -29,33 +29,19 @@ const Modal: FC<Props> = (props: Props) => {
       onClick={componentProps.onClick}
       {...scaleExitAnimation}
     >
-      {/* {show && (
-        <AnimatePresence mode="wait">
-          <motion.div
-            {...modalFadeAnimation}
-            className="absolute -z-[1] inset-0 bg-[#C7C7C7] bg-opacity-50 w-screen h-[100svh]"
-          />
-        </AnimatePresence>
-      )} */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`absolute left-1/2 top-1 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 overflow-clip bg-black 
-        bg-main bg-cover rounded-[32px] w-[98%] h-[85%] md:h-[90%] lg:h-[60vh] lg:w-[100vh] xl:w-[120vh] 3xl:h-[50vh] 3xl:w-[70vh] ${className}`}
+        className={`absolute inset-0 lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:aspect-[2/1] lg:w-[80vw] max-w-[1241px]
+        lg:rounded-[32px] p-6 md:p-10 ${className}`}
       >
-        <motion.div
-          className="fixed top-1 md:top-5 right-1 md:right-6 cursor-pointer"
+        <div
+          className="hover-opacity row-centered text-white border-[0.85px] border-white w-[79px] h-[24px] text-xs fixed top-6 md:top-5 right-6 md:right-6 cursor-pointer z-10"
           onClick={componentProps.onClick}
-          {...midClickAnimation}
         >
-          <Image
-            src="/images/icons/close.png"
-            height={40}
-            width={40}
-            alt="close"
-            priority
-          />
-        </motion.div>
+          Close &nbsp; X
+        </div>
         {children}
+        <div className="modal-gradient absolute inset-0 -z-[1] lg:rounded-[32px]" />
       </div>
     </motion.div>
   );

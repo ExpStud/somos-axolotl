@@ -4,6 +4,7 @@ export type InfographicsDataType = {
   content: string[];
   displayImage: string;
   expandedImage: string;
+  icon: string;
 };
 
 
