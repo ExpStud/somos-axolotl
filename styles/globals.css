@@ -142,8 +142,11 @@ html {
 .hover-opacity {
   @apply transition-200 hover:opacity-60 active:opacity-30;
 }
-.hover-less-opacity {
+.hover-opacity-1 {
   @apply transition-200 hover:opacity-70 active:opacity-40;
+}
+.hover-opacity-2 {
+  @apply transition-200 hover:opacity-80 active:opacity-60;
 }
 
 .inner-padding {
