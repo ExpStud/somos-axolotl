@@ -35,6 +35,7 @@ const Home = dynamic(() => import("./organisms/Home"));
 const Description = dynamic(() => import("./organisms/Description"));
 const Infographics = dynamic(() => import("./organisms/Infographics"));
 const Partners = dynamic(() => import("./organisms/Partners"));
+const Donate = dynamic(() => import("./organisms/Donate"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -72,5 +73,6 @@ export {
   TextDropdown,
   PatternSVG,
   Infographics,
-  Partners
+  Partners,
+  Donate
 }

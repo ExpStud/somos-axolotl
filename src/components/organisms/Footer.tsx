@@ -18,10 +18,20 @@ const Footer: FC = () => {
           width={winWidth < 768 ? 93 : 65}
           height={winWidth < 768 ? 131 : 92}
         />
-        <p className="text-xs hidden md:flex xl:whitespace-nowrap">
-          © {new Date().getFullYear()} — Copyright{" "}
-          <br className="hidden md:block lg:hidden" /> All Rights reserved
-        </p>
+        <div className="text-xs hidden md:flex flex-col gap- -mb-4">
+          <p>
+            © {new Date().getFullYear()} — Copyright{" "}
+            <br className="hidden md:block lg:hidden" /> All Rights reserved
+          </p>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/exp_studio_"
+            className="text-sm"
+          >
+            ℗ Powered by EXP
+          </a>
+        </div>
 
         <IconBar className="md:hidden h-min" />
       </div>
@@ -64,9 +74,20 @@ const Footer: FC = () => {
         <IconBar className="hidden md:grid w-[100px]" />
       </div>
 
-      <p className="md:hidden whitespace-nowrap self-center -mb-10 text-xs">
-        © {new Date().getFullYear()} — Copyright All Rights reserved
-      </p>
+      <div className="md:hidden whitespace-nowrap self-center -mb-10 text-xs">
+        <p>
+          © {new Date().getFullYear()} — Copyright{" "}
+          <br className="hidden md:block lg:hidden" /> All Rights reserved
+        </p>
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://twitter.com/exp_studio_"
+          className="text-sm"
+        >
+          ℗ Powered by EXP
+        </a>
+      </div>
     </footer>
   );
 };

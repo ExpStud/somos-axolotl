@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, FC } from "react";
-import { Description, Home, Infographics, Partners } from "@components";
+import { Description, Home, Infographics, Partners, Donate } from "@components";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
@@ -14,6 +14,7 @@ const LandingView: FC<Props> = (props: Props) => {
       <Description />
       <Infographics />
       <Partners />
+      <Donate />
     </div>
   );
 };

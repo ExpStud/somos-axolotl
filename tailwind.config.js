@@ -38,11 +38,9 @@ module.exports = {
           700: "#1B8883",
           800: "#187772",
         },
-        "somos-red": {
-          DEFAULT: "#FFB93E",
-        },
         "somos-orange": "#FFB93E",
         "somos-red": "#FE6375",
+        "somos-blue": "#2A48AF",
         //template
         "custom-black": "#121212",
       },
