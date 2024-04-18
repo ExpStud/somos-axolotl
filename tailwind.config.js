@@ -33,7 +33,8 @@ module.exports = {
         },
         "somos-teal": {
           DEFAULT: "#25BDB5",
-          light: "#3CD8D1",
+          300: "#67E1DB",
+          400: "#29D1C9",
           600: "#1E9993",
           700: "#1B8883",
           800: "#187772",

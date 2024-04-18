@@ -49,7 +49,7 @@ a {
     @apply text-somos-brown-dark text-2xl md:text-[40px] font-poppins-semibold;
   }
   h2 {
-    @apply text-somos-brown-dark text-2xl md:text-[40px] font-poppins-semibold md:leading-10;
+    @apply text-somos-brown-dark text-2xl md:text-[40px] font-poppins-semibold md:leading-[45px];
   }
   /* h3 {
     @apply text-white text-xs lg:text-xl;
@@ -139,6 +139,12 @@ html {
 }
 
 /* custom */
+.teal-hover-dark {
+  @apply bg-somos-teal hover:bg-somos-teal-600 active:bg-somos-teal-800; 
+}
+.teal-light {
+  @apply bg-somos-teal hover:bg-somos-teal-400 active:bg-somos-teal-300; 
+} 
 .hover-opacity {
   @apply transition-200 hover:opacity-60 active:opacity-30;
 }
