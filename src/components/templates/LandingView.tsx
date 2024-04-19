@@ -31,7 +31,6 @@ const LandingView: FC<Props> = (props: Props) => {
       {/* pt-28 */}
       <Partners className="" />
       <PatternSVG className="my-20" />
-      {/* px-6 md:px-12 lg:px-0 py-14 lg:py-28 */}
       <Donate className="px-6 md:px-12 lg:px-0 pb-14 lg:pb-28" />
     </div>
   );
