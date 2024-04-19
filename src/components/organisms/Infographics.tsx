@@ -1,33 +1,37 @@
-import { FC, useContext } from "react";
-import { PatternSVG } from "@components";
+import { FC, HTMLAttributes, useContext } from "react";
 import Image from "next/image";
 import { useWindowSize } from "@hooks";
 import { ViewContext } from "@contexts";
 import { InfographicsDataType } from "@types";
 import { infographicsData } from "@constants";
 
-const Infographics: FC = () => {
+interface Props extends HTMLAttributes<HTMLDivElement> {}
+
+const Infographics: FC<Props> = (props: Props) => {
+  const { className } = props;
+
   return (
-    <div className="infographic-inner-padding relative infographic-page-height w-screen flex flex-col items-start md:items-center gap-10">
+    <div
+      className={`relative w-screen flex flex-col items-start md:items-center gap-10 ${className}`}
+    >
       <h2 className="text-center max-w-[665px]">
         Using Tech to save <span className="text-somos-red">lorem ipsum,</span>{" "}
         <span className="text-somos-orange">lorem ipsum,</span>{" "}
         <span className="text-somos-teal">loremipsu ipsunnk</span>
       </h2>
-      <div className="relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-6">
+      <div className="relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-2">
         {infographicsData.map((data, index) => (
           <InfographicsCard data={data} key={index} />
         ))}
       </div>
-      <PatternSVG className="absolute -bottom-20 md:-bottom-10 -z-[2] left-1/2 -translate-x-1/2" />
     </div>
   );
 };
 
-interface Props {
+interface ICProps {
   data: InfographicsDataType;
 }
-const InfographicsCard: FC<Props> = (props: Props) => {
+const InfographicsCard: FC<ICProps> = (props: ICProps) => {
   const { data } = props;
   const [winWidth, winHeight] = useWindowSize();
 

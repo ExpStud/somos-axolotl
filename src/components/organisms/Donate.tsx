@@ -1,15 +1,15 @@
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 import Image from "next/image";
 import { useWindowSize } from "src/hooks";
 
-const Donate: FC = () => {
+interface Props extends HTMLAttributes<HTMLDivElement> {}
+
+const Donate: FC<Props> = (props: Props) => {
+  const { className } = props;
   const [winWidth, winHeight] = useWindowSize();
 
   return (
-    <div
-      className="col-centered px-6 md:px-12 lg:px-0 py-14 lg:py-28 relative w-screen"
-      id="donate"
-    >
+    <div className={`col-centered relative w-screen ${className}`} id="donate">
       <div
         className="flex flex-col-reverse xl:flex-row items-center justify-evenly rounded-[32px] bg-somos-blue p-4 md:p-0  
         max-w-[345px] sm:max-w-[500px] xl:max-w-[1245px]"

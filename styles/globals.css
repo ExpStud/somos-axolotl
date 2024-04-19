@@ -164,10 +164,10 @@ html {
 .inner-padding {
   @apply px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[24svh] lg:pt-[14svh] 2xl:pt-[18svh] 3xl:pt-[15svh];
 }
-.description-inner-padding {
+.description-padding {
   @apply px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[24svh] lg:pt-[10svh] 2xl:pt-[18svh] 3xl:pt-[15svh];
 }
-.infographic-inner-padding {
+.infographic-padding {
   @apply px-6 pt-[15svh] md:pt-[10svh] lg:pt-[15svh] 3xl:pt-[8svh];
 }
 .description-page-height {

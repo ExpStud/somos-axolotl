@@ -1,6 +1,4 @@
-import { FC } from "react";
-import { PatternSVG } from "@components";
-import Image from "next/image";
+import { FC, HTMLAttributes } from "react";
 
 type PartnersType = {
   name: string;
@@ -15,9 +13,14 @@ const partners: PartnersType[] = [
   { name: "Partner 5", image: "/images/temp.png", href: "/" },
 ];
 
-const Partners: FC = () => {
+interface Props extends HTMLAttributes<HTMLDivElement> {}
+
+const Partners: FC<Props> = (props: Props) => {
+  const { className } = props;
   return (
-    <div className="pt-28 relative w-screen flex flex-col items-center gap-6">
+    <div
+      className={`relative w-screen flex flex-col items-center gap-6  ${className}`}
+    >
       <h2 className="text-center">Our partners</h2>
       <p className="text-center max-w-[344px] lg:max-w-[415px] ">
         In publishing and graphic design, Lorem ipsum is a placeholder text
@@ -29,17 +32,9 @@ const Partners: FC = () => {
             className="rounded-[32px] bg-somos-brown w-[106px] lg:w-[190px] h-[106px] lg:h-[190px] cursor-pointer"
             key={index}
             onClick={() => window.open(partner.href, "_blank")}
-          >
-            {/* <Image
-            src={partner.image}
-            alt={partner.name}
-            width={190}
-            height={190}
-          /> */}
-          </div>
+          ></div>
         ))}
       </div>
-      <PatternSVG className="mt-8 lg:mt-12" />
     </div>
   );
 };

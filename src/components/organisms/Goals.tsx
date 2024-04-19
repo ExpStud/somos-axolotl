@@ -1,16 +1,15 @@
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 import Image from "next/image";
 import { useWindowSize } from "@hooks";
-import { PatternSVG } from "@components";
 
-const Goals: FC = () => {
+interface Props extends HTMLAttributes<HTMLDivElement> {}
+
+const Goals: FC<Props> = (props: Props) => {
+  const { className } = props;
   const [winWidth, winHeight] = useWindowSize();
 
   return (
-    <div
-      className="col-centered px-6 md:px-12 lg:px-10 pt-28 lg:pt-28 relative w-screen"
-      id="donate"
-    >
+    <div className={`col-centered relative w-screen  ${className}`} id="donate">
       <div
         className="flex flex-col lg:flex-row items-center justify-evenly     
         max-w-[400px] sm:max-w-[500px] lg:max-w-[1245px]"
@@ -77,7 +76,6 @@ const Goals: FC = () => {
           </div>
         </div>
       </div>
-      <PatternSVG className="mt-20 lg:mt-24" />
     </div>
   );
 };
