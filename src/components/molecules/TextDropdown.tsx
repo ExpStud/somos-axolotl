@@ -46,7 +46,7 @@ const TextDropdown: FC<Props> = (props: Props) => {
         />
       </div>
       <div
-        className="hover-opacity-1 flex w-full sm:w-[150px] h-[40px] row-centered gap-2 border border-somos-brown-dark text-somos-brown-dark rounded-[34px] cursor-pointer"
+        className="transition-200 hover:text-somos-brown hover:border-somos-brown active:opacity-80 flex w-full sm:w-[150px] h-[40px] row-centered gap-2 border border-somos-brown-dark text-somos-brown-dark rounded-[34px] cursor-pointer"
         onClick={() => setShow(!show)}
       >
         Read {show ? "less" : "more"}
