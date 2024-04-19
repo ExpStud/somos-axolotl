@@ -79,7 +79,7 @@ const Header: FC<Props> = (props: Props) => {
 
   return (
     <header
-      className={`top-0 z-10 transition-all duration-500 w-full h-0 ${
+      className={`top-0 z-50 transition-all duration-500 w-full h-0 ${
         type === "scroll" ? "fixed" : type
       } 
       `}
