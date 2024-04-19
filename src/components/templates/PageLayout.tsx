@@ -18,6 +18,7 @@ interface Props {
   absolute?: boolean; //allows scroll
   headerType?: string;
   assets?: boolean[];
+  headerBackground?: string;
 }
 
 const PageLayout: FC<Props> = (props: Props) => {
@@ -28,6 +29,7 @@ const PageLayout: FC<Props> = (props: Props) => {
     headerType = "absolute",
     children,
     assets = [],
+    headerBackground,
   } = props;
 
   //context for splash screen & modals
@@ -54,7 +56,7 @@ const PageLayout: FC<Props> = (props: Props) => {
           twitter="twitterhandle"
         />
         {/* header */}
-        <Header type={headerType} />
+        <Header type={headerType} background={headerBackground} />
 
         {/* body */}
         <motion.main

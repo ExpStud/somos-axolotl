@@ -1,19 +1,30 @@
-import { Dispatch, SetStateAction, FC } from "react";
+import { Dispatch, SetStateAction, FC, useRef, useEffect } from "react";
 import { handleAssetLoad } from "@utils";
 import Image from "next/image";
 import Gallery from "../molecules/Gallery";
+import { useInView } from "framer-motion";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
+  handleViewChange: (value: boolean) => void;
 }
 
 const Home: FC<Props> = (props: Props) => {
-  const { setAssets } = props;
+  const { setAssets, handleViewChange } = props;
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  useEffect(() => {
+    if (isInView) handleViewChange(true);
+    else handleViewChange(false);
+  }, [handleViewChange, isInView]);
 
   return (
     <div
       id="home"
       className="inner-padding flex flex-col md:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 relative min-h-screen lg:h-[100svh] w-screen bg-black overflow-hidden z-0 "
+      ref={ref}
     >
       {/* TODO: add bg video */}
       <Image

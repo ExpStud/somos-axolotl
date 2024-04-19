@@ -9,10 +9,11 @@ import { HeaderContent } from "@components";
 interface Props {
   showHeader?: boolean;
   type?: string;
+  background?: string;
 }
 
 const Header: FC<Props> = (props: Props) => {
-  const { type = "absolute", showHeader = true } = props;
+  const { type = "absolute", showHeader = true, background } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
 
@@ -41,7 +42,7 @@ const Header: FC<Props> = (props: Props) => {
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // if (latest > 0.95) setAnimateHeader(true);
-    if (latest < 0.1) setAnimateHeader(true);
+    if (latest < 0.01) setAnimateHeader(true);
   });
 
   //hide header on scroll down, show on scroll up
@@ -84,14 +85,14 @@ const Header: FC<Props> = (props: Props) => {
       `}
     >
       {type !== "scroll" ? (
-        <HeaderContent />
+        <HeaderContent background={background} />
       ) : (
         <motion.aside
           variants={headerVariants}
           initial={showHeader ? "show" : "hidden"}
           animate={animateHeader ? "show" : "hidden"}
         >
-          <HeaderContent />
+          <HeaderContent background={background} />
         </motion.aside>
       )}
     </header>
