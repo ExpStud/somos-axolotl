@@ -13,7 +13,7 @@ const Home: FC<Props> = (props: Props) => {
   return (
     <div
       id="home"
-      className="inner-padding flex flex-col items-center relative min-h-screen lg:h-[100svh] w-screen bg-black overflow-hidden z-0 "
+      className="inner-padding flex flex-col md:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 relative min-h-screen lg:h-[100svh] w-screen bg-black overflow-hidden z-0 "
     >
       {/* TODO: add bg video */}
       <Image
@@ -24,7 +24,7 @@ const Home: FC<Props> = (props: Props) => {
         onLoad={() => handleAssetLoad(0, setAssets)}
       />
       {/* content */}
-      <div className="max-width flex flex-col md:flex-row gap-16 md:gap-14 lg:gap-0 justify-center lg:justify-between items-center md:items-end  pb-14 md:pb-20 lg:pb-20 3xl:pb-[10svh] md:w-full">
+      <div className="max-width flex flex-col md:flex-row gap-10 md:gap-14 lg:gap-0 justify-center md:justify-between items-center md:items-end  pb-14 md:pb-6 lg:pb-12 md:w-full">
         <Image
           src="/images/logos/lg.svg"
           height={162.04}
@@ -51,6 +51,25 @@ const Home: FC<Props> = (props: Props) => {
         </div>
       </div>
       <Gallery />
+      <svg
+        width="60"
+        height="60"
+        viewBox="0 0 60 60"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="hidden md:flex mb-4"
+      >
+        <path
+          d="M19.4531 38.4375L28.5253 47.3081C29.3451 48.1096 30.6549 48.1096 31.4747 47.3081L40.5469 38.4375M19.4531 21.5625L28.5253 12.6919C29.3451 11.8904 30.6549 11.8904 31.4747 12.6919L40.5469 21.5625"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        <path
+          d="M26.7188 29.7656C26.7188 31.7073 28.2927 33.2812 30.2344 33.2812C32.176 33.2812 33.75 31.7073 33.75 29.7656C33.75 27.824 32.176 26.25 30.2344 26.25C28.2927 26.25 26.7188 27.824 26.7188 29.7656Z"
+          fill="white"
+        />
+      </svg>
     </div>
   );
 };
