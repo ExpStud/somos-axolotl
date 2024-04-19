@@ -12,7 +12,7 @@ const Infographics: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={`relative w-screen flex flex-col items-start md:items-center gap-10 ${className}`}
+      className={`relative w-screen flex flex-col items-start md:items-center gap-10 z-10 ${className}`}
     >
       <h2 className="text-center max-w-[665px]">
         Using Tech to save <span className="text-somos-red">lorem ipsum,</span>{" "}

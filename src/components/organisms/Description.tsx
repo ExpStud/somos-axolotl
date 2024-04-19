@@ -9,7 +9,7 @@ const Description: FC<Props> = (props: Props) => {
   return (
     <div className={`relative w-screen flex justify-center  ${className}`}>
       <div className="max-width flex flex-col lg:flex-row no-wrap pt-20 3xl:justify-between w-full">
-        <div className="flex flex-col gap-2 max-w-[500px]">
+        <div className="z-10 flex flex-col gap-2 max-w-[500px]">
           <div className="row-centered text-somos-red border-[0.85px] border-somos-red w-[96px] h-[24px] text-xs ">
             The story
           </div>
@@ -26,10 +26,9 @@ const Description: FC<Props> = (props: Props) => {
           alt="Axolotl"
           width={587}
           height={640}
-          className="-z-[1] rotate-36 absolute -right-40 -top-28  xs:-right-48 xs:-top-36 lg:-right-16 lg:-top-16 xl:top-[100px] xl:right-[10vw] 3xl:top-[5vw] 3xl:right-[20vw] 3xl:scale-150"
+          className="z-0 rotate-36 absolute -right-40 -top-28  xs:-right-48 xs:-top-36 lg:-right-16 lg:-top-16 xl:top-[100px] xl:right-[10vw] 3xl:top-[5vw] 3xl:right-[20vw] 3xl:scale-150"
         />
       </div>
-      {/* <PatternSVG className="absolute -bottom-20 md:-bottom-10 lg:bottom-0 -z-[2]" /> */}
     </div>
   );
 };
