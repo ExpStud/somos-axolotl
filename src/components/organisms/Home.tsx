@@ -23,7 +23,7 @@ const Home: FC<Props> = (props: Props) => {
   return (
     <div
       id="home"
-      className="inner-padding flex flex-col md:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 relative min-h-screen lg:h-[100svh] w-screen bg-black overflow-hidden z-[1] "
+      className="inner-padding flex flex-col md:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 relative min-h-screen lg:h-screen w-screen bg-black overflow-hidden z-[1] "
       ref={ref}
     >
       {/* TODO: add bg video */}

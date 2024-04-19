@@ -57,7 +57,7 @@ const Menu: FC<Props> = (props: Props) => {
           ref={ref}
         >
           <motion.div
-            className={`px-4 sm:px-6 lg:px-10 py-6h-[100svh] relative`}
+            className={`px-4 sm:px-6 lg:px-10 py-6 h-screen relative`}
             variants={fadeVariants}
             initial="closed"
             animate="open"
