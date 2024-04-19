@@ -9,7 +9,7 @@ const Goals: FC<Props> = (props: Props) => {
   const [winWidth, winHeight] = useWindowSize();
 
   return (
-    <div className={`col-centered relative w-screen  ${className}`} id="donate">
+    <div className={`col-centered relative w-screen  ${className}`}>
       <div
         className="flex flex-col lg:flex-row items-center justify-evenly     
         max-w-[400px] sm:max-w-[500px] lg:max-w-[1245px]"
