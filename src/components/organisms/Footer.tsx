@@ -74,7 +74,7 @@ const Footer: FC = () => {
         <IconBar className="hidden md:grid w-[100px]" />
       </div>
 
-      <div className="md:hidden whitespace-nowrap self-center -mb-10 text-xs">
+      <div className="md:hidden whitespace-nowrap self-start -mb-10 text-xs">
         <p>
           © {new Date().getFullYear()} — Copyright{" "}
           <br className="hidden md:block lg:hidden" /> All Rights reserved

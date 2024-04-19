@@ -25,13 +25,13 @@ const Modal: FC<Props> = (props: Props) => {
   return (
     <motion.div
       key="image-modal"
-      className="fixed inset-0 backdrop-blur z-50 w-screen h-[100svh] "
+      className="fixed inset-0 backdrop-blur z-50 w-screen h-screen cursor-pointer"
       onClick={componentProps.onClick}
       {...scaleExitAnimation}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`absolute inset-0 lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:aspect-[2/1] lg:w-[80vw] max-w-[1241px]
+        className={`absolute cursor-default inset-0 lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:aspect-[2/1] w-screen lg:w-[80vw] max-w-[1241px] lg:h-auto 
         lg:rounded-[32px] p-6 md:p-10 ${className}`}
       >
         <div

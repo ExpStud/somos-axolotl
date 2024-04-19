@@ -10,7 +10,7 @@ const HeaderContent: FC<Props> = (props: Props) => {
   const { background } = props;
   return (
     <div
-      className={`w-full flex items-center justify-between px-6 md:px-12 lg:px-24 py-5 md:py-8 z-20 overflow-hidden transtion-500 ${background}`}
+      className={`w-full flex items-center justify-between px-6 md:px-12 lg:px-24 py-5   z-20 overflow-hidden transtion-500 ${background}`}
     >
       <Logo />
       <div className="flex items-end gap-8">

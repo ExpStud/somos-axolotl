@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     <PageLayout
       footer
       assets={assets}
-      headerType={"scroll"}
+      headerType={"fixed"}
       headerBackground={
         isHomeInView ? "bg-black bg-opacity-60" : "bg-somos-blue bg-opacity-900"
       }
