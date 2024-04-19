@@ -5,7 +5,7 @@ import { useState } from "react";
 const Home: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([false]);
 
-  const [isHomeInView, setIsHomeInView] = useState(false);
+  const [isHomeInView, setIsHomeInView] = useState(true);
 
   const handleViewChange = (value: boolean) => {
     setIsHomeInView(value);
