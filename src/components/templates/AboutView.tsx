@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, FC } from "react";
-import { PatternSVG, TextDropdown } from "@components";
+import { PatternSVG, TeamCard, TextDropdown } from "@components";
 import Image from "next/image";
 
 interface Props {
@@ -34,8 +34,9 @@ const AboutView: FC<Props> = (props: Props) => {
             The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly decreasing and is too fast for humans to be sure that they can help stabilize their numbers.</p>`}
         />
       </div>
-      <div className="relative self-center flex items-center justify-center aspect-[3/1] md:aspect-[5.25/1] h-[274px] mt-14 md:mt-20 lg:mt-32 -z-10 gap-8 sm:gap-32 md:gap-48 lg:gap-[605px]">
-        <p className="text-3xl lg:text-[40px] lg:leading-[45px] font-poppins-semibold text-somos-brown-dark">
+      {/* Team Header */}
+      <div className="relative self-center flex items-center justify-between sm:justify-center px-5 lg:aspect-[3/1] md:aspect-[5.25/1] w-full lg:h-[274px] mt-24 md:mt-20 lg:mt-32 -z-10 sm:gap-32 lg:gap-[400px] xl:gap-[605px]">
+        <p className="text-2xl lg:text-[40px] lg:leading-[45px] font-poppins-semibold text-somos-brown-dark">
           The Team <br /> Behind it all.
         </p>
 
@@ -43,17 +44,37 @@ const AboutView: FC<Props> = (props: Props) => {
           src="/images/logos/text-black.svg"
           width={200}
           height={81.5}
-          className="w-[100px] md:w-auto"
+          className="w-[98px] md:w-auto"
           alt="Somos Axolotl"
         />
         <Image
           src="/images/design/red-stroke.png"
           fill
-          className="absolute"
+          className="absolute  hidden lg:block"
           alt="Red Stroke"
         />
       </div>
-      <PatternSVG className="my-20 lg:my-32" />
+      {/* Team Cards */}
+      <div className="flex flex-col items-center gap-4 my-10">
+        <TeamCard id="scum" />
+        <TeamCard id="gio" />
+        <TeamCard id="cass" />
+      </div>
+      <PatternSVG className="my-20 lg:my-32 px-6" />
+      <div className="relative flex flex-col items-center justify-center text-center gap-2 px-6 md:px-10 w-[90vw] md:w-[70vw] lg:w-[697px] aspect-[1.2/1] mb-20 lg:mb-40">
+        <h2 className="max-w-[305px]">Be part of saving lorem</h2>
+        <p className="max-w-[427px]">
+          The Axolotl is a species scientists are apprehensive about going
+          extinct soon The Axolotl is a species scientists are apprehensive
+          about going extinct soon
+        </p>
+        <Image
+          src="/images/about/topo.svg"
+          fill
+          alt="Topography"
+          className="-z-[1]"
+        />
+      </div>
     </div>
   );
 };

@@ -37,6 +37,7 @@ const Infographics = dynamic(() => import("./organisms/Infographics"));
 const Partners = dynamic(() => import("./organisms/Partners"));
 const Donate = dynamic(() => import("./organisms/Donate"));
 const Goals = dynamic(() => import("./organisms/Goals"));
+const TeamCard = dynamic(() => import("./organisms/TeamCard"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -78,5 +79,6 @@ export {
   Partners,
   Donate,
   Goals,
-  AboutView
+  AboutView,
+  TeamCard
 }
