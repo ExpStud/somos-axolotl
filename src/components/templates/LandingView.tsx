@@ -18,7 +18,7 @@ const LandingView: FC<Props> = (props: Props) => {
   const { setAssets, handleViewChange } = props;
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center  bg-somos-white">
+    <div className="z-[1] w-full h-full flex flex-col items-center justify-center ">
       <Home setAssets={setAssets} handleViewChange={handleViewChange} />
 
       <Description className="description-padding" />
