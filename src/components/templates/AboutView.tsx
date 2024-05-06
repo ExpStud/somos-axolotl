@@ -34,11 +34,22 @@ const AboutView: FC<Props> = (props: Props) => {
             The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly decreasing and is too fast for humans to be sure that they can help stabilize their numbers.</p>`}
         />
       </div>
-      <div className="relative self-end w-screen aspect-[5.25/1] max-w-[1440px] mt-32 -z-10">
+      <div className="relative self-center flex items-center justify-center aspect-[3/1] md:aspect-[5.25/1] h-[274px] mt-14 md:mt-20 lg:mt-32 -z-10 gap-8 sm:gap-32 md:gap-48 lg:gap-[605px]">
+        <p className="text-3xl lg:text-[40px] lg:leading-[45px] font-poppins-semibold text-somos-brown-dark">
+          The Team <br /> Behind it all.
+        </p>
+
+        <Image
+          src="/images/logos/text-black.svg"
+          width={200}
+          height={81.5}
+          className="w-[100px] md:w-auto"
+          alt="Somos Axolotl"
+        />
         <Image
           src="/images/design/red-stroke.png"
           fill
-          className=""
+          className="absolute"
           alt="Red Stroke"
         />
       </div>
