@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@coinflowlabs/react": "^4.1.0",
     "@metaplex-foundation/js": "^0.18.1",
     "@metaplex-foundation/mpl-token-metadata": "^2.8.3",
     "@solana/wallet-adapter-base": "^0.9.20",

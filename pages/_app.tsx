@@ -15,6 +15,7 @@ import {
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { useMemo } from "react";
 import { Toaster } from "react-hot-toast";
+import { CoinflowPurchaseProtection, CoinflowEnvs } from "@coinflowlabs/react";
 
 // Default styles that can be overridden by your app
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -52,6 +53,10 @@ const App = ({ Component, pageProps }: AppProps) => {
                 secondary: "#454545",
               },
             }}
+          />
+          <CoinflowPurchaseProtection
+            coinflowEnv={"prod"}
+            merchantId={"Test10"}
           />
         </WalletModalProvider>
       </WalletProvider>
