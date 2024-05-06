@@ -113,16 +113,7 @@ const Home: FC<Props> = (props: Props) => {
               viewBox="0 0 60 60"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="hidden md:flex mb-4 animate-bounce "
-              // animate={{ y: ["0%", "10%", "0%"] }}
-              // transition={{
-              //   repeat: Infinity,
-              //   duration: 0.8,
-              //   ease: "easeIn",
-              // }}
-              // animate={{
-              //   y: ["0.4em", "0rem", "0.4em"],
-              // }}
+              className="hidden md:flex mb-4 animate-bounce"
             >
               <path
                 d="M19.4531 38.4375L28.5253 47.3081C29.3451 48.1096 30.6549 48.1096 31.4747 47.3081L40.5469 38.4375M19.4531 21.5625L28.5253 12.6919C29.3451 11.8904 30.6549 11.8904 31.4747 12.6919L40.5469 21.5625"

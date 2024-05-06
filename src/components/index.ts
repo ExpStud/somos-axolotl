@@ -40,6 +40,7 @@ const Goals = dynamic(() => import("./organisms/Goals"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
+const AboutView = dynamic(() => import("./templates/AboutView"));
 
 export {
   PageHead,
@@ -76,5 +77,6 @@ export {
   Infographics,
   Partners,
   Donate,
-  Goals
+  Goals,
+  AboutView
 }
