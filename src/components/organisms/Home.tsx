@@ -10,7 +10,8 @@ import { handleAssetLoad } from "@utils";
 import Image from "next/image";
 import Gallery from "../molecules/Gallery";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { exitAnimation, midExitAnimation } from "src/constants";
+import { exitAnimation, midEnterAnimation } from "src/constants";
+import { isMobile } from "react-device-detect";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
@@ -40,13 +41,11 @@ const Home: FC<Props> = (props: Props) => {
       clearTimeout(timer);
     };
   }, []);
-
-  const transitionValues = {
-    duration: 0.8,
-    yoyo: Infinity,
-    ease: "easeOut",
-  };
-
+  console.log(
+    "isMobile",
+    isMobile,
+    `/videos/ ${isMobile ? "intro-video-xs.mp4" : "intro-video-sm.mp4"}`
+  );
   return (
     <div
       id="home"
@@ -54,13 +53,26 @@ const Home: FC<Props> = (props: Props) => {
       ref={ref}
     >
       {/* TODO: add bg video */}
+      <div className="absolute inset-0 bg-black bg-opacity-75 -z-[5]"></div>
       <Image
-        src="/images/temp.png"
+        src="/images/landing/intro-xs.jpg"
         alt="EXP"
         fill
-        className="object-cover opacity-20 overflow-hidden -z-10"
+        className="object-cover opacity-100 overflow-hidden -z-10"
         onLoad={() => handleAssetLoad(0, setAssets)}
       />
+      <motion.video
+        src={`/videos/${
+          isMobile ? "intro-video-xs.mp4" : "intro-video-sm.mp4"
+        }`}
+        autoPlay
+        loop
+        muted
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover -z-[8]"
+        {...midEnterAnimation}
+      />
+
       <AnimatePresence mode="wait">
         {!showView ? (
           <motion.div key="logo" {...exitAnimation}>
