@@ -196,3 +196,13 @@ html {
 .info-gradient {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 39.5%, rgba(0, 0, 0, 0.69) 77.5%);
 }
+
+.hscroll {
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.hscroll::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari and Opera */
+}

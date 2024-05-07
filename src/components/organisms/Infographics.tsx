@@ -15,11 +15,12 @@ const Infographics: FC<Props> = (props: Props) => {
       className={`relative w-screen flex flex-col items-start md:items-center gap-10 z-10 ${className}`}
     >
       <h2 className="text-center max-w-[665px]">
-        Using Tech to save <span className="text-somos-red">lorem ipsum,</span>{" "}
-        <span className="text-somos-orange">lorem ipsum,</span>{" "}
-        <span className="text-somos-teal">loremipsu ipsunnk</span>
+        Our work in <span className="text-somos-red">Xochimilco</span>{" "}
+        {/* <span className="text-somos-orange">lorem ipsum,</span>{" "} */}
+        <br /> <span className="text-somos-teal">(where the</span>{" "}
+        <span className="text-somos-orange">flowers grow)</span>
       </h2>
-      <div className="relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-2">
+      <div className="hscroll relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-2">
         {infographicsData.map((data, index) => (
           <InfographicsCard data={data} key={index} />
         ))}
@@ -50,7 +51,9 @@ const InfographicsCard: FC<ICProps> = (props: ICProps) => {
       <h3 className="text-white text-xs lg:text-xl font-poppins-semibold">
         {data.title}
       </h3>
-      <p className="text-white text-xs lg:text-base">{data.content[0]}</p>
+      <p className="text-white text-xs lg:text-base line-clamp-4">
+        {data.content[0]}
+      </p>
       <Image
         src={data.displayImage}
         alt="Axolotl"

@@ -92,17 +92,16 @@ const Home: FC<Props> = (props: Props) => {
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="flex flex-row md:flex-col-reverse items-end md:items-start md:gap-3 justify-between md:justify-start">
                   <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9">
-                    Our Project
+                    Our Mission
                   </h2>
                   <div className="row-centered text-white border-[0.85px] border-white w-[103px] md:w-[74px] h-[27.6px] md:h-[24px] text-xs">
                     Vision
                   </div>
                 </div>
                 <p className="text-white xs:max-w-[293px]">
-                  In publishing and graphic design, Lorem ipsum is a placeholder
-                  text commonly used to demonstrate the visual form of a
-                  document or a typeface In publishing and graphic design, Lorem
-                  ipsum is a placeholder text commonly used to
+                  Somos Axolotl uses art and technology to help communities move
+                  toward sustainable resource and environmental management -
+                  first in Mexico, and then beyond.
                 </p>
               </div>
             </div>

@@ -13,12 +13,28 @@ const Description: FC<Props> = (props: Props) => {
           <div className="row-centered text-somos-red border-[0.85px] border-somos-red w-[96px] h-[24px] text-xs ">
             The story
           </div>
-          <h2 className="max-w-[184px] md:max-w-[270px]">The Axolotl story.</h2>
+          <h2 className="max-w-[184px] md:max-w-[270px]">
+            The Somos Axolotl story.
+          </h2>
           <TextDropdown
-            content={`<p class="!text-base">The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly decreasing and is too fast for humans to be sure that they can help stabilize their numbers. 
-            The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly decreasing and is too fast for humans to be sure that they can help stabilize their numbers. 
-            </p></br> <p class="!text-base">The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly decreasing and is too fast for humans to be sure that they can help stabilize their numbers. 
-            The Axolotl is a species scientists are apprehensive about going extinct soon; they estimate that there are only about 50 to 1,000 left in the wild. That number is greatly decreasing and is too fast for humans to be sure that they can help stabilize their numbers.</p>`}
+            content={`
+              <p class="!text-base">
+                Somos Axolotl is an art- and tech-based initiative created by a digital artist, a muralist, and an environmental activist -- three individuals united in their desire to push back against the potential extinction of one of the world's most compelling animals, the axolotl salamander.
+              </p>
+              </br> 
+              <p class="!text-base">
+                Spearheaded by Matt “Scum” Martinez,  Somos Axolotl works in and with the vibrant Xochimilco community in Mexico City to protect and restore axolotl populations though the development of sustainable economic systems for local farmers, businesses, and tourism operators. 
+              </p>
+              </br> 
+              <p class="!text-base">
+                There can be no path toward healthy and balanced relationships with our natural environment without sustainable relationships between people, places, and our planet's other denizens. Somos Axolotl uses technology and art to inspire action, create solutions, and build partnerships supporting symbiosis between Xochimilco's human and axolotl populations. 
+              </p>
+              </br> 
+              <p class="!text-base">
+                As this project matures, the tools built and lessons learned in Xochimilco will become available to communities around the world. 
+              </p>
+            `}
+            openHeight="36rem"
           />
         </div>
         <Image

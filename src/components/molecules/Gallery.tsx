@@ -9,11 +9,10 @@ type ImageData = {
 };
 
 const images: ImageData[] = [
-  { src: "/meta.png", caption: "Rare Axolotl swimming" },
-  { src: "/images/temp.png", caption: "Caption 2" },
-  { src: "/meta.png", caption: "Caption 3" },
-  { src: "/images/temp.png", caption: "Caption 4" },
-  { src: "/meta.png", caption: "Caption 5" },
+  { src: "/images/landing/axolotls.jpg", caption: "Axolotl in tank" },
+  { src: "/images/landing/trees.jpg", caption: "Lake Xochimilco" },
+  { src: "/images/landing/boats.jpg", caption: "Boats on the lake" },
+  { src: "/images/landing/statues.jpg", caption: "Statues on the Chinampa" },
 ];
 
 const Gallery: React.FC = () => {
