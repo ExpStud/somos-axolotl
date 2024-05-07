@@ -1,11 +1,13 @@
 import { FC, HTMLAttributes } from "react";
 import { TextDropdown } from "@components";
 import Image from "next/image";
+import { useWindowSize } from "src/hooks";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const Description: FC<Props> = (props: Props) => {
   const { className } = props;
+  const [winWidth] = useWindowSize();
   return (
     <div className={`relative w-screen flex justify-center  ${className}`}>
       <div className="max-width flex flex-col lg:flex-row no-wrap pt-20 3xl:justify-between w-full">
@@ -34,7 +36,9 @@ const Description: FC<Props> = (props: Props) => {
                 As this project matures, the tools built and lessons learned in Xochimilco will become available to communities around the world. 
               </p>
             `}
-            openHeight="36rem"
+            openHeight={
+              winWidth < 400 ? "48rem" : winWidth < 768 ? "40rem" : "36rem"
+            }
           />
         </div>
         <Image

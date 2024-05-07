@@ -115,9 +115,12 @@ const Home: FC<Props> = (props: Props) => {
                   <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9">
                     Our Mission
                   </h2>
-                  <div className="row-centered text-white border-[0.85px] border-white w-[103px] md:w-[74px] h-[27.6px] md:h-[24px] text-xs">
-                    Vision
-                  </div>
+                  <Image
+                    src="/images/design/squares-yellow.svg"
+                    width={111}
+                    height={18}
+                    alt="Yellow Squares"
+                  />
                 </div>
                 <p className="text-white xs:max-w-[293px]">
                   Somos Axolotl uses art and technology to help communities move
