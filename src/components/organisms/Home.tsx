@@ -32,20 +32,29 @@ const Home: FC<Props> = (props: Props) => {
   }, [handleViewChange, isInView]);
 
   //show view timeout
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowView(true);
+  //   }, 1500);
+
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const handleScroll = () => {
       setShowView(true);
-    }, 1500);
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearTimeout(timer);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(
-    "isMobile",
-    isMobile,
-    `/videos/ ${isMobile ? "intro-video-xs.mp4" : "intro-video-sm.mp4"}`
-  );
+
   return (
     <div
       id="home"
@@ -82,7 +91,7 @@ const Home: FC<Props> = (props: Props) => {
               width={230}
               alt="Somos Axolotl"
               priority
-              className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 "
+              className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140px] md:w-auto"
             />
           </motion.div>
         ) : (

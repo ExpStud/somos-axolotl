@@ -17,7 +17,9 @@ const Home: NextPage = () => {
       assets={assets}
       headerType={"fixed"}
       headerBackground={
-        isHomeInView ? "bg-black bg-opacity-20" : "bg-somos-blue "
+        isHomeInView
+          ? "bg-black bg-opacity-80 lg:bg-opacity-20"
+          : "bg-somos-blue "
       }
     >
       <LandingView setAssets={setAssets} handleViewChange={handleViewChange} />
