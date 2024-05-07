@@ -10,20 +10,10 @@ const IconBar: FC<Props> = (props: Props) => {
   const size = winWidth < 1024 ? 47 : 40;
   return (
     <div className={`grid grid-cols-2 gap-3 ${className}`}>
-      <a
-        href={"/"}
-        rel="noreferrer"
-        target="_blank"
-        className="hover-opacity-2"
-      >
+      <a href={"/"} rel="noreferrer" target="_blank" className="">
         <Image src="/images/icons/wk.svg" width={size} height={size} alt="Wk" />
       </a>
-      <a
-        href={"/"}
-        rel="noreferrer"
-        target="_blank"
-        className="hover-opacity-2"
-      >
+      <a href={"/"} rel="noreferrer" target="_blank" className="">
         <Image
           src="/images/icons/facebook.svg"
           width={size}
@@ -31,12 +21,7 @@ const IconBar: FC<Props> = (props: Props) => {
           alt="Facebook"
         />
       </a>
-      <a
-        href={"/"}
-        rel="noreferrer"
-        target="_blank"
-        className="hover-opacity-2"
-      >
+      <a href={"/"} rel="noreferrer" target="_blank" className="">
         <Image
           src="/images/icons/telegram.svg"
           width={size}
@@ -44,12 +29,7 @@ const IconBar: FC<Props> = (props: Props) => {
           alt="Telegram"
         />
       </a>
-      <a
-        href={"/"}
-        rel="noreferrer"
-        target="_blank"
-        className="hover-opacity-2"
-      >
+      <a href={"/"} rel="noreferrer" target="_blank" className="">
         <Image
           src="/images/icons/instagram.svg"
           width={size}
