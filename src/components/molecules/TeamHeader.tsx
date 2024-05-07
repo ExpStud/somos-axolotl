@@ -18,7 +18,7 @@ const TeamHeader: FC = () => {
       <Image
         src="/images/design/red-stroke.png"
         fill
-        className="absolute  hidden lg:block"
+        className="absolute"
         alt="Red Stroke"
       />
     </div>
