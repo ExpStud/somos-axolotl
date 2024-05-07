@@ -8,7 +8,7 @@ const Footer: FC = () => {
 
   return (
     <footer
-      className="bg-somos-orange flex flex-col md:flex-row justify-evenly md:justify-between md:items-center px-8 pb-2 md:px-10 md:pt-10  md:pb-7 h-[400px] md:h-[220px] lg:h-[200px]"
+      className="bg-somos-orange overflow-hidden flex flex-col md:flex-row justify-evenly md:justify-between md:items-center px-8 pb-2 md:px-10 md:pt-10  md:pb-7 h-[400px] md:h-[220px] lg:h-[200px]"
       key="footer"
     >
       <div className="flex md:flex-col w-full md:w-auto h-min md:h-full justify-between md:justify items-center md:items-start  ">
@@ -29,7 +29,7 @@ const Footer: FC = () => {
             href="https://twitter.com/exp_studio_"
             className="text-sm"
           >
-            ℗ Powered by EXP
+            Powered by EXP
           </a>
         </div>
 
@@ -74,7 +74,7 @@ const Footer: FC = () => {
         <IconBar className="hidden md:grid w-[100px]" />
       </div>
 
-      <div className="md:hidden whitespace-nowrap self-start -mb-10 text-xs">
+      <div className="md:hidden whitespace-nowrap self-center -mb-10 text-xs flex flex-col items-center gap-2">
         <p>
           © {new Date().getFullYear()} — Copyright{" "}
           <br className="hidden md:block lg:hidden" /> All Rights reserved
@@ -85,7 +85,7 @@ const Footer: FC = () => {
           href="https://twitter.com/exp_studio_"
           className="text-sm"
         >
-          ℗ Powered by EXP
+          Powered by EXP
         </a>
       </div>
     </footer>

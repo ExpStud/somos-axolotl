@@ -61,7 +61,7 @@ const PageLayout: FC<Props> = (props: Props) => {
 
         {/* body */}
         <motion.main
-          className={`relative flex flex-col h-full w-full overflow-x-clip bg-somos-white`}
+          className={`relative flex flex-col h-full w-full overflow-x-hidden bg-somos-white`}
           {...enterAnimation}
         >
           {children}
