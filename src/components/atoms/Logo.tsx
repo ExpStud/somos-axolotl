@@ -12,7 +12,7 @@ const Logo: FC = () => {
     >
       <Link href="#home">
         <Image
-          src="/images/logos/sm.svg"
+          src="/images/logos/sm-yellow.svg"
           height={34.31}
           width={84}
           alt="Somos Axolotl"

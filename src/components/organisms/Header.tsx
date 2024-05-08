@@ -3,9 +3,11 @@ import {
   motion,
   useMotionValueEvent,
   useScroll,
+  useTransform,
   Variants,
 } from "framer-motion";
 import { HeaderContent } from "@components";
+import { useWindowSize } from "src/hooks";
 interface Props {
   showHeader?: boolean;
   type?: string;
@@ -16,6 +18,7 @@ const Header: FC<Props> = (props: Props) => {
   const { type = "absolute", showHeader = true, background } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
+  const [winWidth] = useWindowSize();
 
   //scroll variables
   const scrollRef = useRef<number>();
@@ -77,6 +80,17 @@ const Header: FC<Props> = (props: Props) => {
     setAnimateHeader(showHeader);
   }, [showHeader]);
 
+  const [numRepeats, setNumRepeats] = useState(0);
+  const textWidth = 150; // Approximate width of the text in pixels
+  const gap = 50; // Gap between each instance of the text
+
+  useEffect(() => {
+    // Calculate the number of times the text should be repeated
+    const width = winWidth;
+    setNumRepeats(Math.ceil(width / (textWidth + gap)));
+  }, [winWidth]);
+  const x = useTransform(scrollYProgress, [0, 1], [0, -textWidth * numRepeats]);
+
   return (
     <header
       className={`top-0 z-50 transition-all duration-500 w-full h-0 ${
@@ -87,14 +101,23 @@ const Header: FC<Props> = (props: Props) => {
       {type !== "scroll" ? (
         <HeaderContent background={background} />
       ) : (
-        <motion.aside
+        <motion.div
           variants={headerVariants}
           initial={showHeader ? "show" : "hidden"}
           animate={animateHeader ? "show" : "hidden"}
         >
           <HeaderContent background={background} />
-        </motion.aside>
+        </motion.div>
       )}
+      <div className="h-[37px] w-full bg-somos-blue text-somos-orange text-xl overflow-hidden flex items-center font-karantina">
+        {Array(numRepeats)
+          .fill(null) // Provide an argument to fill()
+          .map((_, i) => (
+            <span key={i} className=" mx-6 md:mr-0 md:ml-14 whitespace-nowrap">
+              USING ART TO SAVE XOCHIMILCO
+            </span>
+          ))}
+      </div>
     </header>
   );
 };

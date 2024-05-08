@@ -20,24 +20,26 @@ const Menu: FC<Props> = (props: Props) => {
   useOutsideAlerter(ref, () => toggleMenu(false));
 
   const isTablet: boolean = winWidth < 900;
+
   //stop page scroll (when modal or menu open)
   useEffect(() => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-
     if (open) {
-      timeoutRef.current = setTimeout(() => {
-        document.body.style.overflow = "hidden";
-      }, 700);
-    } else {
-      document.body.style.overflow = "auto";
+      // Get the scrollbar width
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+
+      // Hide the scrollbar and compensate for the scrollbar width
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
 
     return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      // Show the scrollbar and remove the padding
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     };
   }, [open]);
+
   return (
     <AnimatePresence mode="wait" initial={false}>
       {open && (

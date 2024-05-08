@@ -15,6 +15,7 @@ module.exports = {
         "poppins-medium": ["Poppins-Light"],
         "poppins-semibold": ["Poppins-SemiBold"],
         "poppins-bold": ["Poppins-Bold"],
+        karantina: ["Karantina-Regular"],
       },
       fontWeight: {
         light: 400, //font-helvetica-neue font-light

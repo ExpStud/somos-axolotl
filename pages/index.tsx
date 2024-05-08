@@ -15,12 +15,7 @@ const Home: NextPage = () => {
     <PageLayout
       footer
       assets={assets}
-      headerType={"fixed"}
-      headerBackground={
-        isHomeInView
-          ? "bg-black bg-opacity-80 lg:bg-opacity-20"
-          : "bg-somos-blue "
-      }
+      headerType={"relative"} 
     >
       <LandingView setAssets={setAssets} handleViewChange={handleViewChange} />
     </PageLayout>
