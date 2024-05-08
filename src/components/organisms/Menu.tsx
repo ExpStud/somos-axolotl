@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconBar, NavItem } from "@components";
-import Link from "next/link";
+import Image from "next/image";
 import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
 import { useOutsideAlerter } from "@hooks";
@@ -99,46 +99,55 @@ const Menu: FC<Props> = (props: Props) => {
               <NavItem href="/team">Team</NavItem>
               <NavItem href="/donate">Donate</NavItem>
             </div>
-            <div className="flex justify-between w-full">
-              <div className="flex flex-col md:flex-row justify-between md:justify-end md:items-end gap-8 md:gap-10 md:pb-2">
-                <div className="flex flex-col max-w-[177px]">
-                  <h3 className="text-white tex-sm md:text-base font-poppins-regular pb-3">
-                    Contact Us
-                  </h3>
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    href="tel:+19998887766"
-                    className="text-xs"
-                  >
-                    +1 (999) 888-77-66
-                  </a>
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    href="mailto:hello@logoipsum.com"
-                    className="text-xs"
-                  >
-                    hello@logoipsum.com
-                  </a>
+            <div className="flex flex-col gap-6">
+              <Image
+                src="/images/logos/lg-white.svg"
+                width={122}
+                height={174}
+                alt="Somos"
+                className="hidden lg:block opacity-10 "
+              />
+              <div className="flex justify-between w-full">
+                <div className="flex flex-col md:flex-row justify-between md:justify-start md:items-start gap-8 md:gap-10 md:pb-2">
+                  <div className="flex flex-col max-w-[177px]">
+                    <h3 className="text-white tex-sm md:text-base font-poppins-regular pb-3">
+                      Contact Us
+                    </h3>
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="tel:+19998887766"
+                      className="text-xs"
+                    >
+                      +1 (999) 888-77-66
+                    </a>
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="mailto:hello@logoipsum.com"
+                      className="text-xs"
+                    >
+                      hello@logoipsum.com
+                    </a>
+                  </div>
+                  <div className="flex flex-col max-w-[177px]">
+                    <h3 className="text-white text-sm md:text-base font-poppins-regular pb-3">
+                      Location
+                    </h3>
+                    <a
+                      rel="noreferrer"
+                      target="_blank"
+                      href="https://www.google.com/maps/search/?api=1&query=483920,Mexico+Myasnitskaya+22/2/5,Office+4"
+                      className="line-clamp-2 text-xs"
+                    >
+                      483920, Mexico <br />
+                      Myasnitskaya 22/2/5, Office 4
+                    </a>
+                  </div>
                 </div>
-                <div className="flex flex-col max-w-[177px]">
-                  <h3 className="text-white text-sm md:text-base font-poppins-regular pb-3">
-                    Location
-                  </h3>
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://www.google.com/maps/search/?api=1&query=483920,Mexico+Myasnitskaya+22/2/5,Office+4"
-                    className="line-clamp-2 text-xs"
-                  >
-                    483920, Mexico <br />
-                    Myasnitskaya 22/2/5, Office 4
-                  </a>
-                </div>
-              </div>
 
-              <IconBar className="max-w-[90px] self-end" />
+                <IconBar className="max-w-[90px] self-end" />
+              </div>
             </div>
           </motion.div>
         </motion.aside>
