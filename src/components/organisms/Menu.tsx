@@ -76,7 +76,7 @@ const Menu: FC<Props> = (props: Props) => {
           key="main-menu"
           // onMouseLeave={() => toggleMenu(false)}
           initial={{ width: 0, opacity: 0 }}
-          animate={{ width: isTablet ? winWidth - 15 : 669, opacity: 1 }}
+          animate={{ width: isTablet ? winWidth : 610, opacity: 1 }}
           exit={{
             width: 0,
             transition: { duration: 0.5 },
@@ -84,22 +84,62 @@ const Menu: FC<Props> = (props: Props) => {
           }}
           transition={{ duration: 0.7 }}
           className=" bg-[#1A0E06] fixed top-0 right-0 z-50 "
-          onClick={() => toggleMenu(false)}
+          // onClick={() => toggleMenu(false)}
           ref={ref}
         >
           <motion.div
-            className={`px-4 sm:px-6 lg:px-10 py-6 h-screen relative`}
+            className={`px-4 sm:px-6 lg:px-10 py-6 h-screen relative flex flex-col justify-between pl-10 pt-32 `}
             variants={fadeVariants}
             initial="closed"
             animate="open"
             exit="closed"
           >
-            <div className="absolute left-1/2 top-[45%] transform -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start text-4xl sm:text-6xl gap-2">
+            <div className="flex flex-col items-start justify-start text-4xl sm:text-6xl gap-10 font-poppins-regular">
               <NavItem href="/">Mission</NavItem>
-              <NavItem href="/">Team</NavItem>
-              <NavItem href="/">Donate</NavItem>
+              <NavItem href="/team">Team</NavItem>
+              <NavItem href="/donate">Donate</NavItem>
             </div>
-            <IconBar className="max-w-[90px]" />
+            <div className="flex justify-between w-full">
+              <div className="flex flex-col md:flex-row justify-between md:justify-end md:items-end gap-8 md:gap-10 md:pb-2">
+                <div className="flex flex-col max-w-[177px]">
+                  <h3 className="text-white tex-sm md:text-base font-poppins-regular pb-3">
+                    Contact Us
+                  </h3>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="tel:+19998887766"
+                    className="text-xs"
+                  >
+                    +1 (999) 888-77-66
+                  </a>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="mailto:hello@logoipsum.com"
+                    className="text-xs"
+                  >
+                    hello@logoipsum.com
+                  </a>
+                </div>
+                <div className="flex flex-col max-w-[177px]">
+                  <h3 className="text-white text-sm md:text-base font-poppins-regular pb-3">
+                    Location
+                  </h3>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.google.com/maps/search/?api=1&query=483920,Mexico+Myasnitskaya+22/2/5,Office+4"
+                    className="line-clamp-2 text-xs"
+                  >
+                    483920, Mexico <br />
+                    Myasnitskaya 22/2/5, Office 4
+                  </a>
+                </div>
+              </div>
+
+              <IconBar className="max-w-[90px] self-end" />
+            </div>
           </motion.div>
         </motion.aside>
       )}

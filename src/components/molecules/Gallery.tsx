@@ -27,7 +27,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="max-width relative w-[90vw] md:w-[80vw] lg:w-[70vw] h-[200px] md:h-[320px] lg:h-[420px] aspect-[16/9] mb-6 text-white px-6 md:px-20 lg:px-[15vw]">
+    <div className="max-width relative w-[90vw] md:w-[80vw] lg:w-[70vw]  aspect-[3/2] md:aspect-[2/1] lg:aspect-[16/5.5] 2xl:aspect-[16/5] mb-6 text-white px-6 md:px-20 lg:px-[15vw]">
       <AnimatePresence>
         {currentIndex % 2 === 0 && (
           <GalleryItem index={currentIndex} images={images} key="zero" />

@@ -96,7 +96,7 @@ const Home: FC<Props> = (props: Props) => {
           </motion.div>
         ) : (
           <motion.div
-            className="relative flex flex-col md:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 h-full"
+            className="relative flex flex-col gap-24 lg:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 h-full pt-10 2xl:pt-0 min-h-[660px]"
             key="body"
             {...exitAnimation}
           >
@@ -110,7 +110,7 @@ const Home: FC<Props> = (props: Props) => {
                 priority
                 className="w-[110px] md:w-auto"
               />
-              <div className="flex flex-col lg:flex-row gap-6">
+              <div className="flex flex-col lg:flex-row gap-">
                 <div className="flex flex-row md:flex-col-reverse items-end md:items-start md:gap-3 justify-between md:justify-start">
                   <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9">
                     Our Mission

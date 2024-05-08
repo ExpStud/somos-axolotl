@@ -52,7 +52,7 @@ const HeaderContent: FC<Props> = (props: Props) => {
         <AnimatePresence>
           {openMenu && (
             <motion.div
-              className="-z-10 fixed inset-0 bg-[#030303] bg-opacity-50 "
+              className="-z-10 fixed inset-0 bg-[#030303] bg-opacity-70 "
               onClick={() => setOpenMenu(false)}
               {...midExitAnimation}
             />
