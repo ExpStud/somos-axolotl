@@ -42,11 +42,11 @@ const Description: FC<Props> = (props: Props) => {
           />
         </div>
         <Image
-          src="/images/axolotl.png"
+          src="/images/landing/axolotl.png"
           alt="Axolotl"
-          width={587}
-          height={640}
-          className="z-0 rotate-36 absolute -right-40 -top-28  xs:-right-48 xs:-top-36 lg:-right-16 lg:-top-16 xl:top-[100px] xl:right-[10vw] 3xl:top-[5vw] 3xl:right-[20vw] 3xl:scale-150"
+          width={1797 * 0.5}
+          height={1714 * 0.5}
+          className="z-0 rotate-36 absolute -right-28 -top-36 xs:-right-48 xs:-top-36 lg:-right-16 lg:-top-16 xl:right-[10vw] 3xl:right-[20vw] 3xl:scale-150"
         />
       </div>
     </div>

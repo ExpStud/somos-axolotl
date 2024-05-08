@@ -22,7 +22,7 @@ const Infographics: FC<Props> = (props: Props) => {
       </h2>
       <div className="hscroll relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-2">
         {infographicsData.map((data, index) => (
-          <InfographicsCard data={data} key={index} />
+          <InfographicsCard data={data} key={index} index={index} />
         ))}
       </div>
     </div>
@@ -31,16 +31,23 @@ const Infographics: FC<Props> = (props: Props) => {
 
 interface ICProps {
   data: InfographicsDataType;
+  index: number;
 }
 const InfographicsCard: FC<ICProps> = (props: ICProps) => {
-  const { data } = props;
+  const { data, index } = props;
   const [winWidth, winHeight] = useWindowSize();
 
   const { setShowModal } = useContext(ViewContext);
 
   return (
     <div
-      className="info-gradient relative rounded-[32px] cursor-pointer overflow-hidden flex flex-col justify-end px-8 py-6 gap-3 min-w-[228px] min-h-[342px]"
+      className={`info-gradient relative cursor-pointer overflow-hidden flex flex-col justify-end px-8 py-6 gap-3 min-w-[228px] min-h-[342px] ${
+        index === 0
+          ? "rounded-bl-[100px]"
+          : index === 2
+          ? "rounded-tr-[100px]"
+          : ""
+      }`}
       style={{
         width: winWidth >= 1024 ? 400 * 0.9 : 228,
         height: winWidth >= 1024 ? 600 * 0.9 : 342,
@@ -57,7 +64,7 @@ const InfographicsCard: FC<ICProps> = (props: ICProps) => {
       <Image
         src={data.displayImage}
         alt="Axolotl"
-        className="absolute object-cover rounded-[32px] transition-500 hover:scale-110 -z-[1]"
+        className="absolute object-cover  transition-500 hover:scale-110 -z-[1]"
         fill
       />
     </div>
