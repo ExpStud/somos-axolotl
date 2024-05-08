@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useRef, useState } from "react";
 import {
   PageHead,
   Header,
@@ -33,6 +33,8 @@ const PageLayout: FC<Props> = (props: Props) => {
     headerBackground,
   } = props;
 
+  const headerRef = useRef(null);
+
   //context for splash screen & modals
   const [showView, setShowView] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<InfographicsDataType | null>(null);
@@ -57,7 +59,11 @@ const PageLayout: FC<Props> = (props: Props) => {
           twitter="twitterhandle"
         />
         {/* header */}
-        <Header type={headerType} background={headerBackground} />
+        <Header
+          type={headerType}
+          background={headerBackground}
+          headerRef={headerRef}
+        />
 
         {/* body */}
         <motion.main
@@ -87,6 +93,7 @@ const PageLayout: FC<Props> = (props: Props) => {
               show={showModal !== null}
               data={showModal}
               close={() => setShowModal(null)}
+              headerRef={headerRef}
             />
           )}
         </AnimatePresence>

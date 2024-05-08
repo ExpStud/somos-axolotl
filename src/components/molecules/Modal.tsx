@@ -1,34 +1,76 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FC, ReactNode, useEffect, HTMLAttributes } from "react";
-import {
-  modalFadeAnimation,
-  midClickAnimation,
-  scaleExitAnimation,
-} from "@constants";
-import Image from "next/image";
+import { scaleExitAnimation } from "@constants";
 interface Props extends HTMLAttributes<HTMLDivElement> {
   show: boolean;
   children: ReactNode;
+  headerRef: React.RefObject<HTMLDivElement>;
 }
 const Modal: FC<Props> = (props: Props) => {
-  const { show, children, className, ...componentProps } = props;
+  const { show, children, headerRef, className, ...componentProps } = props;
 
-  //stop page scroll (when modal or menu open)
+  // useEffect(() => {
+  //   if (show) {
+  //     // Get the scrollbar width
+  //     const scrollbarWidth =
+  //       window.innerWidth - document.documentElement.clientWidth;
+
+  //     // Hide the scrollbar and compensate for the scrollbar width
+  //     document.body.style.overflow = "hidden";
+  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
+  //   }
+
+  //   return () => {
+  //     // Show the scrollbar and remove the padding
+  //     document.body.style.overflow = "";
+  //     document.body.style.paddingRight = "";
+  //   };
+  // }, [show]);
+
+  // //stop page scroll (when modal or menu open)
+  // useEffect(() => {
+  //   // Get the scrollbar width
+  //   const scrollbarWidth =
+  //     window.innerWidth - document.documentElement.clientWidth;
+  //   if (show) {
+  //     // Hide the scrollbar and compensate for the scrollbar width
+  //     document.body.style.overflow = "hidden";
+  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
+  //     // Add padding to the header
+  //     if (headerRef.current) {
+  //       const preexistingPadding = parseInt(
+  //         window.getComputedStyle(headerRef.current).paddingRight,
+  //         10
+  //       );
+  //       headerRef.current.style.paddingRight = `${
+  //         preexistingPadding + scrollbarWidth
+  //       }px`;
+  //     }
+  //   }
+
+  //   return () => {
+  //     // Show the scrollbar and remove the padding
+  //     document.body.style.overflow = "";
+  //     document.body.style.paddingRight = "";
+
+  //     // Reset padding of the header
+  //     if (headerRef.current) {
+  //       const preexistingPadding = parseInt(
+  //         window.getComputedStyle(headerRef.current).paddingRight,
+  //         10
+  //       );
+  //       headerRef.current.style.paddingRight = `${
+  //         preexistingPadding - scrollbarWidth
+  //       }px`;
+  //     }
+  //   };
+  // }, [show]);
+
   useEffect(() => {
-    if (show) {
-      // Get the scrollbar width
-      const scrollbarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
-
-      // Hide the scrollbar and compensate for the scrollbar width
-      document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-    }
+    if (show) document.body.style.overflow = "hidden";
 
     return () => {
-      // Show the scrollbar and remove the padding
-      document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
+      document.body.style.overflow = "auto";
     };
   }, [show]);
 

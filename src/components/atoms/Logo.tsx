@@ -10,7 +10,7 @@ const Logo: FC = () => {
       className="my-0 flex items-center gap-2 cursor-pointer"
       {...enterAnimation}
     >
-      <Link href="#home">
+      <Link href="/">
         <Image
           src="/images/logos/sm-yellow.svg"
           height={34.31}

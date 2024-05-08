@@ -12,10 +12,11 @@ interface Props {
   showHeader?: boolean;
   type?: string;
   background?: string;
+  headerRef: React.RefObject<HTMLDivElement>;
 }
 
 const Header: FC<Props> = (props: Props) => {
-  const { type = "absolute", showHeader = true, background } = props;
+  const { type = "absolute", showHeader = true, background, headerRef } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
   const [winWidth] = useWindowSize();
@@ -89,7 +90,6 @@ const Header: FC<Props> = (props: Props) => {
     const width = winWidth;
     setNumRepeats(Math.ceil(width / (textWidth + gap)));
   }, [winWidth]);
-  const x = useTransform(scrollYProgress, [0, 1], [0, -textWidth * numRepeats]);
 
   return (
     <header
@@ -99,14 +99,14 @@ const Header: FC<Props> = (props: Props) => {
       `}
     >
       {type !== "scroll" ? (
-        <HeaderContent background={background} />
+        <HeaderContent background={background} headerRef={headerRef} />
       ) : (
         <motion.div
           variants={headerVariants}
           initial={showHeader ? "show" : "hidden"}
           animate={animateHeader ? "show" : "hidden"}
         >
-          <HeaderContent background={background} />
+          <HeaderContent background={background} headerRef={headerRef} />
         </motion.div>
       )}
       <div className="h-[37px] w-full bg-somos-blue text-somos-orange text-xl overflow-hidden flex items-center font-karantina">

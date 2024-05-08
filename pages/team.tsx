@@ -2,7 +2,7 @@ import { PageLayout, AboutView } from "@components";
 import { NextPage } from "next";
 import { useState } from "react";
 
-const Home: NextPage = () => {
+const Team: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([false]);
 
   return (
@@ -16,4 +16,4 @@ const Home: NextPage = () => {
     </PageLayout>
   );
 };
-export default Home;
+export default Team;

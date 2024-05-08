@@ -9,10 +9,11 @@ import { useOutsideAlerter } from "@hooks";
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
   open: boolean;
+  headerRef: React.RefObject<HTMLDivElement>;
 }
 
 const Menu: FC<Props> = (props: Props) => {
-  const { toggleMenu, open } = props;
+  const { toggleMenu, open, headerRef } = props;
   const [winWidth, winHeight] = useWindowSize();
   const timeoutRef = useRef<NodeJS.Timeout>();
   const ref = useRef(null);
@@ -22,21 +23,49 @@ const Menu: FC<Props> = (props: Props) => {
   const isTablet: boolean = winWidth < 900;
 
   //stop page scroll (when modal or menu open)
-  useEffect(() => {
-    if (open) {
-      // Get the scrollbar width
-      const scrollbarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
+  // useEffect(() => {
+  //   // Get the scrollbar width
+  //   const scrollbarWidth =
+  //     window.innerWidth - document.documentElement.clientWidth;
+  //   if (open) {
+  //     // Hide the scrollbar and compensate for the scrollbar width
+  //     document.body.style.overflow = "hidden";
+  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
+  //     // Add padding to the header
+  //     if (headerRef.current) {
+  //       const preexistingPadding = parseInt(
+  //         window.getComputedStyle(headerRef.current).paddingRight,
+  //         10
+  //       );
+  //       headerRef.current.style.paddingRight = `${
+  //         preexistingPadding + scrollbarWidth
+  //       }px`;
+  //     }
+  //   }
 
-      // Hide the scrollbar and compensate for the scrollbar width
-      document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-    }
+  //   return () => {
+  //     // Show the scrollbar and remove the padding
+  //     document.body.style.overflow = "";
+  //     document.body.style.paddingRight = "";
+
+  //     // Reset padding of the header
+  //     if (headerRef.current) {
+  //       const preexistingPadding = parseInt(
+  //         window.getComputedStyle(headerRef.current).paddingRight,
+  //         10
+  //       );
+  //       headerRef.current.style.paddingRight = `${
+  //         preexistingPadding - scrollbarWidth
+  //       }px`;
+  //     }
+  //   };
+  // }, [open]);
+
+  useEffect(() => {
+    if (open) document.body.style.overflow = "hidden";
 
     return () => {
-      // Show the scrollbar and remove the padding
-      document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
+      document.body.style.overflow = "auto";
     };
   }, [open]);
 
@@ -54,7 +83,7 @@ const Menu: FC<Props> = (props: Props) => {
             opacity: 1,
           }}
           transition={{ duration: 0.7 }}
-          className=" bg-custom-black fixed top-0 right-0 z-50 lg:shadow-xl font-daysOne lg:shadow-gray-600"
+          className=" bg-[#1A0E06] fixed top-0 right-0 z-50 "
           onClick={() => toggleMenu(false)}
           ref={ref}
         >
@@ -66,10 +95,11 @@ const Menu: FC<Props> = (props: Props) => {
             exit="closed"
           >
             <div className="absolute left-1/2 top-[45%] transform -translate-x-1/2 -translate-y-1/2  flex flex-col items-center justify-start text-4xl sm:text-6xl gap-2">
-              {/* <NavItem href="/about">About</NavItem> */}
-              {/* <NavItem href="/more">More</NavItem> */}
+              <NavItem href="/">Mission</NavItem>
+              <NavItem href="/">Team</NavItem>
+              <NavItem href="/">Donate</NavItem>
             </div>
-            <IconBar className="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 bottom-3" />
+            <IconBar className="max-w-[90px]" />
           </motion.div>
         </motion.aside>
       )}

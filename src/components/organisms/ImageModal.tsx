@@ -7,13 +7,14 @@ interface Props {
   show: boolean;
   data: InfographicsDataType;
   close: () => void;
+  headerRef: React.RefObject<HTMLDivElement>;
 }
 
 const ImageModal: FC<Props> = (props: Props) => {
-  const { show, data, close } = props;
+  const { show, data, close, headerRef } = props;
 
   return (
-    <Modal show={show} onClick={() => close()}>
+    <Modal show={show} onClick={() => close()} headerRef={headerRef}>
       <div className="z-10 h-full w-full pt-24 flex flex-col gap-10 pb-6">
         <Image src={data.icon} alt="Icon" width={106} height={106} />
         <h3 className="text-white text-2xl lg:text-[32px] font-poppins-semibold">
