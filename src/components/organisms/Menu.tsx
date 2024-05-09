@@ -79,10 +79,10 @@ const Menu: FC<Props> = (props: Props) => {
           animate={{ width: isTablet ? winWidth : 610, opacity: 1 }}
           exit={{
             width: 0,
-            transition: { duration: 0.5 },
+            transition: { duration: 0.3 },
             opacity: 1,
           }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
           className=" bg-[#1A0E06] fixed top-0 right-0 z-50 "
           // onClick={() => toggleMenu(false)}
           ref={ref}

@@ -16,7 +16,7 @@ const Donate: FC<Props> = (props: Props) => {
       await navigator.clipboard.writeText(address);
       setCopied(true);
     } catch (err) {
-      console.error("Failed to copy text: ", err);
+      alert("Failed to copy text");
     }
   };
 
@@ -61,7 +61,9 @@ const Donate: FC<Props> = (props: Props) => {
                   height={26}
                   alt="Copy"
                 />
-                <p>G4Qu1wAd6pm......9Z8U8ZnmqC</p>
+                <p className="text-xs lg:text-sm font-poppins-regular">
+                  G4Qu1wAd6pm......9Z8U8ZnmqC
+                </p>
               </div>
             ) : (
               <> 💰 Donate</>

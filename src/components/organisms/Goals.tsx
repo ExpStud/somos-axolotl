@@ -28,15 +28,9 @@ const Goals: FC<Props> = (props: Props) => {
             height={18}
             alt="Brown Squares"
           />
-          <h2 className="">
-            The <br className="lg:hidden" />
-            Regeneration Goals
-          </h2>
+          <h2 className="">Our Approach</h2>
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex flex-col gap-2 max-w-[520px]">
-              <p className="text-somos-brown-dark font-poppins-semibold text-base">
-                Our Approach
-              </p>
               <p className="">
                 Somos Axolotl is using the power of art and technology to create
                 new pathways toward sustainability for the Xochimilco community.

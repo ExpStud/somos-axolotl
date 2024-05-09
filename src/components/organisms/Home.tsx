@@ -55,6 +55,15 @@ const Home: FC<Props> = (props: Props) => {
     };
   }, []);
 
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  // const isMobile = /* your condition for mobile devices */;
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []);
+
   return (
     <div
       id="home"
@@ -63,20 +72,23 @@ const Home: FC<Props> = (props: Props) => {
     >
       {/* TODO: add bg video */}
       <div className="absolute inset-0 bg-black bg-opacity-75 -z-[5]"></div>
-      <Image
+
+      {/* <Image
         src="/images/landing/intro-xs.jpg"
         alt="EXP"
         fill
         className="object-cover opacity-100 overflow-hidden -z-10"
         onLoad={() => handleAssetLoad(0, setAssets)}
-      />
+      /> */}
       <motion.video
+        ref={videoRef}
         src={`/videos/${
           isMobile ? "intro-video-xs.mp4" : "intro-video-sm.mp4"
         }`}
         autoPlay
         loop
         muted
+        playsInline
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover -z-[8]"
         {...midEnterAnimation}

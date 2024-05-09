@@ -29,7 +29,7 @@ const Footer: FC = () => {
             href="https://twitter.com/exp_studio_"
             className="text-sm"
           >
-            Powered by EXP
+            ℗ Powered by EXP
           </a>
         </div>
 
@@ -85,7 +85,7 @@ const Footer: FC = () => {
           href="https://twitter.com/exp_studio_"
           className="text-sm"
         >
-          Powered by EXP
+          ℗ Powered by EXP
         </a>
       </div>
     </footer>

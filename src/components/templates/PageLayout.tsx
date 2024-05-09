@@ -48,7 +48,7 @@ const PageLayout: FC<Props> = (props: Props) => {
   return (
     <ViewContext.Provider value={{ ...value, showModal: null }}>
       <div
-        className={`flex flex-col min-h-screen h-full justify-between overflow-none ${
+        className={`flex flex-col min-h-screen h-full justify-between  ${
           fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
         }`}
       >

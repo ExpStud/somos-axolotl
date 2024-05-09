@@ -41,7 +41,7 @@ const team: Team[] = [
   {
     id: "cass",
     name: "Casson Trenor",
-    text: `Giovanna Gonzalez is a Mexican artist and activist who specializes in large-scale productions that drive awareness and catalyze environmental action. She is known for her innovative community empowerment initiatives which have led to the adoption of cutting-edge sustainability practices in Vietnam, Morocco, Sri Lanka and Mexico.`,
+    text: `Casson Trenor is a career environmental activist and winner of the TIME Magazine “Hero of the Environment” award. He works to support conservation causes around the world, and specializes in art- and tech-driven impact projects. He has worked in the web3 space since 2019 and has produced numerous projects that harness the power and promise of blockchain to make the world a better place.`,
     src: "/images/about/cass.png",
     mobile: "/images/about/cass-sm.png",
     direction: "right",
@@ -196,7 +196,7 @@ const TeamCard: FC<Props> = (props: Props) => {
     <div
       className={`relative flex items-start justify-end pl-6 pr-3 lg:px-10 w-[344px] lg:w-[960px] max-h-[590px] lg:max-h-[480px] aspect-[1.2/2] lg:aspect-[2/1] rotate-1 lg:rotate-0`}
     >
-      <div className="flex flex-col items-start justify-center gap-5 lg:pt-24 lg:pb-8 lg:w-[54%] pt-12 lg:rotate-1 pr-3 lg:pr-8  mt-[290px] lg:-mt-12">
+      <div className="flex flex-col items-start justify-center gap-5 lg:pt-24 lg:pb-8 lg:w-[54%] pt-12 lg:rotate-1 pr-3 lg:pr-8  mt-[280px] lg:-mt-14">
         <div className="flex flex-row lg:flex-col items-start justify-center gap-1 lg:gap-5">
           <Image
             src="/images/design/pattern-yellow.svg"

@@ -14,7 +14,7 @@ const Infographics: FC<Props> = (props: Props) => {
     <div
       className={`relative w-screen flex flex-col items-start md:items-center gap-10 z-10 ${className}`}
     >
-      <h2 className="text-center max-w-[665px]">
+      <h2 className="self-center text-center max-w-[665px]">
         Our work in <span className="text-somos-red">Xochimilco</span>{" "}
         {/* <span className="text-somos-orange">lorem ipsum,</span>{" "} */}
         <br /> <span className="text-somos-teal">(where the</span>{" "}
@@ -41,7 +41,7 @@ const InfographicsCard: FC<ICProps> = (props: ICProps) => {
 
   return (
     <div
-      className={`info-gradient relative cursor-pointer overflow-hidden flex flex-col justify-end px-8 py-6 gap-3 min-w-[228px] min-h-[342px] ${
+      className={`info-gradient relative cursor-pointer overflow-hidden flex flex-col justify-end px-8 py-8 lg:py-6 gap-3 min-w-[228px] min-h-[342px]  ${
         index === 0
           ? "rounded-bl-[100px]"
           : index === 2
@@ -64,7 +64,13 @@ const InfographicsCard: FC<ICProps> = (props: ICProps) => {
       <Image
         src={data.displayImage}
         alt="Axolotl"
-        className="absolute object-cover  transition-500 hover:scale-110 -z-[1]"
+        className={`absolute object-cover  transition-500 hover:scale-110 -z-[1]  ${
+          index === 0
+            ? "rounded-bl-[100px]"
+            : index === 2
+            ? "rounded-tr-[100px]"
+            : ""
+        }`}
         fill
       />
     </div>

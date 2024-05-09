@@ -41,7 +41,7 @@ const HeaderContent: FC<Props> = (props: Props) => {
               key="close-icon"
               onClick={() => setOpenMenu(false)}
               className="cursor-pointer z-[100] w-[72px] h-[24p] text-sm col-centered border border-somos-brown rounded"
-              {...midExitAnimation}
+              // {...midExitAnimation}
             >
               Close X
             </motion.div>

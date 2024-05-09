@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import { useState } from "react";
 
 const Home: NextPage = () => {
-  const [assets, setAssets] = useState<boolean[]>([false]);
+  const [assets, setAssets] = useState<boolean[]>([]);
 
   const [isHomeInView, setIsHomeInView] = useState(true);
 
