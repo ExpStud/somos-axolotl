@@ -149,7 +149,7 @@ html {
 
 /* custom */
 .teal-hover-dark {
-  @apply bg-somos-teal hover:bg-somos-teal-600 active:bg-somos-teal-800; 
+  @apply bg-somos-teal hover:bg-somos-teal-600 active:bg-somos-teal-800 disabled:hover:bg-somos-teal; 
 }
 .teal-light {
   @apply bg-somos-teal hover:bg-somos-teal-400 active:bg-somos-teal-300; 

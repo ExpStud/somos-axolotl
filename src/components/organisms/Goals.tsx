@@ -15,7 +15,7 @@ const Goals: FC<Props> = (props: Props) => {
         max-w-[400px] sm:max-w-[500px] lg:max-w-[1245px]"
       >
         <Image
-          src="/images/temp.png"
+          src="/images/landing/statue.jpg"
           alt="Donate"
           width={winWidth < 640 ? 344 : 562}
           height={winWidth < 640 ? 391 : 391}

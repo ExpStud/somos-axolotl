@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from "react";
+import { FC, HTMLAttributes, useEffect, useState } from "react";
 import Image from "next/image";
 import { useWindowSize } from "src/hooks";
 
@@ -6,7 +6,31 @@ interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const Donate: FC<Props> = (props: Props) => {
   const { className } = props;
-  const [winWidth, winHeight] = useWindowSize();
+
+  const [copied, setCopied] = useState<boolean>(false);
+  const [winWidth] = useWindowSize();
+  const address = "G4Qu1wAd6pmCVYc1WckS8dxffv9ooaAfW49Z8U8ZnmqC";
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(address);
+      setCopied(true);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    if (copied) {
+      timeoutId = setTimeout(() => setCopied(false), 5000);
+    }
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [copied]);
 
   return (
     <div className={`col-centered relative w-screen ${className}`} id="donate">
@@ -18,17 +42,33 @@ const Donate: FC<Props> = (props: Props) => {
           <div className="row-centered text-white border-[0.85px] border-white w-[135px] h-[24px] md:h-[32px] text-sm md:rounded-[21px]">
             Donate & Save
           </div>
-          <h2 className="text-white max-w-[305px]"> Be part of saving lorem</h2>
-          <p className="text-white">
-            The Axolotl is a species scientists are apprehensive about going
-            extinct soon
-          </p>
-          <button className="teal-hover-dark col-centered mt-4 text-sm md:text-base rounded-xl w-full max-w-[313px] h-[40px] md:h-[48px] transition-200  text-white font-poppins-semibold">
-            💰 Donate
+          <h2 className="text-white max-w-[305px]">
+            Be part of <br />
+            the Solution
+          </h2>
+          <p className="text-white">We need your help to achieve our mission</p>
+          <button
+            className="teal-hover-dark col-centered mt-4 text-sm md:text-base rounded-xl w-full max-w-[313px] h-[40px] md:h-[48px] transition-200  text-white font-poppins-semibold"
+            onClick={handleCopy}
+            disabled={copied}
+          >
+            {copied ? (
+              <div className="flex gap-2 items-center">
+                <Image
+                  src="/images/icons/copy.png"
+                  width={26}
+                  height={26}
+                  alt="Copy"
+                />
+                <p>G4Qu1wAd6pm......9Z8U8ZnmqC</p>
+              </div>
+            ) : (
+              <> 💰 Donate</>
+            )}
           </button>
         </div>
         <Image
-          src="/images/temp.png"
+          src="/images/landing/boats-1.jpg"
           alt="Donate"
           width={winWidth < 640 ? 307 : 721}
           height={winWidth < 640 ? 292 : 504}
