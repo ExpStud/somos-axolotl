@@ -17,37 +17,35 @@ const Goals: FC<Props> = (props: Props) => {
         <Image
           src="/images/temp.png"
           alt="Donate"
-          width={winWidth < 640 ? 344 : 610}
+          width={winWidth < 640 ? 344 : 562}
           height={winWidth < 640 ? 391 : 391}
-          className="rounded-[32px] aspect-[1.75/2] sm:aspect-[3.1/2] object-cover"
+          className="aspect-[1.75/2] sm:aspect-[3.1/2] object-cover rounded-bl-[40px] rounded-tr-[40px]"
         />
         <div className="flex flex-col justify-center  gap-6 py-8 md:p-12 lg:min-w-[395px]">
-          <div className="row-centered text-somos-teal-450 border-[0.85px] border-somos-teal-450 w-[114px] md:w-[104px] h-[24px] text-sm ">
-            the solution
-          </div>
+          <Image
+            src="/images/design/squares-pink.svg"
+            width={111}
+            height={18}
+            alt="Brown Squares"
+          />
           <h2 className="">
             The <br className="lg:hidden" />
             Regeneration Goals
           </h2>
           <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 max-w-[520px]">
               <p className="text-somos-brown-dark font-poppins-semibold text-base">
-                title here
+                Our Approach
               </p>
               <p className="">
-                The Axolotl is a species scientists are apprehensive about going
-                extinct soon; they estimate that there are only about 50 to
-                1,000 left in the wild.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <p className="text-somos-brown-dark font-poppins-semibold text-base">
-                title here
-              </p>
-              <p className="">
-                The Axolotl is a species scientists are apprehensive about going
-                extinct soon; they estimate that there are only about 50 to
-                1,000 left in the wild.
+                Somos Axolotl is using the power of art and technology to create
+                new pathways toward sustainability for the Xochimilco community.
+                Our Axolotl sculptures, designed and painted by a host of
+                incredibly talented artists from across Mexico and beyond, will
+                be placed throughout Xochimilco and along major tourism routes.
+                The sculptures are designed to drive awareness and funding
+                streams to the community members and organizations working to
+                sustain and rebuild this unique and highly endangered ecosystem.
               </p>
             </div>
           </div>
