@@ -10,11 +10,14 @@ const Description: FC<Props> = (props: Props) => {
   const [winWidth] = useWindowSize();
   return (
     <div className={`relative w-screen flex justify-center  ${className}`}>
-      <div className="max-width flex flex-col lg:flex-row no-wrap pt-20 3xl:justify-between w-full">
+      <div className="max-width flex flex-col lg:flex-row no-wrap  pt-20 3xl:justify-between w-full">
         <div className="z-10 flex flex-col gap-2 max-w-[500px]">
-          <div className="row-centered text-somos-red border-[0.85px] border-somos-red w-[96px] h-[24px] text-xs ">
-            The story
-          </div>
+          <Image
+            src="/images/design/squares-blue.svg"
+            width={111}
+            height={18}
+            alt="Blue Squares"
+          />
           <h2 className="max-w-[184px] md:max-w-[270px]">
             The Somos Axolotl story.
           </h2>
