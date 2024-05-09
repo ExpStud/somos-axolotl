@@ -19,6 +19,8 @@ const partners: PartnersType[] = [
   { name: "Pontyx", image: "/images/partners/pontyx.svg", href: "/" },
   { name: "Sphere", image: "/images/partners/sphere.svg", href: "/" },
   { name: "Leap Lab", image: "/images/partners/leap.svg", href: "/" },
+  { name: "Slimes", image: "/images/partners/slimes.svg", href: "/" },
+  { name: "Mexico", image: "/images/partners/mexico.svg", href: "/" },
 ];
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
@@ -27,7 +29,8 @@ const Partners: FC<Props> = (props: Props) => {
   const { className } = props;
 
   const firstRowPartners = partners.slice(0, 3);
-  const secondRowPartners = partners.slice(3);
+  const secondRowPartners = partners.slice(3, 7);
+  const thirdRowPartners = partners.slice(7);
 
   const [winWidth] = useWindowSize();
   const size = winWidth >= 1024 ? 190 : winWidth >= 768 ? 120 : 60;
@@ -73,6 +76,25 @@ const Partners: FC<Props> = (props: Props) => {
               alt={partner.name}
               height={size}
               width={size}
+            />
+          </div>
+        ))}
+      </div>{" "}
+      <div className="flex gap-5 md:gap-10 lg:gap-20 lg:pt-8 items-center">
+        {thirdRowPartners.map((partner, index) => (
+          <div
+            className={`text-center ${
+              index < 1 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
+            }`}
+            key={index + 3}
+            // onClick={() => window.open(partner.href, "_blank")}
+          >
+            <Image
+              src={partner.image}
+              alt={partner.name}
+              height={size}
+              width={size}
+              className={`${index === 0 ? "p-3" : "p-8"}`}
             />
           </div>
         ))}

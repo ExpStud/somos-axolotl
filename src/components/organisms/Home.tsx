@@ -6,7 +6,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { handleAssetLoad } from "@utils";
 import Image from "next/image";
 import Gallery from "../molecules/Gallery";
 import { AnimatePresence, motion, useInView } from "framer-motion";
@@ -32,28 +31,28 @@ const Home: FC<Props> = (props: Props) => {
   }, [handleViewChange, isInView]);
 
   //show view timeout
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setShowView(true);
-  //   }, 1500);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
-  // }, []);
-
   useEffect(() => {
-    const handleScroll = () => {
+    const timer = setTimeout(() => {
       setShowView(true);
-      window.removeEventListener("scroll", handleScroll);
-    };
-
-    window.addEventListener("scroll", handleScroll);
+    }, 3000);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timer);
     };
   }, []);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setShowView(true);
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   // const isMobile = /* your condition for mobile devices */;

@@ -91,6 +91,8 @@ const Header: FC<Props> = (props: Props) => {
     setNumRepeats(Math.ceil(width / (textWidth + gap)));
   }, [winWidth]);
 
+  const marqueeText = "USING ART TO SAVE XOCHIMILCO";
+
   return (
     <header
       className={`top-0 z-50 transition-all duration-500 w-full h-0 ${
@@ -109,14 +111,35 @@ const Header: FC<Props> = (props: Props) => {
           <HeaderContent background={background} headerRef={headerRef} />
         </motion.div>
       )}
-      <div className="h-[37px] w-full bg-somos-blue text-somos-orange text-xl overflow-hidden flex items-center font-karantina">
-        {Array(numRepeats)
-          .fill(null) // Provide an argument to fill()
-          .map((_, i) => (
-            <span key={i} className=" mx-6 md:mr-0 md:ml-14 whitespace-nowrap">
-              USING ART TO SAVE XOCHIMILCO
-            </span>
-          ))}
+      <div className="h-[37px] w-full bg-somos-blue relative">
+        <motion.div
+          className="h-full text-somos-orange text-xl overflow-hidden flex items-center font-karantina absolute"
+          initial={{ x: "0%" }} // Start from the right edge of the text
+          animate={{ x: "-100%" }} // Move to the left edge of the text
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        >
+          {Array(numRepeats)
+            .fill(marqueeText)
+            .map((text, i) => (
+              <span key={i} className="mx-6 md:mr-0 md:ml-14 whitespace-nowrap">
+                {text}
+              </span>
+            ))}
+        </motion.div>
+        <motion.div
+          className="h-full text-somos-orange text-xl overflow-hidden flex items-center font-karantina absolute"
+          initial={{ x: "100%" }} // Start from the right edge of the text
+          animate={{ x: "0%" }} // Move to the left edge of the text
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        >
+          {Array(numRepeats)
+            .fill(marqueeText)
+            .map((text, i) => (
+              <span key={i} className="mx-6 md:mr-0 md:ml-14 whitespace-nowrap">
+                {text}
+              </span>
+            ))}
+        </motion.div>
       </div>
     </header>
   );
