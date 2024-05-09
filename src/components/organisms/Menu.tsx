@@ -94,10 +94,13 @@ const Menu: FC<Props> = (props: Props) => {
             animate="open"
             exit="closed"
           >
-            <div className="flex flex-col items-start justify-start text-4xl sm:text-6xl gap-10 font-poppins-regular">
+            <div
+              className="flex flex-col items-start justify-start text-4xl sm:text-6xl gap-10 font-poppins-regular"
+              onClick={() => toggleMenu(false)}
+            >
               <NavItem href="/">Mission</NavItem>
               <NavItem href="/team">Team</NavItem>
-              <NavItem href="/donate">Donate</NavItem>
+              <NavItem href="/#donate">Donate</NavItem>
             </div>
             <div className="flex flex-col gap-6">
               <Image

@@ -49,7 +49,7 @@ const Description: FC<Props> = (props: Props) => {
           alt="Axolotl"
           width={1797 * 0.5}
           height={1714 * 0.5}
-          className="z-0 rotate-36 absolute -right-28 -top-36 xs:-right-48 xs:-top-36 lg:-right-16 lg:-top-16 xl:right-[10vw] 3xl:right-[20vw] 3xl:scale-150"
+          className="z-0 rotate-36 absolute -right-28 -top-36 xs:-right-48 xs:-top-[300px] lg:-right-[240px] xl:-top-[180px] xl:-right-[10px] 2xl:right-[10 vw] 2xl:-top-[120px] 3xl:right-[20vw] 3xl:scale-150"
         />
       </div>
     </div>

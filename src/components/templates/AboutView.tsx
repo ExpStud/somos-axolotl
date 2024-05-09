@@ -17,7 +17,7 @@ const AboutView: FC<Props> = (props: Props) => {
   const { setAssets } = props;
 
   return (
-    <div className="z-[1] w-full h-full flex flex-col items-center justify-center mt-[80px]">
+    <div className="z-[1] w-full min-h-[150vh] flex flex-col items-center justify-center mt-[80px]">
       <AboutDescription />
       <TeamHeader />
 

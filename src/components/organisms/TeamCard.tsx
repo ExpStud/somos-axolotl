@@ -78,7 +78,7 @@ const TeamCard: FC<Props> = (props: Props) => {
             Scum <br /> Matt Martinez
           </p>
 
-          <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-8`}>
+          <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-8 lg:pl-0`}>
             <a href={"/"} rel="noreferrer" target="_blank">
               <Image
                 src="/images/icons/fb-brown.svg"

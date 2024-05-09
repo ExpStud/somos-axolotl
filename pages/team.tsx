@@ -10,7 +10,7 @@ const Team: NextPage = () => {
       footer
       assets={assets}
       headerType={"fixed"}
-      headerBackground={"bg-somos-blue"}
+      // headerBackground={"bg-somos-blue"}
     >
       <AboutView setAssets={setAssets} />
     </PageLayout>

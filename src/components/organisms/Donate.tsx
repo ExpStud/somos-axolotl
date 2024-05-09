@@ -33,7 +33,7 @@ const Donate: FC<Props> = (props: Props) => {
   }, [copied]);
 
   return (
-    <div className={`col-centered relative w-screen ${className}`} id="donate">
+    <div className={`col-centered relative w-screen ${className}`}>
       <div
         className="flex flex-col-reverse xl:flex-row items-center justify-evenly rounded-[32px] bg-somos-blue p-4 md:p-0  
         max-w-[345px] sm:max-w-[500px] xl:max-w-[1245px]"
@@ -51,6 +51,7 @@ const Donate: FC<Props> = (props: Props) => {
             className="teal-hover-dark col-centered mt-4 text-sm md:text-base rounded-xl w-full max-w-[313px] h-[40px] md:h-[48px] transition-200  text-white font-poppins-semibold"
             onClick={handleCopy}
             disabled={copied}
+            id="donate"
           >
             {copied ? (
               <div className="flex gap-2 items-center">
