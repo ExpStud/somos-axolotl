@@ -47,7 +47,7 @@ const Donate: FC<Props> = (props: Props) => {
           <div className="row-centered text-white border-[0.85px] border-white w-[135px] h-[24px] md:h-[32px] text-sm md:rounded-[21px]">
             {t("DONATE_HEADER")}
           </div>
-          <h2 className="text-white max-w-[250px]">{t("DONATE_TITLE")}</h2>
+          <h2 className="text-white max-w-[377px]">{t("DONATE_TITLE")}</h2>
           <p className="text-white">{t("DONATE_DESC")}</p>
           <button
             className="teal-hover-dark col-centered mt-4 text-sm md:text-base rounded-xl w-full max-w-[313px] h-[40px] md:h-[48px] transition-200  text-white font-poppins-semibold"
