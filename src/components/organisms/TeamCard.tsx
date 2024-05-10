@@ -22,8 +22,8 @@ const team: Team[] = [
     id: "scum",
     name: "Scum Matt Martinez",
     text: `Matt "Scum" Martinez is a Solana success story: a digital artist who found his medium, inspiration, and audience in the world of web3. He was the highest selling artist for the year of 2023 & believes unequivocally in the power of web3 technology to change peoples lives.`,
-    src: "/images/about/scum-3xl.png",
-    mobile: "/images/about/scum-sm-1.png",
+    src: "/images/about/scum-2.png",
+    mobile: "/images/about/scum-sm-2.png",
     direction: "right",
     backgroundColor: "",
     accentColor: "#41240F",
@@ -32,8 +32,8 @@ const team: Team[] = [
     id: "gio",
     name: "Giovanna Gonzalez",
     text: `Giovanna Gonzalez is a Mexican artist and activist who specializes in large-scale productions that drive awareness and catalyze environmental action. She is known for her innovative community empowerment initiatives which have led to the adoption of cutting-edge sustainability practices in Vietnam, Morocco, Sri Lanka and Mexico.`,
-    src: "/images/about/gio.png",
-    mobile: "/images/about/gio-sm.png",
+    src: "/images/about/gio-1.png",
+    mobile: "/images/about/gio-sm-1.png",
     direction: "left",
     backgroundColor: "",
     accentColor: "#FE6375",
@@ -78,7 +78,7 @@ const TeamCard: FC<Props> = (props: Props) => {
             Scum <br /> Matt Martinez
           </p>
 
-          <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-8 lg:pl-0`}>
+          <div className={`grid grid-cols-2 gap-1 lg:gap-3 pl-14 lg:pl-0`}>
             {/* <a href={"/"} rel="noreferrer" target="_blank">
               <Image
                 src="/images/icons/fb-brown.svg"
@@ -122,7 +122,7 @@ const TeamCard: FC<Props> = (props: Props) => {
             alt="Brown Squares"
             className=""
           />
-          <p className="text-somos-brown-dark text-xs lg:text-base">
+          <p className="text-somos-brown-dark text-xs lg:text-base pr-2 lg:pr-0">
             {team[0].text}
           </p>
         </div>
@@ -139,9 +139,11 @@ const TeamCard: FC<Props> = (props: Props) => {
 
   if (id === "gio") {
     return (
-      <div className={`${containerClass} ml-3`}>
+      <div
+        className={`${containerClass} ml-3 w-[344px] h-[575px] lg:w-[960px] lg:h-[464.5px]`}
+      >
         {/* left column */}
-        <div className="flex lg:flex-col items-center lg:items-start justify-start  gap-2 lg:gap-5 lg:w-1/3 lg:pt-24 pb-4 lg:pb-0  mt-[350px] lg:mt-0">
+        <div className="flex lg:flex-col items-center lg:items-start justify-start  gap-2 lg:gap-5 lg:w-1/3 lg:pt-24 pb-4 lg:pb-0  mt-[340px] lg:mt-0">
           <Image
             src="/images/design/pattern-pink.svg"
             width={patternSize}
@@ -152,7 +154,7 @@ const TeamCard: FC<Props> = (props: Props) => {
             {team[1].name}
           </p>
 
-          <div className={`grid grid-cols-2 gap-1 lg:gap-3 pl-3 lg:pl-0`}>
+          <div className={`grid grid-cols-2 gap-1 lg:gap-3 pl-8 lg:pl-0`}>
             {/* <a href={"/"} rel="noreferrer" target="_blank">
               <Image
                 src="/images/icons/fb-pink.svg"
@@ -195,7 +197,9 @@ const TeamCard: FC<Props> = (props: Props) => {
             height={18}
             alt="Brown Squares"
           />
-          <p className="text-white text-xs lg:text-base">{team[1].text}</p>
+          <p className="text-white text-xs lg:text-base pr-2 lg:pr-0">
+            {team[1].text}
+          </p>
         </div>
         {/* bg image */}
         <Image

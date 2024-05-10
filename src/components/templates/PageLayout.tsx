@@ -6,7 +6,7 @@ import {
   SplashScreen,
   ImageModal,
 } from "@components";
-import { enterAnimation } from "@constants";
+import { enterAnimation, midExitAnimation } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewContext } from "@contexts";
 import { InfographicsDataType } from "@types";
@@ -94,6 +94,15 @@ const PageLayout: FC<Props> = (props: Props) => {
               data={showModal}
               close={() => setShowModal(null)}
               headerRef={headerRef}
+            />
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {showModal && (
+            <motion.div
+              className="z-10 fixed inset-0 bg-[#030303] bg-opacity-70 "
+              onClick={() => setShowModal(null)}
+              {...midExitAnimation}
             />
           )}
         </AnimatePresence>

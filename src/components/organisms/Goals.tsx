@@ -43,7 +43,12 @@ const Goals: FC<Props> = (props: Props) => {
               </p>
             </div>
           </div>
-          <div className="row-centered hover-brown gap-3 mt-4 text-sm  rounded-[34px] w-full sm:max-w-[268px] h-[40px] cursor-pointer text-white">
+          <a
+            href="https://www.instagram.com/somos_axolotl"
+            rel="noreferrer"
+            target="_blank"
+            className="row-centered hover-brown gap-3 mt-4 text-sm  rounded-[34px] w-full sm:max-w-[268px] h-[40px] cursor-pointer text-white"
+          >
             <svg
               width="18"
               height="18"
@@ -65,7 +70,7 @@ const Goals: FC<Props> = (props: Props) => {
               />
             </svg>
             <p>Follow our latest updates</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>

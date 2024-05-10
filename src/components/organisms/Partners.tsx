@@ -8,18 +8,18 @@ type PartnersType = {
   href: string;
 };
 const partners: PartnersType[] = [
-  { name: "Solana", image: "/images/partners/solana.svg", href: "/" },
+  { name: "Slimes", image: "/images/partners/slimes.svg", href: "/" },
   {
     name: "Santuario Ajolote",
     image: "/images/partners/santuario.svg",
     href: "/",
   },
-  { name: "Maya Moon", image: "/images/partners/mayamoon.svg", href: "/" },
+  { name: "Solana", image: "/images/partners/solana.svg", href: "/" },
   { name: "Roel", image: "/images/partners/roel.svg", href: "/" },
   { name: "Pontyx", image: "/images/partners/pontyx.svg", href: "/" },
   { name: "Sphere", image: "/images/partners/sphere.svg", href: "/" },
   { name: "Leap Lab", image: "/images/partners/leap.svg", href: "/" },
-  { name: "Slimes", image: "/images/partners/slimes.svg", href: "/" },
+  { name: "Maya Moon", image: "/images/partners/mayamoon.svg", href: "/" },
   { name: "Brasil", image: "/images/partners/brasil.svg", href: "/" },
 ];
 
@@ -44,14 +44,13 @@ const Partners: FC<Props> = (props: Props) => {
         In publishing and graphic design, Lorem ipsum is a placeholder text
         commonly used to demonstrate the visual
       </p>
-      <div className="flex gap-5 md:gap-10 lg:gap-20 pt-8">
+      <div className="flex items-center gap-5 md:gap-10 lg:gap-20 pt-8">
         {firstRowPartners.map((partner, index) => (
           <div
             className={`text-center ${
               index < 2 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
             }`}
             key={index}
-            // onClick={() => window.open(partner.href, "_blank")}
           >
             <Image
               src={partner.image}
@@ -69,7 +68,6 @@ const Partners: FC<Props> = (props: Props) => {
               index < 3 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
             }`}
             key={index + 3}
-            // onClick={() => window.open(partner.href, "_blank")}
           >
             <Image
               src={partner.image}
@@ -87,14 +85,13 @@ const Partners: FC<Props> = (props: Props) => {
               index < 1 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
             }`}
             key={index + 3}
-            // onClick={() => window.open(partner.href, "_blank")}
           >
             <Image
               src={partner.image}
               alt={partner.name}
               height={size}
               width={size}
-              className={`${index === 0 ? "md:p-3" : "p-3 md:p-9"}`}
+              className={`${index === 0 ? "" : "p-3 md:p-10"}`}
             />
           </div>
         ))}
