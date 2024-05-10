@@ -23,51 +23,51 @@ const Menu: FC<Props> = (props: Props) => {
   const isTablet: boolean = winWidth < 900;
 
   //stop page scroll (when modal or menu open)
-  // useEffect(() => {
-  //   // Get the scrollbar width
-  //   const scrollbarWidth =
-  //     window.innerWidth - document.documentElement.clientWidth;
-  //   if (open) {
-  //     // Hide the scrollbar and compensate for the scrollbar width
-  //     document.body.style.overflow = "hidden";
-  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
-  //     // Add padding to the header
-  //     if (headerRef.current) {
-  //       const preexistingPadding = parseInt(
-  //         window.getComputedStyle(headerRef.current).paddingRight,
-  //         10
-  //       );
-  //       headerRef.current.style.paddingRight = `${
-  //         preexistingPadding + scrollbarWidth
-  //       }px`;
-  //     }
-  //   }
-
-  //   return () => {
-  //     // Show the scrollbar and remove the padding
-  //     document.body.style.overflow = "";
-  //     document.body.style.paddingRight = "";
-
-  //     // Reset padding of the header
-  //     if (headerRef.current) {
-  //       const preexistingPadding = parseInt(
-  //         window.getComputedStyle(headerRef.current).paddingRight,
-  //         10
-  //       );
-  //       headerRef.current.style.paddingRight = `${
-  //         preexistingPadding - scrollbarWidth
-  //       }px`;
-  //     }
-  //   };
-  // }, [open]);
-
   useEffect(() => {
-    if (open) document.body.style.overflow = "hidden";
+    // Get the scrollbar width
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    if (open) {
+      // Hide the scrollbar and compensate for the scrollbar width
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      // Add padding to the header
+      if (headerRef.current) {
+        const preexistingPadding = parseInt(
+          window.getComputedStyle(headerRef.current).paddingRight,
+          10
+        );
+        headerRef.current.style.paddingRight = `${
+          preexistingPadding + scrollbarWidth
+        }px`;
+      }
+    }
 
     return () => {
-      document.body.style.overflow = "auto";
+      // Show the scrollbar and remove the padding
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+
+      // Reset padding of the header
+      if (headerRef.current) {
+        const preexistingPadding = parseInt(
+          window.getComputedStyle(headerRef.current).paddingRight,
+          10
+        );
+        headerRef.current.style.paddingRight = `${
+          preexistingPadding - scrollbarWidth
+        }px`;
+      }
     };
   }, [open]);
+
+  // useEffect(() => {
+  //   if (open) document.body.style.overflow = "hidden";
+
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [open]);
 
   return (
     <AnimatePresence mode="wait" initial={false}>

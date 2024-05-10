@@ -9,23 +9,23 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 const Modal: FC<Props> = (props: Props) => {
   const { show, children, headerRef, className, ...componentProps } = props;
 
-  // useEffect(() => {
-  //   if (show) {
-  //     // Get the scrollbar width
-  //     const scrollbarWidth =
-  //       window.innerWidth - document.documentElement.clientWidth;
+  useEffect(() => {
+    if (show) {
+      // Get the scrollbar width
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
 
-  //     // Hide the scrollbar and compensate for the scrollbar width
-  //     document.body.style.overflow = "hidden";
-  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
-  //   }
+      // Hide the scrollbar and compensate for the scrollbar width
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
-  //   return () => {
-  //     // Show the scrollbar and remove the padding
-  //     document.body.style.overflow = "";
-  //     document.body.style.paddingRight = "";
-  //   };
-  // }, [show]);
+    return () => {
+      // Show the scrollbar and remove the padding
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    };
+  }, [show]);
 
   // //stop page scroll (when modal or menu open)
   // useEffect(() => {
@@ -66,13 +66,13 @@ const Modal: FC<Props> = (props: Props) => {
   //   };
   // }, [show]);
 
-  useEffect(() => {
-    if (show) document.body.style.overflow = "hidden";
+  // useEffect(() => {
+  //   if (show) document.body.style.overflow = "hidden";
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [show]);
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [show]);
 
   return (
     <motion.div
