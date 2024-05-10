@@ -38,16 +38,9 @@ const Footer: FC = () => {
       <div className="flex justify-between md:justify-end md:items-end gap-8 md:gap-10 md:pb-2">
         <div className="flex flex-col max-w-[177px]">
           <h3 className="text-somos-brown-dark tex-sm md:text-base font-poppins-regular pb-3">
-            Contact Us
+            Contact
           </h3>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="tel:+19998887766"
-            className="text-xs"
-          >
-            +1 (999) 888-77-66
-          </a>
+          <p className="text-xs">email us:</p>
           <a
             rel="noreferrer"
             target="_blank"

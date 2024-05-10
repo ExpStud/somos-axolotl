@@ -161,7 +161,11 @@ const TeamCard: FC<Props> = (props: Props) => {
                 alt="Facebook"
               />
             </a> */}
-            <a href={"/"} rel="noreferrer" target="_blank">
+            <a
+              href={"https://www.instagram.com/giomantis/"}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 src="/images/icons/ig-pink.svg"
                 width={iconSize}
@@ -222,7 +226,7 @@ const TeamCard: FC<Props> = (props: Props) => {
 
           <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-14 lg:p-0`}>
             <a
-              href={"https://twitter.com/CassonTrenor"}
+              href={"https://www.cassontrenor.com/"}
               rel="noreferrer"
               target="_blank"
             >
