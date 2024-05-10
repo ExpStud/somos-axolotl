@@ -1,8 +1,10 @@
 import { FC } from "react";
 import { TextDropdown } from "@components";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const AboutDescription: FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col lg:flex-row gap-10 lg:gap-32 items-end mt-12 lg:mt-[20vh] px-6 md:px-10">
       <div className="flex flex-col gap-6 max-w-[505px]">
@@ -13,15 +15,12 @@ const AboutDescription: FC = () => {
           alt="Yellow Squares"
         />
         <h2 className="text-start !text-5xl !font-poppins-semibold">
-          Our <span className="text-somos-teal">Vision</span>
+          {t("team_title_1")}{" "}
+          <span className="text-somos-teal">{t("team_title_2")}</span>
           {/* <span className="text-somos-red">change.</span> */}
         </h2>
       </div>
-      <p className="max-w-[420px] ">
-        We believe in a future where conserving the environment and honoring
-        cultural history are more economically viable than their destruction and
-        exploitation.
-      </p>
+      <p className="max-w-[420px] ">{t("team_vision")}</p>
       {/* <TextDropdown
         className="max-w-[505px]"
         content={`

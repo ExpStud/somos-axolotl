@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC, HTMLAttributes } from "react";
 import { useWindowSize } from "src/hooks";
+import { useTranslation } from "next-i18next";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   id: "scum" | "gio" | "cass";
@@ -17,41 +18,10 @@ type Team = {
   accentColor: string;
 };
 
-const team: Team[] = [
-  {
-    id: "scum",
-    name: "Scum Matt Martinez",
-    text: `Matt "Scum" Martinez is a Solana success story: a digital artist who found his medium, inspiration, and audience in the world of web3. He was the highest selling artist for the year of 2023 & believes unequivocally in the power of web3 technology to change peoples lives.`,
-    src: "/images/about/scum-2.png",
-    mobile: "/images/about/scum-sm-2.png",
-    direction: "right",
-    backgroundColor: "",
-    accentColor: "#41240F",
-  },
-  {
-    id: "gio",
-    name: "Giovanna Gonzalez",
-    text: `Giovanna Gonzalez is a Mexican artist and activist who specializes in large-scale productions that drive awareness and catalyze environmental action. She is known for her innovative community empowerment initiatives which have led to the adoption of cutting-edge sustainability practices in Vietnam, Morocco, Sri Lanka and Mexico.`,
-    src: "/images/about/gio-1.png",
-    mobile: "/images/about/gio-sm-1.png",
-    direction: "left",
-    backgroundColor: "",
-    accentColor: "#FE6375",
-  },
-  {
-    id: "cass",
-    name: "Casson Trenor",
-    text: `Casson Trenor is a career environmental activist and winner of the TIME Magazine “Hero of the Environment” award. He works to support conservation causes around the world, and specializes in art- and tech-driven impact projects. He has worked in the web3 space since 2019 and has produced numerous projects that harness the power and promise of blockchain to make the world a better place.`,
-    src: "/images/about/cass.png",
-    mobile: "/images/about/cass-sm.png",
-    direction: "right",
-    backgroundColor: "",
-    accentColor: "#FFB93E",
-  },
-];
-
 const TeamCard: FC<Props> = (props: Props) => {
   const { id, className } = props;
+  const { t } = useTranslation();
+  // {t("")}
 
   const [winWidth] = useWindowSize();
 
@@ -62,6 +32,39 @@ const TeamCard: FC<Props> = (props: Props) => {
 
   const containerClass =
     "relative flex flex-col lg:flex-row items-start justify-start lg:justify-between pl-6 pr-3 lg:px-10 w-[344px] lg:w-[960px] aspect-[1.2/2] lg:aspect-[2/1]";
+
+  const team: Team[] = [
+    {
+      id: "scum",
+      name: "Scum Matt Martinez",
+      text: t("team_scum"),
+      src: "/images/about/scum-2.png",
+      mobile: "/images/about/scum-sm-2.png",
+      direction: "right",
+      backgroundColor: "",
+      accentColor: "#41240F",
+    },
+    {
+      id: "gio",
+      name: "Giovanna Gonzalez",
+      text: t("team_gio"),
+      src: "/images/about/gio-1.png",
+      mobile: "/images/about/gio-sm-1.png",
+      direction: "left",
+      backgroundColor: "",
+      accentColor: "#FE6375",
+    },
+    {
+      id: "cass",
+      name: "Casson Trenor",
+      text: t("team_cass"),
+      src: "/images/about/cass.png",
+      mobile: "/images/about/cass-sm.png",
+      direction: "right",
+      backgroundColor: "",
+      accentColor: "#FFB93E",
+    },
+  ];
 
   if (id === "scum") {
     return (

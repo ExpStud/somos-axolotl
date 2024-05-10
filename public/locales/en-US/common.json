@@ -61,7 +61,15 @@
   "MENU_CLOSE": "Close X",
   "MENU_MISSION": "Mission",
   "menu_team": "Team",
-  "menu_donate": "Donate"
+  "menu_donate": "Donate",
 
-
+  "team_title_1": "Our",
+  "team_title_2": "Vision",
+  "team_vision": " We believe in a future where conserving the environment and honoring cultural history are more economically viable than their destruction and exploitation.",
+  "team_caption": "The Team Behind it all.",
+  "team_scum": "Matt \"Scum\" Martinez is a Solana success story: a digital artist who found his medium, inspiration, and audience in the world of web3. He was the highest selling artist for the year of 2023 & believes unequivocally in the power of web3 technology to change peoples lives.",
+  "team_gio": "Giovanna Gonzalez is a Mexican artist and activist who specializes in large-scale productions that drive awareness and catalyze environmental action. She is known for her innovative community empowerment initiatives which have led to the adoption of cutting-edge sustainability practices in Vietnam, Morocco, Sri Lanka and Mexico. " ,
+  "team_cass": "Casson Trenor is a career environmental activist and winner of the TIME Magazine “Hero of the Environment” award. He works to support conservation causes around the world, and specializes in art- and tech-driven impact projects. He has worked in the web3 space since 2019 and has produced numerous projects that harness the power and promise of blockchain to make the world a better place.  ",
+  "team_disc": "Disclaimer",
+  "team_desc": "Somos Axolotl is a fiscally sponsored project of Leap Lab, a State of California 501-(c)3 not-for-profit organization. Leap Lab is dedicated to the advancement of science and education in under-resourced communities across North America."
 }
