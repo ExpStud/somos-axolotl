@@ -6,6 +6,8 @@ import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
 import { useOutsideAlerter } from "@hooks";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import i18n from "i18next";
 
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
@@ -20,6 +22,9 @@ const Menu: FC<Props> = (props: Props) => {
   const ref = useRef(null);
 
   useOutsideAlerter(ref, () => toggleMenu(false));
+
+  const router = useRouter();
+  const currentLanguage = i18n.language;
   const { t } = useTranslation();
 
   const isTablet: boolean = winWidth < 900;

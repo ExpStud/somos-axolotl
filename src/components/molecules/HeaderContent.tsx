@@ -22,7 +22,6 @@ const HeaderContent: FC<Props> = (props: Props) => {
       ref={headerRef}
     >
       <Logo />
-      {/* <LanguageSwitcher /> */}
       <div className="flex items-end gap-8">
         <AnimatePresence mode="wait">
           {!openMenu ? (

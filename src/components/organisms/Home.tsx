@@ -66,6 +66,27 @@ const Home: FC<Props> = (props: Props) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (showView) {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    } else {
+      // Get the scrollbar width
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+
+      // Hide the scrollbar and compensate for the scrollbar width
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    // return () => {
+    //   // Show the scrollbar and remove the padding
+    //   document.body.style.overflow = "";
+    //   document.body.style.paddingRight = "";
+    // };
+  }, [showView]);
+
   return (
     <div
       id="home"
