@@ -1,11 +1,14 @@
 import { FC, HTMLAttributes, useEffect, useState } from "react";
 import Image from "next/image";
 import { useWindowSize } from "src/hooks";
+import { useTranslation } from "next-i18next";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const Donate: FC<Props> = (props: Props) => {
   const { className } = props;
+
+  const { t } = useTranslation();
 
   const [copied, setCopied] = useState<boolean>(false);
   const [winWidth] = useWindowSize();
@@ -40,13 +43,10 @@ const Donate: FC<Props> = (props: Props) => {
       >
         <div className="flex flex-col justify-center gap-4 md:gap-6 p-8 md:p-12 lg:min-w-[395px]">
           <div className="row-centered text-white border-[0.85px] border-white w-[135px] h-[24px] md:h-[32px] text-sm md:rounded-[21px]">
-            Donate & Save
+            {t("DONATE_HEADER")}
           </div>
-          <h2 className="text-white max-w-[305px]">
-            Be part of <br />
-            the Solution
-          </h2>
-          <p className="text-white">We need your help to achieve our mission</p>
+          <h2 className="text-white max-w-[250px]">{t("DONATE_TITLE")}</h2>
+          <p className="text-white">{t("DONATE_DESC")}</p>
           <button
             className="teal-hover-dark col-centered mt-4 text-sm md:text-base rounded-xl w-full max-w-[313px] h-[40px] md:h-[48px] transition-200  text-white font-poppins-semibold"
             onClick={handleCopy}
@@ -66,7 +66,7 @@ const Donate: FC<Props> = (props: Props) => {
                 </p>
               </div>
             ) : (
-              <> 💰 Donate</>
+              <> 💰 {t("DONATE_CTA")}</>
             )}
           </button>
         </div>

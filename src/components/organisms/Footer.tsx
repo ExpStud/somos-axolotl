@@ -2,10 +2,11 @@ import { FC } from "react";
 import Image from "next/image";
 import { IconBar } from "@components";
 import { useWindowSize } from "src/hooks";
+import { useTranslation } from "next-i18next";
 
 const Footer: FC = () => {
   const [winWidth, winHeight] = useWindowSize();
-
+  const { t } = useTranslation();
   return (
     <footer
       className="bg-somos-orange overflow-hidden flex flex-col md:flex-row justify-evenly md:justify-between md:items-center px-8 pb-2 md:px-10 md:pt-10  md:pb-7 h-[400px] md:h-[220px] lg:h-[200px]"
@@ -20,8 +21,7 @@ const Footer: FC = () => {
         />
         <div className="text-xs hidden md:flex flex-col gap- -mb-4">
           <p>
-            © {new Date().getFullYear()} — Copyright{" "}
-            <br className="hidden md:block lg:hidden" /> All Rights reserved
+            © {new Date().getFullYear()} — {t("FOOTER_COPYRIGHT")}
           </p>
           <a
             rel="noreferrer"
@@ -29,7 +29,7 @@ const Footer: FC = () => {
             href="https://twitter.com/exp_studio_"
             className="text-sm"
           >
-            ℗ Powered by EXP
+            ℗ {t("FOOTER_POWERED")}
           </a>
         </div>
 
@@ -38,9 +38,9 @@ const Footer: FC = () => {
       <div className="flex justify-between md:justify-end md:items-end gap-8 md:gap-10 md:pb-2">
         <div className="flex flex-col max-w-[177px]">
           <h3 className="text-somos-brown-dark tex-sm md:text-base font-poppins-regular pb-3">
-            Contact
+            {t("FOOTER_CONTACT")}
           </h3>
-          <p className="text-xs">email us:</p>
+          <p className="text-xs">{t("FOOTER_EMAIL")}</p>
           <a
             rel="noreferrer"
             target="_blank"
@@ -52,7 +52,7 @@ const Footer: FC = () => {
         </div>
         <div className="flex flex-col max-w-[177px]">
           <h3 className="text-somos-brown-dark text-sm md:text-base font-poppins-regular pb-3">
-            Location
+            {t("FOOTER_LOCATION")}
           </h3>
           <a
             rel="noreferrer"
@@ -69,8 +69,7 @@ const Footer: FC = () => {
 
       <div className="md:hidden whitespace-nowrap self-center -mb-10 text-xs flex flex-col items-center gap-2">
         <p>
-          © {new Date().getFullYear()} — Copyright{" "}
-          <br className="hidden md:block lg:hidden" /> All Rights reserved
+          © {new Date().getFullYear()} — {t("FOOTER_COPYRIGHT")}
         </p>
         <a
           rel="noreferrer"
@@ -78,7 +77,7 @@ const Footer: FC = () => {
           href="https://twitter.com/exp_studio_"
           className="text-sm"
         >
-          ℗ Powered by EXP
+          ℗ {t("FOOTER_POWERED")}
         </a>
       </div>
     </footer>

@@ -1,6 +1,7 @@
 import { PageLayout, LandingView } from "@components";
 import { NextPage } from "next";
 import { useState } from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Home: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([]);
@@ -22,4 +23,17 @@ const Home: NextPage = () => {
     </PageLayout>
   );
 };
+
 export default Home;
+
+export async function getStaticProps(context: { locale: any }) {
+  // extract the locale identifier from the URL
+  const { locale } = context;
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale)),
+    },
+  };
+}

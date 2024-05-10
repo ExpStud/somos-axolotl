@@ -1,6 +1,7 @@
 import { FC, HTMLAttributes } from "react";
 import Image from "next/image";
 import { useWindowSize } from "src/hooks";
+import { useTranslation } from "next-i18next";
 
 type PartnersType = {
   name: string;
@@ -28,6 +29,8 @@ interface Props extends HTMLAttributes<HTMLDivElement> {}
 const Partners: FC<Props> = (props: Props) => {
   const { className } = props;
 
+  const { t } = useTranslation();
+
   const firstRowPartners = partners.slice(0, 3);
   const secondRowPartners = partners.slice(3, 7);
   const thirdRowPartners = partners.slice(7);
@@ -39,10 +42,9 @@ const Partners: FC<Props> = (props: Props) => {
     <div
       className={`relative w-screen flex flex-col items-center gap-6  ${className}`}
     >
-      <h2 className="text-center">Our partners</h2>
+      <h2 className="text-center">{t("PARTNERS_TITLE")}</h2>
       <p className="text-center max-w-[344px] lg:max-w-[415px] ">
-        In publishing and graphic design, Lorem ipsum is a placeholder text
-        commonly used to demonstrate the visual
+        {t("PARTNERS_DESC")}
       </p>
       <div className="flex items-center gap-5 md:gap-10 lg:gap-20 pt-8">
         {firstRowPartners.map((partner, index) => (

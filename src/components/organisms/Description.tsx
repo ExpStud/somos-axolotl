@@ -2,12 +2,16 @@ import { FC, HTMLAttributes } from "react";
 import { TextDropdown } from "@components";
 import Image from "next/image";
 import { useWindowSize } from "src/hooks";
+import { useTranslation } from "next-i18next";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const Description: FC<Props> = (props: Props) => {
   const { className } = props;
   const [winWidth] = useWindowSize();
+
+  const { t } = useTranslation();
+
   return (
     <div className={`relative w-screen flex justify-center  ${className}`}>
       <div className="max-width flex flex-col lg:flex-row no-wrap  pt-20 3xl:justify-between w-full">
@@ -18,27 +22,9 @@ const Description: FC<Props> = (props: Props) => {
             height={18}
             alt="Blue Squares"
           />
-          <h2 className="max-w-[184px] md:max-w-[270px]">
-            The Somos Axolotl story.
-          </h2>
+          <h2 className="max-w-[184px] md:max-w-[270px]">{t("SOMOS_TITLE")}</h2>
           <TextDropdown
-            content={`
-              <p class="!text-base">
-                Somos Axolotl is an art- and tech-based initiative created by a digital artist, a muralist, and an environmental activist -- three individuals united in their desire to push back against the potential extinction of one of the world's most compelling animals, the axolotl salamander.
-              </p>
-              </br> 
-              <p class="!text-base">
-                Spearheaded by Matt “Scum” Martinez,  Somos Axolotl works in and with the vibrant Xochimilco community in Mexico City to protect and restore axolotl populations though the development of sustainable economic systems for local farmers, businesses, and tourism operators. 
-              </p>
-              </br> 
-              <p class="!text-base">
-                There can be no path toward healthy and balanced relationships with our natural environment without sustainable relationships between people, places, and our planet's other denizens. Somos Axolotl uses technology and art to inspire action, create solutions, and build partnerships supporting symbiosis between Xochimilco's human and axolotl populations. 
-              </p>
-              </br> 
-              <p class="!text-base">
-                As this project matures, the tools built and lessons learned in Xochimilco will become available to communities around the world. 
-              </p>
-            `}
+            content={t("SOMOS_DESC")}
             openHeight={
               winWidth < 400 ? "48rem" : winWidth < 768 ? "40rem" : "36rem"
             }

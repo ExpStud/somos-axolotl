@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
 import { useOutsideAlerter } from "@hooks";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   toggleMenu: Dispatch<SetStateAction<boolean>>;
@@ -19,6 +20,7 @@ const Menu: FC<Props> = (props: Props) => {
   const ref = useRef(null);
 
   useOutsideAlerter(ref, () => toggleMenu(false));
+  const { t } = useTranslation();
 
   const isTablet: boolean = winWidth < 900;
 
@@ -98,9 +100,9 @@ const Menu: FC<Props> = (props: Props) => {
               className="flex flex-col items-start justify-start text-4xl sm:text-6xl gap-10 font-poppins-regular"
               onClick={() => toggleMenu(false)}
             >
-              <NavItem href="/">Mission</NavItem>
-              <NavItem href="/team">Team</NavItem>
-              <NavItem href="/#donate">Donate</NavItem>
+              <NavItem href="/">{t("MENU_MISSION")}</NavItem>
+              <NavItem href="/team">{t("menu_team")}</NavItem>
+              <NavItem href="/#donate">{t("menu_donate")}</NavItem>
             </div>
             <div className="flex flex-col gap-6">
               <Image
@@ -114,10 +116,10 @@ const Menu: FC<Props> = (props: Props) => {
                 <div className="flex flex-col md:flex-row justify-between md:justify-start md:items-start gap-8 md:gap-10 md:pb-2">
                   <div className="flex flex-col max-w-[177px]">
                     <h3 className="text-white tex-sm md:text-base font-poppins-regular pb-3">
-                      Contact
+                      {t("FOOTER_CONTACT")}
                     </h3>
 
-                    <p className="text-xs">email us:</p>
+                    <p className="text-xs">{t("FOOTER_EMAIL")}</p>
                     <a
                       rel="noreferrer"
                       target="_blank"
@@ -129,7 +131,7 @@ const Menu: FC<Props> = (props: Props) => {
                   </div>
                   <div className="flex flex-col max-w-[177px]">
                     <h3 className="text-white text-sm md:text-base font-poppins-regular pb-3">
-                      Location
+                      {t("FOOTER_LOCATION")}
                     </h3>
                     <a
                       rel="noreferrer"

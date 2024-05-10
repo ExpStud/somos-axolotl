@@ -2,24 +2,27 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { exitAnimation, midExitAnimation } from "src/constants";
+import { useTranslation } from "next-i18next";
 
 type ImageData = {
   src: string;
   caption: string;
 };
 
-const images: ImageData[] = [
-  {
-    src: "/images/landing/axie_compressed.jpg",
-    caption: "Statues on the Chinampa",
-  },
-  { src: "/images/landing/trees.jpg", caption: "Lake Xochimilco" },
-  { src: "/images/landing/axolotls.jpg", caption: "Axolotl in tank" },
-  { src: "/images/landing/boats.jpg", caption: "Boats in the lake" },
-];
-
 const Gallery: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const { t } = useTranslation();
+
+  const images: ImageData[] = [
+    {
+      src: "/images/landing/axie_compressed.jpg",
+      caption: t("GALLERY_1"),
+    },
+    { src: "/images/landing/trees.jpg", caption: t("GALLERY_2") },
+    { src: "/images/landing/axolotls.jpg", caption: t("GALLERY_3") },
+    { src: "/images/landing/boats.jpg", caption: t("GALLERY_4") },
+  ];
 
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % images.length);

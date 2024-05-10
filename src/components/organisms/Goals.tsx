@@ -1,6 +1,7 @@
 import { FC, HTMLAttributes } from "react";
 import Image from "next/image";
 import { useWindowSize } from "@hooks";
+import { useTranslation } from "next-i18next";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -8,6 +9,7 @@ const Goals: FC<Props> = (props: Props) => {
   const { className } = props;
   const [winWidth, winHeight] = useWindowSize();
 
+  const { t } = useTranslation();
   return (
     <div className={`col-centered relative w-screen  ${className}`}>
       <div
@@ -28,19 +30,10 @@ const Goals: FC<Props> = (props: Props) => {
             height={18}
             alt="Brown Squares"
           />
-          <h2 className="">Our Approach</h2>
+          <h2 className="">{t("GOALS_TITLE")}</h2>
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex flex-col gap-2 max-w-[520px]">
-              <p className="">
-                Somos Axolotl is using the power of art and technology to create
-                new pathways toward sustainability for the Xochimilco community.
-                Our Axolotl sculptures, designed and painted by a host of
-                incredibly talented artists from across Mexico and beyond, will
-                be placed throughout Xochimilco and along major tourism routes.
-                The sculptures are designed to drive awareness and funding
-                streams to the community members and organizations working to
-                sustain and rebuild this unique and highly endangered ecosystem.
-              </p>
+              <p className="">{t("GOALS_DESC")}</p>
             </div>
           </div>
           <a
@@ -69,7 +62,7 @@ const Goals: FC<Props> = (props: Props) => {
                 fill="white"
               />
             </svg>
-            <p>Follow our latest updates</p>
+            <p>{t("GOALS_CTA")}</p>
           </a>
         </div>
       </div>

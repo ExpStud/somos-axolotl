@@ -3,22 +3,71 @@ import Image from "next/image";
 import { useWindowSize } from "@hooks";
 import { ViewContext } from "@contexts";
 import { InfographicsDataType } from "@types";
-import { infographicsData } from "@constants";
+import { useTranslation } from "next-i18next";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const Infographics: FC<Props> = (props: Props) => {
   const { className } = props;
 
+  const { t } = useTranslation();
+
+  const infographicsData: InfographicsDataType[] = [
+    {
+      title: t("INFO_TITLE_1"),
+      content: [
+        t("INFO_DESC_1_1"),
+        t("INFO_DESC_1_2"),
+        t("INFO_DESC_1_3"),
+        t("INFO_DESC_1_4"),
+        t("INFO_DESC_1_5"),
+      ],
+      displayImage: "/images/landing/pill-1-sm.jpg",
+      expandedImage: "/images/landing/pill-1.jpg",
+      icon: "/images/icons/info-1.svg",
+    },
+    {
+      title: t("INFO_TITLE_2"),
+      content: [
+        t("INFO_DESC_2_1"),
+        t("INFO_DESC_2_2"),
+        t("INFO_DESC_2_3"),
+        t("INFO_DESC_2_4"),
+        t("INFO_DESC_2_5"),
+      ],
+      displayImage: "/images/landing/pill-2-sm.jpg",
+      expandedImage: "/images/landing/pill-2.jpg",
+      icon: "/images/icons/info-2.svg",
+    },
+    {
+      title: t("INFO_TITLE_3"),
+      content: [
+        t("INFO_DESC_3_1"),
+        t("INFO_DESC_3_2"),
+        t("INFO_DESC_3_3"),
+        t("INFO_DESC_3_4"),
+        t("INFO_DESC_3_5"),
+        t("INFO_DESC_3_6"),
+        t("INFO_DESC_3_7"),
+      ],
+      displayImage: "/images/landing/pill-3-sm.jpg",
+      expandedImage: "/images/landing/pill-3.jpg",
+      icon: "/images/icons/info-3.svg",
+    },
+  ];
+
   return (
     <div
       className={`relative w-screen flex flex-col items-start md:items-center gap-10 z-10 ${className}`}
     >
       <h2 className="self-center text-center max-w-[665px]">
-        Our work in <span className="text-somos-red">Xochimilco</span>{" "}
+        {t("INFO_HEADER_1")}{" "}
+        <span className="text-somos-red">{t("INFO_HEADER_2")}</span>{" "}
         {/* <span className="text-somos-orange">lorem ipsum,</span>{" "} */}
-        <br /> <span className="text-somos-teal">(where the</span>{" "}
-        <span className="text-somos-orange">flowers grow)</span>
+        <br /> <span className="text-somos-teal">
+          {t("INFO_HEADER_3")}
+        </span>{" "}
+        <span className="text-somos-orange">{t("INFO_HEADER_4")}</span>
       </h2>
       <div className="hscroll relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-2">
         {infographicsData.map((data, index) => (

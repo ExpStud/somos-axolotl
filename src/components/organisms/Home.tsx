@@ -11,6 +11,7 @@ import Gallery from "../molecules/Gallery";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { exitAnimation, midEnterAnimation } from "src/constants";
 import { isMobile } from "react-device-detect";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
@@ -20,6 +21,8 @@ interface Props {
 const Home: FC<Props> = (props: Props) => {
   const { setAssets, handleViewChange } = props;
   const [showView, setShowView] = useState(false);
+
+  const { t } = useTranslation();
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -134,9 +137,7 @@ const Home: FC<Props> = (props: Props) => {
                   />
                 </div>
                 <p className="text-white xs:max-w-[293px]">
-                  Somos Axolotl uses art and technology to help communities move
-                  toward sustainable resource and environmental management -
-                  first in Mexico, and then beyond.
+                  {t("OUR_MISSION")}
                 </p>
               </div>
             </div>

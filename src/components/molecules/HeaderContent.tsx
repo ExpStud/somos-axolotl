@@ -1,9 +1,10 @@
 import { FC, useState } from "react";
-import { CloseIcon, Logo, Menu, MenuIcon } from "@components";
+import { CloseIcon, LanguageSwitcher, Logo, Menu, MenuIcon } from "@components";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { midExitAnimation } from "src/constants";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   background?: string;
@@ -14,12 +15,14 @@ const HeaderContent: FC<Props> = (props: Props) => {
   const { background, headerRef } = props;
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
+  const { t } = useTranslation();
   return (
     <div
       className={`w-full flex items-center justify-between px-6 md:px-12 lg:px-24 py-5 h-[65px] lg:h-[80px] z-50 overflow-hidden transition-300 bg-[#1A0E06] ${background}`}
       ref={headerRef}
     >
       <Logo />
+      {/* <LanguageSwitcher /> */}
       <div className="flex items-end gap-8">
         <AnimatePresence mode="wait">
           {!openMenu ? (
@@ -43,7 +46,7 @@ const HeaderContent: FC<Props> = (props: Props) => {
               className="cursor-pointer z-[100] w-[72px] h-[24p] text-sm col-centered border border-somos-brown rounded"
               // {...midExitAnimation}
             >
-              Close X
+              {t("MENU_CLOSE")}
             </motion.div>
           )}
         </AnimatePresence>

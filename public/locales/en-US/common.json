@@ -1,0 +1,67 @@
+{ 
+  "OUR_MISSION": "Somos Axolotl uses art and technology to help communities move toward sustainable resource and environmental management - first in Mexico, and then beyond.",
+  
+  "GALLERY_1": "Statues on the Chinampa",
+  "GALLERY_2": "Lake Xochimilco",
+  "GALLERY_3": "Axolotl in tank",
+  "GALLERY_4": "Boats in the lake",
+
+  "SOMOS_TITLE": "The Somos Axolotl story.",
+  "SOMOS_DESC": "<p class='!text-base'>Somos Axolotl is an art- and tech-based initiative created by a digital artist, a muralist, and an environmental activist -- three individuals united in their desire to push back against the potential extinction of one of the world's most compelling animals, the axolotl salamander.</p> </br> <p class='!text-base'>Spearheaded by Matt “Scum” Martinez,  Somos Axolotl works in and with the vibrant Xochimilco community in Mexico City to protect and restore axolotl populations though the development of sustainable economic systems for local farmers, businesses, and tourism operators. </p></br> <p class='!text-base'>There can be no path toward healthy and balanced relationships with our natural environment without sustainable relationships between people, places, and our planet's other denizens. Somos Axolotl uses technology and art to inspire action, create solutions, and build partnerships supporting symbiosis between Xochimilco's human and axolotl populations. </p></br> <p class='!text-base'>As this project matures, the tools built and lessons learned in Xochimilco will become available to communities around the world. </p>",
+  "READ_MORE": "Read more",
+
+  "INFO_HEADER_1": "Our work in",
+  "INFO_HEADER_2": "Xochimilco",
+  "INFO_HEADER_3": "(where the",
+  "INFO_HEADER_4": "flowers grow)",
+
+  "INFO_TITLE_1": "Environment",
+  "INFO_TITLE_2": "Community",
+  "INFO_TITLE_3": "Technology",
+
+  "INFO_DESC_1_1": "For millennia, the area now known as Xochimilco was a wide and shallow lake hosting a remarkable array of flora, including water-lilies, floating primrose, water hyacinth, pennywort, and alkali buttercup. Along the lake shore were extensive stands of ajuehote, a native willow tree that towered over the lake's colorful tangle of aquatic plant life and that has become emblematic of Xochimilco at large. ", 
+  "INFO_DESC_1_2": "Amongst these plants could be found countless examples of local fauna as well. Frogs, snakes, fish, and brightly-colored birds populated the shallow waters of the lake, living alongside what has unquestionably become Xochimilco's most famous denizen: Ambystoma mexicanum, the axolotl salamander.",
+  "INFO_DESC_1_3": "Early inhabitants of the area slowly transformed much of the lake into a latticework of irrigation canals and wattle-and-daub farming plots known as chinampas.  As Mexico City grew and the area industralized, however, much of Xochimilco was drained and absorbed by the growing metropolis, causing the local plant and animal populations to plummet.",
+  "INFO_DESC_1_4": "Today, the remaining wetland areas of Xochimilco are under heavy pressure from urbanization, pollution, and development. Trajineros ply canals thick with litter and pollution. Axolotl sightings have gone from frequent to nearly unheard of. Without drastic action and new solutions, the ecology of Xochimilco -- as well as the many livelihoods that depend on it -- may be lost.",
+  "INFO_DESC_1_5": "Somos Axolotl is committed to working with the Xochimilco community to revitalize the local environment and rebuild axolotl populations throughout the lake.",
+  
+  "INFO_DESC_2_1": "Xochimilco represents one of the only remaining areas where the the footprint of Tenochtitlan, the ancient Aztec capital, has not melted away into the vastness of Mexico City. Many families in Xochimilco still practice agricultural techniques developed centuries ago, raising maize, squash, beans, and a staggering variety of flowers. Indeed, these flowers are what gives the lake its name; Xochimilco means “where the flowers grow” in the Nahuatl language.", 
+  "INFO_DESC_2_2": "These same flowers underpin a remarkable relationship between the Xochimilco community and color. Artistic expression is a way of life along the lake, with the vivid colors of the flowers echoed in paint and cloth. From ornately decorated trajineras to flower-clad floats along the chinampas, one cannot help but marvel at the art and beauty festooning the ancient canals.",
+  "INFO_DESC_2_3": "In the spirit of this magnificent community, Somos Axolotl is first and foremost an artistic initiative. We have created an axolotl model that serves as our fabrication mold for a growing number of sculptures. Street artists from Mexico and around the world vye for the opportunity to paint these sculptures, creating vibrant, engaging interpretations of the axolotl salamander. ",
+  "INFO_DESC_2_4": "This constellation of painted axolotls is strategically disseminated throughout Xochimilco, driving awareness and recognition to organizations and businesses that are working to protect the lake and its inhabitants. ",
+  "INFO_DESC_2_5": "As Somos Axolotl grows, we aim for our emblematic sculptures to increase in number and impact, identifying and nurturing an ever-growing community committed to returning Lake Xochimilco to its former glory.",
+
+  "INFO_DESC_3_1": "In order to achieve meaningful and sustainable conservation goals, local community members must have a vested interest in participating.", 
+  "INFO_DESC_3_2": "Many of the world's natural wonders support tourism industries, but they often lack the economic webwork that allows tourists to maximize their support. Visitors often find themselves wondering how to contribute, unsure of how best to tip, shop, or donate. ",
+  "INFO_DESC_3_3": "Additionally, operators and businesses that do not see a financial return from conservation activity are often forced to engage in polluting and destructive behaviors in order to realize profits. ",
+  "INFO_DESC_3_4": "Somos Axolotl aims to solve this problem.",
+  "INFO_DESC_3_5": "Blockchain technology offers us the opportunity to  revolutionalize charitable giving through high-speed, code-driven value transfers with full transparency and democratic management. Additionally, the Solana network offers the speed, security, and accessibility necessary to bring these solutions to life.",
+  "INFO_DESC_3_6": "The Somos Axolotl tech layer harnesses financial on- and off-ramps that allow for donations to reach recipients nearly instantaneously, even across currency barriers. We combine these with on-chain democratic splitting contracts, ensuring that donated funds support all recipients at agreed-upon levels, without risk of fraud or theft. Rather than donating to a single NGO, visitors to Xochimilco can now scan a QR code on any axolotl sculpture and support an entire network of cooperating organizations and operators with one transaction.",
+  "INFO_DESC_3_7": "There is no path to conservation without economic sustainability. What we are building together in the old Aztec canals is not just for Xochimilco, it's for the whole world.",
+
+  "GOALS_TITLE": "Our Approach",
+  "GOALS_DESC": "Somos Axolotl is using the power of art and technology to create new pathways toward sustainability for the Xochimilco community. Our Axolotl sculptures, designed and painted by a host of incredibly talented artists from across Mexico and beyond, will be placed throughout Xochimilco and along major tourism routes. The sculptures are designed to drive awareness and funding streams to the community members and organizations working to sustain and rebuild this unique and highly endangered ecosystem.",
+  "GOALS_CTA": "Follow our latest updates",
+
+  "PARTNERS_TITLE": "Our partners",
+  "PARTNERS_DESC": "We are proud to display our growing list of collaborators and contributors:",
+
+
+  "DONATE_HEADER": "Donate & Save",
+  "DONATE_TITLE": "Be part of the Solution",
+  "DONATE_DESC": "We need your help to achieve our mission",
+  "DONATE_CTA": "Donate",
+
+  "FOOTER_COPYRIGHT": "Copyright All Rights reserved",
+  "FOOTER_POWERED": "Powered by EXP",
+  "FOOTER_CONTACT": "Contact",
+  "FOOTER_EMAIL": "Email us:",
+  "FOOTER_LOCATION": "Location",
+
+  "MENU_CLOSE": "Close X",
+  "MENU_MISSION": "Mission",
+  "menu_team": "Team",
+  "menu_donate": "Donate"
+
+
+}

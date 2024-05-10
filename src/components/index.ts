@@ -28,6 +28,7 @@ const Gallery = dynamic(() => import("./molecules/Gallery"));
 const TextDropdown = dynamic(() => import("./molecules/TextDropdown"));
 const TeamHeader = dynamic(() => import("./molecules/TeamHeader"));
 const Topography = dynamic(() => import("./molecules/Topography"));
+const LanguageSwitcher = dynamic(() => import("./molecules/LanguageSwitcher"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
@@ -86,5 +87,6 @@ export {
   TeamCard,
   AboutDescription,
   TeamHeader,
-  Topography
+  Topography,
+  LanguageSwitcher
 }
