@@ -12,7 +12,7 @@ const Footer: FC = () => {
       className="bg-somos-orange overflow-hidden flex flex-col md:flex-row justify-evenly md:justify-between md:items-center px-8 pb-2 md:px-10 md:pt-10  md:pb-7 h-[400px] md:h-[220px] lg:h-[200px]"
       key="footer"
     >
-      <div className="flex md:flex-col w-full md:w-auto h-min md:h-full justify-between md:justify items-center md:items-start  ">
+      <div className="flex md:flex-col w-full md:w-auto h-min md:h-full justify-between md:justify items-center md:items-start">
         <Image
           src="/images/logos/lg-brown.svg"
           alt="Somos"
@@ -35,7 +35,7 @@ const Footer: FC = () => {
 
         <IconBar className="md:hidden h-min" />
       </div>
-      <div className="flex justify-between md:justify-end md:items-end gap-8 md:gap-10 md:pb-2">
+      <div className="flex justify-between md:justify-end md:items-center gap-8 md:gap-10 md:pb-2">
         <div className="flex flex-col max-w-[177px]">
           <h3 className="text-somos-brown-dark tex-sm md:text-base font-poppins-regular pb-3">
             {t("FOOTER_CONTACT")}
