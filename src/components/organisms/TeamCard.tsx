@@ -57,7 +57,7 @@ const TeamCard: FC<Props> = (props: Props) => {
 
   const isDesktop = winWidth >= 1024;
 
-  const iconSize = isDesktop ? 32 : 22;
+  const iconSize = isDesktop ? 32 : 26;
   const patternSize = isDesktop ? 65 : 32;
 
   const containerClass =
@@ -65,7 +65,7 @@ const TeamCard: FC<Props> = (props: Props) => {
 
   if (id === "scum") {
     return (
-      <div className={containerClass}>
+      <div className={`rotate-1 ${containerClass}`}>
         {/* left column */}
         <div className="flex lg:flex-col items-center lg:items-start justify-start  gap-2 lg:gap-5 lg:w-1/3 lg:pt-24 -rotate-1 pb-4 lg:pb-0 mt-[350px] lg:mt-0">
           <Image
@@ -79,14 +79,14 @@ const TeamCard: FC<Props> = (props: Props) => {
           </p>
 
           <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-8 lg:pl-0`}>
-            <a href={"/"} rel="noreferrer" target="_blank">
+            {/* <a href={"/"} rel="noreferrer" target="_blank">
               <Image
                 src="/images/icons/fb-brown.svg"
                 width={iconSize}
                 height={iconSize}
                 alt="Facebook"
               />
-            </a>
+            </a> */}
             <a href={"/"} rel="noreferrer" target="_blank">
               <Image
                 src="/images/icons/ig-brown.svg"
@@ -144,29 +144,29 @@ const TeamCard: FC<Props> = (props: Props) => {
             {team[1].name}
           </p>
 
-          <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-3`}>
-            <a href={"/"} rel="noreferrer" target="_blank">
+          <div className={`grid grid-cols-2 gap-1 lg:gap-3 pl-3 lg:pl-0`}>
+            {/* <a href={"/"} rel="noreferrer" target="_blank">
               <Image
                 src="/images/icons/fb-pink.svg"
                 width={iconSize}
                 height={iconSize}
                 alt="Facebook"
               />
-            </a>
+            </a> */}
             <a href={"/"} rel="noreferrer" target="_blank">
               <Image
                 src="/images/icons/ig-pink.svg"
                 width={iconSize}
                 height={iconSize}
-                alt="Telegram"
+                alt="Instagram"
               />
             </a>
             <a href={"/"} rel="noreferrer" target="_blank">
               <Image
-                src="/images/icons/x-pink.svg"
+                src="/images/icons/globe-pink.svg"
                 width={iconSize}
                 height={iconSize}
-                alt="Instagram"
+                alt="Website"
               />
             </a>
           </div>
@@ -194,7 +194,7 @@ const TeamCard: FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={`relative flex items-start justify-end pl-6 pr-3 lg:px-10 w-[344px] lg:w-[960px] max-h-[590px] lg:max-h-[480px] aspect-[1.2/2] lg:aspect-[2/1] rotate-1 lg:rotate-0`}
+      className={`lg:-rotate-1 relative flex items-start justify-end pl-6 pr-3 lg:px-10 w-[344px] lg:w-[960px] max-h-[590px] lg:max-h-[480px] aspect-[1.2/2] lg:aspect-[2/1] ml-3 lg:ml-5`}
     >
       <div className="flex flex-col items-start justify-center gap-5 lg:pt-24 lg:pb-8 lg:w-[54%] pt-12 lg:rotate-1 pr-3 lg:pr-8  mt-[280px] lg:-mt-14">
         <div className="flex flex-row lg:flex-col items-start justify-center gap-1 lg:gap-5">
@@ -211,18 +211,18 @@ const TeamCard: FC<Props> = (props: Props) => {
           <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-14 lg:p-0`}>
             <a href={"/"} rel="noreferrer" target="_blank">
               <Image
-                src="/images/icons/fb-yellow.svg"
+                src="/images/icons/globe-yellow.svg"
                 width={iconSize}
                 height={iconSize}
-                alt="Facebook"
+                alt="Website"
               />
             </a>
             <a href={"/"} rel="noreferrer" target="_blank">
               <Image
-                src="/images/icons/ig-yellow.svg"
+                src="/images/icons/link-yellow.svg"
                 width={iconSize}
                 height={iconSize}
-                alt="Telegram"
+                alt="Linkedin"
               />
             </a>
             <a href={"/"} rel="noreferrer" target="_blank">

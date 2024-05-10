@@ -111,7 +111,7 @@ const Header: FC<Props> = (props: Props) => {
           <HeaderContent background={background} headerRef={headerRef} />
         </motion.div>
       )}
-      <div className="h-[37px] w-full bg-somos-blue relative">
+      {/* <div className="h-[37px] w-full bg-somos-blue relative">
         <motion.div
           className="h-full text-somos-orange text-xl overflow-hidden flex items-center font-karantina absolute"
           initial={{ x: "0%" }} // Start from the right edge of the text
@@ -140,7 +140,7 @@ const Header: FC<Props> = (props: Props) => {
               </span>
             ))}
         </motion.div>
-      </div>
+      </div> */}
     </header>
   );
 };

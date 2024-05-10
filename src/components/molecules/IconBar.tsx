@@ -10,7 +10,7 @@ const IconBar: FC<Props> = (props: Props) => {
   const size = winWidth < 1024 ? 47 : 40;
   return (
     <div className={`grid grid-cols-2 gap-3 ${className}`}>
-      <a href={"/"} rel="noreferrer" target="_blank" className="">
+      {/* <a href={"/"} rel="noreferrer" target="_blank" className="">
         <Image src="/images/icons/wk.svg" width={size} height={size} alt="Wk" />
       </a>
       <a href={"/"} rel="noreferrer" target="_blank" className="">
@@ -28,7 +28,7 @@ const IconBar: FC<Props> = (props: Props) => {
           height={size}
           alt="Telegram"
         />
-      </a>
+      </a> */}
       <a href={"/"} rel="noreferrer" target="_blank" className="">
         <Image
           src="/images/icons/instagram.svg"

@@ -107,7 +107,7 @@ const Home: FC<Props> = (props: Props) => {
           </motion.div>
         ) : (
           <motion.div
-            className="relative flex flex-col gap-24 lg:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 h-full pt-10 2xl:pt-0 min-h-[660px]"
+            className="relative flex flex-col gap-24 lg:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 h-full pt-0 2xl:pt-0 min-h-[660px]"
             key="body"
             {...exitAnimation}
           >
