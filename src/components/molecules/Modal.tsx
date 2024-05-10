@@ -84,7 +84,7 @@ const Modal: FC<Props> = (props: Props) => {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`absolute cursor-default inset-0 lg:left-1/2 lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 lg:aspect-[2/1] w-screen lg:w-[80vw] max-w-[1241px] lg:h-auto 
-        lg:rounded-[32px] p-6 md:p-10 ${className}`}
+        lg:rounded-[32px] py-6 md:p-10 ${className}`}
       >
         <div
           className="hover-opacity row-centered text-white border-[0.85px] border-white w-[79px] h-[24px] text-xs fixed top-6 md:top-5 right-6 md:right-6 cursor-pointer z-10"
