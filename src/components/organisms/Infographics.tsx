@@ -14,19 +14,6 @@ const Infographics: FC<Props> = (props: Props) => {
 
   const infographicsData: InfographicsDataType[] = [
     {
-      title: t("INFO_TITLE_1"),
-      content: [
-        t("INFO_DESC_1_1"),
-        t("INFO_DESC_1_2"),
-        t("INFO_DESC_1_3"),
-        t("INFO_DESC_1_4"),
-        t("INFO_DESC_1_5"),
-      ],
-      displayImage: "/images/landing/pill-1-sm.jpg",
-      expandedImage: "/images/landing/pill-1.jpg",
-      icon: "/images/icons/info-1.svg",
-    },
-    {
       title: t("INFO_TITLE_2"),
       content: [
         t("INFO_DESC_2_1"),
@@ -38,6 +25,19 @@ const Infographics: FC<Props> = (props: Props) => {
       displayImage: "/images/landing/pill-2-sm.jpg",
       expandedImage: "/images/landing/pill-2.jpg",
       icon: "/images/icons/info-2.svg",
+    },
+    {
+      title: t("INFO_TITLE_1"),
+      content: [
+        t("INFO_DESC_1_1"),
+        t("INFO_DESC_1_2"),
+        t("INFO_DESC_1_3"),
+        t("INFO_DESC_1_4"),
+        t("INFO_DESC_1_5"),
+      ],
+      displayImage: "/images/landing/pill-1-sm.jpg",
+      expandedImage: "/images/landing/pill-1.jpg",
+      icon: "/images/icons/info-1.svg",
     },
     {
       title: t("INFO_TITLE_3"),

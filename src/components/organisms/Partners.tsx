@@ -42,10 +42,8 @@ const Partners: FC<Props> = (props: Props) => {
     <div
       className={`relative w-screen flex flex-col items-center gap-6  ${className}`}
     >
+      <p className="text-center max-w-[260px]  ">{t("PARTNERS_DESC")}</p>
       <h2 className="text-center">{t("PARTNERS_TITLE")}</h2>
-      <p className="text-center max-w-[344px] lg:max-w-[415px] ">
-        {t("PARTNERS_DESC")}
-      </p>
       <div className="flex items-center gap-5 md:gap-10 lg:gap-20 pt-8 ">
         {firstRowPartners.map((partner, index) => (
           <div

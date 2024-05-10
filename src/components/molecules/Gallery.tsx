@@ -15,12 +15,12 @@ const Gallery: React.FC = () => {
   const { t } = useTranslation();
 
   const images: ImageData[] = [
+    { src: "/images/landing/axolotls.jpg", caption: t("GALLERY_3") },
+    { src: "/images/landing/trees.jpg", caption: t("GALLERY_2") },
     {
-      src: "/images/landing/axie_compressed.jpg",
+      src: "/images/landing/Axolotl Abystoma Mex vertical.jpg",
       caption: t("GALLERY_1"),
     },
-    { src: "/images/landing/trees.jpg", caption: t("GALLERY_2") },
-    { src: "/images/landing/axolotls.jpg", caption: t("GALLERY_3") },
     { src: "/images/landing/boats.jpg", caption: t("GALLERY_4") },
   ];
 
