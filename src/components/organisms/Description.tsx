@@ -31,11 +31,11 @@ const Description: FC<Props> = (props: Props) => {
           />
         </div>
         <Image
-          src="/images/landing/axolotl.png"
+          src="/images/landing/axolotl-2.png"
           alt="Axolotl"
           width={1797 * 0.5}
           height={1714 * 0.5}
-          className="z-0 rotate-36 absolute -right-28 -top-20 xs:-right-48 xs:-top-36 md:-right-72 md:-top-52  lg:-right-[240px] xl:-top-[180px]  2xl:right-[4vw] 2xl:-top-[90px] 3xl:right-[15vw] 3xl:scale-150 rotate-90"
+          className="z-0 -rotate-90 xl:rotate-0 scale-[1.350] sm:scale-100 absolute -right-28 -top-48 xs:-right-48 xs:-top-56 sm:-right-72 sm:-top-[500px] lg:-top-[600px]  lg:-right-[320px] xl:-top-[180px]  2xl:right-[4vw] 2xl:-top-[90px] 3xl:right-[15vw] 3xl:scale-150"
         />
       </div>
     </div>

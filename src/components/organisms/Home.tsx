@@ -66,26 +66,26 @@ const Home: FC<Props> = (props: Props) => {
     }
   }, []);
 
-  useEffect(() => {
-    if (showView) {
-      document.body.style.overflow = "";
-      document.body.style.paddingRight = "";
-    } else {
-      // Get the scrollbar width
-      const scrollbarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
+  // useEffect(() => {
+  //   if (showView) {
+  //     document.body.style.overflow = "";
+  //     document.body.style.paddingRight = "";
+  //   } else {
+  //     // Get the scrollbar width
+  //     const scrollbarWidth =
+  //       window.innerWidth - document.documentElement.clientWidth;
 
-      // Hide the scrollbar and compensate for the scrollbar width
-      document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-    }
+  //     // Hide the scrollbar and compensate for the scrollbar width
+  //     document.body.style.overflow = "hidden";
+  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
+  //   }
 
-    // return () => {
-    //   // Show the scrollbar and remove the padding
-    //   document.body.style.overflow = "";
-    //   document.body.style.paddingRight = "";
-    // };
-  }, [showView]);
+  //   // return () => {
+  //   //   // Show the scrollbar and remove the padding
+  //   //   document.body.style.overflow = "";
+  //   //   document.body.style.paddingRight = "";
+  //   // };
+  // }, [showView]);
 
   return (
     <div
@@ -149,7 +149,7 @@ const Home: FC<Props> = (props: Props) => {
             {...exitAnimation}
           >
             {/* content */}
-            <div className="max-width flex flex-col md:flex-row gap-10 md:gap-14 lg:gap-0 justify-center md:justify-between items-center md:items-end  pb-14 md:pb-6 lg:pb-12 md:w-full">
+            <div className="max-width flex flex-col md:flex-row gap-10 md:gap-14 lg:gap-0 justify-center md:justify-between items-center md:items-end  pb-0 pt-10 md:pt-0 md:pb-6 lg:pb-12 md:w-full">
               <Image
                 src="/images/logos/lg.svg"
                 height={162.04}
@@ -161,7 +161,7 @@ const Home: FC<Props> = (props: Props) => {
 
               <div className="flex flex-col lg:flex-row gap-">
                 <div className="flex flex-row md:flex-col-reverse items-end md:items-start md:gap-3 justify-between md:justify-start">
-                  <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9">
+                  <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9 pb-2">
                     {t("OUR_MISSION_TITLE")}
                   </h2>
                   <Image
@@ -169,6 +169,7 @@ const Home: FC<Props> = (props: Props) => {
                     width={111}
                     height={18}
                     alt="Yellow Squares"
+                    className="self-start"
                   />
                 </div>
                 <p className="text-white xs:max-w-[293px]">
