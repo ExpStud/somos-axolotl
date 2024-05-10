@@ -57,11 +57,11 @@ const Footer: FC = () => {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=483920,Mexico+Myasnitskaya+22/2/5,Office+4"
+            href="https://www.google.com/maps/search/?api=1&query=Antiguo+Canal+Cuemanco+105+Pista+Olímpica+Virgilio+Uribe+Xochimilco+16036+Ciudad+de+México+CDMX+Mexico"
             className="line-clamp-2 text-xs"
           >
-            483920, Mexico <br />
-            Myasnitskaya 22/2/5, Office 4
+            Antiguo Canal Cuemanco 105, Pista Olímpica Virgilio Uribe,
+            Xochimilco, 16036 Ciudad de México, CDMX, Mexico
           </a>
         </div>
         <IconBar className="hidden md:grid w-[100px]" />

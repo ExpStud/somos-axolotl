@@ -22,7 +22,7 @@ const Description: FC<Props> = (props: Props) => {
             height={18}
             alt="Blue Squares"
           />
-          <h2 className="max-w-[184px] md:max-w-[270px]">{t("SOMOS_TITLE")}</h2>
+          <h2 className="max-w-[184px] md:max-w-[310px]">{t("SOMOS_TITLE")}</h2>
           <TextDropdown
             content={t("SOMOS_DESC")}
             openHeight={

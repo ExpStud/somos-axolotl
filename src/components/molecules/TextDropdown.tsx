@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { AnimatePresence, Variants, motion } from "framer-motion";
 import { fastExitAnimation, midExitAnimation } from "src/constants";
+import { useTranslation } from "next-i18next";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   content: string;
@@ -17,6 +18,7 @@ const TextDropdown: FC<Props> = (props: Props) => {
   } = props;
 
   const [show, setShow] = useState<boolean>(false);
+  const { t } = useTranslation();
 
   const textVariants: Variants = {
     open: {
@@ -59,11 +61,11 @@ const TextDropdown: FC<Props> = (props: Props) => {
         <AnimatePresence mode="wait">
           {show ? (
             <motion.p key="less" {...midExitAnimation} className="!text-lg">
-              Read less
+              {t("READ_LESS")}
             </motion.p>
           ) : (
             <motion.p key="more" {...midExitAnimation} className="!text-lg">
-              Read more
+              {t("READ_MORE")}
             </motion.p>
           )}
         </AnimatePresence>

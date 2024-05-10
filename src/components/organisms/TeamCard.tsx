@@ -277,7 +277,7 @@ const TeamCard: FC<Props> = (props: Props) => {
           alt="Brown Squares"
           className="lg:self-end lg:-mt-6"
         />
-        <p className="text-xs lg:text-base text-white">{team[2].text}</p>
+        <p className="text-xs lg:text-base text-white -mt-4">{team[2].text}</p>
       </div>
       {/* bg image */}
       <Image

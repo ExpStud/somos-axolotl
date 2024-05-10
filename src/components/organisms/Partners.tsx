@@ -46,10 +46,10 @@ const Partners: FC<Props> = (props: Props) => {
       <p className="text-center max-w-[344px] lg:max-w-[415px] ">
         {t("PARTNERS_DESC")}
       </p>
-      <div className="flex items-center gap-5 md:gap-10 lg:gap-20 pt-8">
+      <div className="flex items-center gap-5 md:gap-10 lg:gap-20 pt-8 ">
         {firstRowPartners.map((partner, index) => (
           <div
-            className={`text-center ${
+            className={`text-center flex items-center h-[60px]  md:h-[120px] lg:h-[190px] ${
               index < 2 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
             }`}
             key={index}

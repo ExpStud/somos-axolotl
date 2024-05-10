@@ -127,7 +127,7 @@ const Home: FC<Props> = (props: Props) => {
               <div className="flex flex-col lg:flex-row gap-">
                 <div className="flex flex-row md:flex-col-reverse items-end md:items-start md:gap-3 justify-between md:justify-start">
                   <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9">
-                    Our Mission
+                    {t("OUR_MISSION_TITLE")}
                   </h2>
                   <Image
                     src="/images/design/squares-yellow.svg"

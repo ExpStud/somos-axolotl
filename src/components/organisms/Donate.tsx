@@ -2,6 +2,8 @@ import { FC, HTMLAttributes, useEffect, useState } from "react";
 import Image from "next/image";
 import { useWindowSize } from "src/hooks";
 import { useTranslation } from "next-i18next";
+import { AnimatePresence, motion } from "framer-motion";
+import { midExitAnimation } from "src/constants";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -53,9 +55,14 @@ const Donate: FC<Props> = (props: Props) => {
             disabled={copied}
             id="donate"
           >
-            {copied ? (
-              <div className="flex gap-2 items-center">
-                <Image
+            <AnimatePresence mode="wait">
+              {copied ? (
+                <motion.div
+                  className="flex gap-2 items-center whitespace-nowrap"
+                  {...midExitAnimation}
+                >
+                  ✅ {t("DONATE_COPIED")}
+                  {/* <Image
                   src="/images/icons/copy.png"
                   width={26}
                   height={26}
@@ -63,11 +70,17 @@ const Donate: FC<Props> = (props: Props) => {
                 />
                 <p className="text-xs lg:text-sm font-poppins-regular">
                   G4Qu1wAd6pm......9Z8U8ZnmqC
-                </p>
-              </div>
-            ) : (
-              <> 💰 {t("DONATE_CTA")}</>
-            )}
+                </p> */}
+                </motion.div>
+              ) : (
+                <motion.div
+                  className="flex gap-2 items-center"
+                  {...midExitAnimation}
+                >
+                  💰 {t("DONATE_CTA")}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
         </div>
         <Image

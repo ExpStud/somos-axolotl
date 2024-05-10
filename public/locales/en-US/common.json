@@ -1,4 +1,5 @@
 { 
+  "OUR_MISSION_TITLE": "Our Mission" ,
   "OUR_MISSION": "Somos Axolotl uses art and technology to help communities move toward sustainable resource and environmental management - first in Mexico, and then beyond.",
   
   "GALLERY_1": "Statues on the Chinampa",
@@ -9,6 +10,7 @@
   "SOMOS_TITLE": "The Somos Axolotl story.",
   "SOMOS_DESC": "<p class='!text-base'>Somos Axolotl is an art- and tech-based initiative created by a digital artist, a muralist, and an environmental activist -- three individuals united in their desire to push back against the potential extinction of one of the world's most compelling animals, the axolotl salamander.</p> </br> <p class='!text-base'>Spearheaded by Matt “Scum” Martinez,  Somos Axolotl works in and with the vibrant Xochimilco community in Mexico City to protect and restore axolotl populations though the development of sustainable economic systems for local farmers, businesses, and tourism operators. </p></br> <p class='!text-base'>There can be no path toward healthy and balanced relationships with our natural environment without sustainable relationships between people, places, and our planet's other denizens. Somos Axolotl uses technology and art to inspire action, create solutions, and build partnerships supporting symbiosis between Xochimilco's human and axolotl populations. </p></br> <p class='!text-base'>As this project matures, the tools built and lessons learned in Xochimilco will become available to communities around the world. </p>",
   "READ_MORE": "Read more",
+  "READ_LESS": "Read less",
 
   "INFO_HEADER_1": "Our work in",
   "INFO_HEADER_2": "Xochimilco",
@@ -24,7 +26,7 @@
   "INFO_DESC_1_3": "Early inhabitants of the area slowly transformed much of the lake into a latticework of irrigation canals and wattle-and-daub farming plots known as chinampas.  As Mexico City grew and the area industralized, however, much of Xochimilco was drained and absorbed by the growing metropolis, causing the local plant and animal populations to plummet.",
   "INFO_DESC_1_4": "Today, the remaining wetland areas of Xochimilco are under heavy pressure from urbanization, pollution, and development. Trajineros ply canals thick with litter and pollution. Axolotl sightings have gone from frequent to nearly unheard of. Without drastic action and new solutions, the ecology of Xochimilco -- as well as the many livelihoods that depend on it -- may be lost.",
   "INFO_DESC_1_5": "Somos Axolotl is committed to working with the Xochimilco community to revitalize the local environment and rebuild axolotl populations throughout the lake.",
-  
+   
   "INFO_DESC_2_1": "Xochimilco represents one of the only remaining areas where the the footprint of Tenochtitlan, the ancient Aztec capital, has not melted away into the vastness of Mexico City. Many families in Xochimilco still practice agricultural techniques developed centuries ago, raising maize, squash, beans, and a staggering variety of flowers. Indeed, these flowers are what gives the lake its name; Xochimilco means “where the flowers grow” in the Nahuatl language.", 
   "INFO_DESC_2_2": "These same flowers underpin a remarkable relationship between the Xochimilco community and color. Artistic expression is a way of life along the lake, with the vivid colors of the flowers echoed in paint and cloth. From ornately decorated trajineras to flower-clad floats along the chinampas, one cannot help but marvel at the art and beauty festooning the ancient canals.",
   "INFO_DESC_2_3": "In the spirit of this magnificent community, Somos Axolotl is first and foremost an artistic initiative. We have created an axolotl model that serves as our fabrication mold for a growing number of sculptures. Street artists from Mexico and around the world vye for the opportunity to paint these sculptures, creating vibrant, engaging interpretations of the axolotl salamander. ",
@@ -48,9 +50,10 @@
 
 
   "DONATE_HEADER": "Donate & Save",
-  "DONATE_TITLE": "Be part of the Solution",
-  "DONATE_DESC": "We need your help to achieve our mission",
+  "DONATE_TITLE": "Be a part of saving Xochimilco",
+  "DONATE_DESC": "Donations are only supported using crypto currently. Click the button below to copy our Solana wallet address.",
   "DONATE_CTA": "Donate",
+  "DONATE_COPIED": "Copied",
 
   "FOOTER_COPYRIGHT": "Copyright All Rights reserved",
   "FOOTER_POWERED": "Powered by EXP",
