@@ -34,15 +34,15 @@ const Home: FC<Props> = (props: Props) => {
   }, [handleViewChange, isInView]);
 
   //show view timeout
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowView(true);
-    }, 3000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowView(true);
+  //   }, 3000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, []);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -98,15 +98,28 @@ const Home: FC<Props> = (props: Props) => {
 
       <AnimatePresence mode="wait">
         {!showView ? (
-          <motion.div key="logo" {...exitAnimation}>
+          <motion.div
+            key="logo"
+            {...exitAnimation}
+            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140px] md:w-auto flex  flex-col items-center gap-2"
+          >
             <Image
               src="/images/logos/lg.svg"
               height={162.04}
               width={230}
               alt="Somos Axolotl"
               priority
-              className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140px] md:w-auto"
+              className="  p-2"
             />
+
+            <button
+              onClick={() => setShowView(true)}
+              className="hover-opacity  text-somos-white border border-somos-white rounded-sm px-9 lg:px-12 py-1.5 lg:py-2 mt-10 lg:text-xl"
+            >
+              {" "}
+              {t("ENTER")}
+            </button>
+            {/* <p className="text-white text-xs">{t("ENTER_1")}</p> */}
           </motion.div>
         ) : (
           <motion.div
@@ -124,6 +137,7 @@ const Home: FC<Props> = (props: Props) => {
                 priority
                 className="w-[110px] md:w-auto"
               />
+
               <div className="flex flex-col lg:flex-row gap-">
                 <div className="flex flex-row md:flex-col-reverse items-end md:items-start md:gap-3 justify-between md:justify-start">
                   <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9">
