@@ -15,7 +15,7 @@ const images: ImageData[] = [
   },
   { src: "/images/landing/trees.jpg", caption: "Lake Xochimilco" },
   { src: "/images/landing/axolotls.jpg", caption: "Axolotl in tank" },
-  { src: "/images/landing/axie_2_compressed.jpg", caption: "Axolotl peeing" },
+  { src: "/images/landing/boats.jpg", caption: "Boats in the lake" },
 ];
 
 const Gallery: React.FC = () => {
