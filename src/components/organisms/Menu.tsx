@@ -95,7 +95,7 @@ const Menu: FC<Props> = (props: Props) => {
           ref={ref}
         >
           <motion.div
-            className={`px-4 sm:px-6 lg:px-10 py-6 h-[svh] relative flex flex-col justify-between pl-10 pt-32 `}
+            className={`px-4 sm:px-6 lg:px-10 py-6 h-[100svh] relative flex flex-col justify-between pl-10 pt-32 `}
             variants={fadeVariants}
             initial="closed"
             animate="open"
