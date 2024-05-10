@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 const AboutDescription: FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col lg:flex-row gap-10 lg:gap-32 items-end mt-12 lg:mt-[20vh] px-6 md:px-10">
+    <div className="flex flex-col lg:flex-row gap-10 lg:gap-32 items-start lg:items-end mt-12 lg:mt-[20vh] px-6 md:px-10">
       <div className="flex flex-col gap-6 max-w-[505px]">
         <Image
           src="/images/design/squares-yellow.svg"
@@ -20,7 +20,7 @@ const AboutDescription: FC = () => {
           {/* <span className="text-somos-red">change.</span> */}
         </h2>
       </div>
-      <p className="max-w-[420px] ">{t("team_vision")}</p>
+      <p className="max-w-[300px] lg:max-w-[420px] ">{t("team_vision")}</p>
       {/* <TextDropdown
         className="max-w-[505px]"
         content={`
