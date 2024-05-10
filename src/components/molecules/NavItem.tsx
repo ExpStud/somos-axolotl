@@ -48,16 +48,15 @@ interface ItemProps {
 const Item: FC<ItemProps> = (props: ItemProps) => {
   const { children, isCurrent } = props;
   return (
-    <div className="flex gap-2 justify-center items-center">
-      <div
-        className={` transition-200 text-[32px] ${
-          isCurrent
-            ? "text-somos-orange cursor-default"
-            : " text-white hover:text-somos-brown cursor-pointer"
-        }`}
-      >
-        <span className="text-sm">X</span> {children}
-      </div>
+    <div
+      className={` transition-200 flex gap-4 justify-center items-center ${
+        isCurrent
+          ? "text-somos-orange cursor-default"
+          : " text-white hover:text-somos-brown cursor-pointer"
+      }`}
+    >
+      <span className="text-sm">X</span>{" "}
+      <p className="text-[32px] ">{children}</p>
     </div>
   );
 };
