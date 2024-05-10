@@ -87,15 +87,23 @@ const TeamCard: FC<Props> = (props: Props) => {
                 alt="Facebook"
               />
             </a> */}
-            <a href={"/"} rel="noreferrer" target="_blank">
+            <a
+              href={"https://www.instagram.com/scum.sol/"}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 src="/images/icons/ig-brown.svg"
                 width={iconSize}
                 height={iconSize}
-                alt="Telegram"
+                alt="Instagram"
               />
             </a>
-            <a href={"/"} rel="noreferrer" target="_blank">
+            <a
+              href={"https://twitter.com/SCUMSOL"}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 src="/images/icons/x-brown.svg"
                 width={iconSize}
@@ -161,7 +169,11 @@ const TeamCard: FC<Props> = (props: Props) => {
                 alt="Instagram"
               />
             </a>
-            <a href={"/"} rel="noreferrer" target="_blank">
+            <a
+              href={"https://www.giomantis.com/"}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 src="/images/icons/globe-pink.svg"
                 width={iconSize}
@@ -209,7 +221,11 @@ const TeamCard: FC<Props> = (props: Props) => {
           </p>
 
           <div className={`grid grid-cols-3 gap-1 lg:gap-3 pl-14 lg:p-0`}>
-            <a href={"/"} rel="noreferrer" target="_blank">
+            <a
+              href={"https://twitter.com/CassonTrenor"}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 src="/images/icons/globe-yellow.svg"
                 width={iconSize}
@@ -217,7 +233,11 @@ const TeamCard: FC<Props> = (props: Props) => {
                 alt="Website"
               />
             </a>
-            <a href={"/"} rel="noreferrer" target="_blank">
+            <a
+              href={"https://www.linkedin.com/in/cassontrenor"}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 src="/images/icons/link-yellow.svg"
                 width={iconSize}
@@ -225,12 +245,16 @@ const TeamCard: FC<Props> = (props: Props) => {
                 alt="Linkedin"
               />
             </a>
-            <a href={"/"} rel="noreferrer" target="_blank">
+            <a
+              href={"https://twitter.com/CassonTrenor"}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 src="/images/icons/x-yellow.svg"
                 width={iconSize}
                 height={iconSize}
-                alt="Instagram"
+                alt="X"
               />
             </a>
           </div>

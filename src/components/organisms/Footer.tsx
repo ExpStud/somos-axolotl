@@ -51,10 +51,10 @@ const Footer: FC = () => {
           <a
             rel="noreferrer"
             target="_blank"
-            href="mailto:hello@logoipsum.com"
+            href="mailto:info@somosaxolotl.com"
             className="text-xs"
           >
-            hello@logoipsum.com
+            info@somosaxolotl.com
           </a>
         </div>
         <div className="flex flex-col max-w-[177px]">

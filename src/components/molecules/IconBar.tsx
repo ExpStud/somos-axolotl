@@ -29,7 +29,11 @@ const IconBar: FC<Props> = (props: Props) => {
           alt="Telegram"
         />
       </a> */}
-      <a href={"/"} rel="noreferrer" target="_blank" className="">
+      <a
+        href={"https://www.instagram.com/somos_axolotl"}
+        rel="noreferrer"
+        target="_blank"
+      >
         <Image
           src="/images/icons/instagram.svg"
           width={size}
