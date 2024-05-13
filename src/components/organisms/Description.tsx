@@ -31,7 +31,7 @@ const Description: FC<Props> = (props: Props) => {
           />
         </div>
         <Image
-          src="/images/landing/axolotl-2.png"
+          src="/images/landing/axolotl-main.png"
           alt="Axolotl"
           width={1797 * 0.5}
           height={1714 * 0.5}
