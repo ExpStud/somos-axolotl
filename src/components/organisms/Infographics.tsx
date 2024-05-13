@@ -69,7 +69,7 @@ const Infographics: FC<Props> = (props: Props) => {
         </span>{" "}
         <span className="text-somos-orange">{t("INFO_HEADER_4")}</span>
       </h2>
-      <div className="hscroll relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:pr-0 pb-2">
+      <div className="hscroll relative flex flex-row justify-start md:justify-center gap-6 w-screen overflow-x-auto pr-12 md:px-4 pb-2  ">
         {infographicsData.map((data, index) => (
           <InfographicsCard data={data} key={index} index={index} />
         ))}
