@@ -56,7 +56,6 @@ const PageLayout: FC<Props> = (props: Props) => {
           title="Somos Axolotl"
           description="Somos Axolotl uses art and technology to help communities move toward sustainable resource and environmental management - first in Mexico, and then beyond."
           url="https://addurl.xyz" // no backslash at the end
-          twitter="twitterhandle"
         />
         {/* header */}
         <Header
