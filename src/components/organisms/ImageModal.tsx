@@ -17,7 +17,7 @@ const ImageModal: FC<Props> = (props: Props) => {
   const [winWidth] = useWindowSize();
   return (
     <Modal show={show} onClick={() => close()} headerRef={headerRef}>
-      <div className="z-10 h-full w-full pt-8 flex flex-col gap-6">
+      <div className="z-10 h-full w-full pt-8 flex flex-col gap-6  pb-16">
         <Image
           src={data.icon}
           alt="Icon"
@@ -25,7 +25,7 @@ const ImageModal: FC<Props> = (props: Props) => {
           height={106}
           className="px-6"
         />
-        <h3 className="text-white text-2xl lg:text-[32px] font-poppins-semibold px-6">
+        <h3 className="text-white text-2xl lg:text-[32px] font-poppins-semibold px-6 ">
           {data.title}
         </h3>
         <div

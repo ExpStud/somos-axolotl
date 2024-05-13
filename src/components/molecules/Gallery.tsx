@@ -33,7 +33,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <div className="max-width relative w-[90vw] md:w-[80vw] lg:w-[70vw]  aspect-[3/2] md:aspect-[2/1] lg:aspect-[16/5.5] 2xl:aspect-[16/5] mb-6 text-white px-6 md:px-20 lg:px-[15vw]">
+    <div className="max-width relative w-full  aspect-[3/2] md:aspect-[2/1] lg:aspect-[2.4/1] text-white px-6 md:px-20 lg:px-[15vw]">
       <AnimatePresence>
         {currentIndex % 2 === 0 && (
           <GalleryItem index={currentIndex} images={images} key="zero" />
@@ -46,7 +46,7 @@ const Gallery: React.FC = () => {
       {/* buttons */}
       <div
         onClick={prevImage}
-        className="hover-opacity absolute -top-7 right-20 md:right-28 cursor-pointer py-2"
+        className="hover-opacity absolute -top-6 md:-top-10 right-20 md:right-28 cursor-pointer py-2"
       >
         <Image
           src="/images/icons/arrow-left.svg"
@@ -58,7 +58,7 @@ const Gallery: React.FC = () => {
       </div>
       <div
         onClick={nextImage}
-        className="hover-opacity absolute -top-7 right-1 cursor-pointer py-2"
+        className="hover-opacity absolute -top-6 md:-top-10 right-2 cursor-pointer py-2"
       >
         <Image
           src="/images/icons/arrow-right.svg"
@@ -86,7 +86,7 @@ const GalleryItem: React.FC<GalleryItemProps> = (props: GalleryItemProps) => {
         fill
         className="object-cover rounded-[32px] aspect-[16/9]"
       />
-      <div className="absolute -top-7 left-1 font-poppins-semibold text-sm italic">
+      <div className="absolute -top-6 md:-top-10 left-2 font-poppins-semibold text-[10px] md:text-sm italic">
         {images[index].caption}
       </div>
     </motion.div>

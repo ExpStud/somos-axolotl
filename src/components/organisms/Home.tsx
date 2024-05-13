@@ -90,19 +90,11 @@ const Home: FC<Props> = (props: Props) => {
   return (
     <div
       id="home"
-      className="inner-padding relative min-h-screen lg:h-screen w-screen bg-black overflow-hidden z-[1]"
+      className="inner-padding relative min-h-screen lg:h-screen w-screen bg-black overflow-hidden z-[1]  "
       ref={ref}
     >
-      {/* TODO: add bg video */}
+      {/* video */}
       <div className="absolute inset-0 bg-black bg-opacity-75 -z-[5]"></div>
-
-      {/* <Image
-        src="/images/landing/intro-xs.jpg"
-        alt="EXP"
-        fill
-        className="object-cover opacity-100 overflow-hidden -z-10"
-        onLoad={() => handleAssetLoad(0, setAssets)}
-      /> */}
       <motion.video
         ref={videoRef}
         src={`/videos/${
@@ -144,12 +136,12 @@ const Home: FC<Props> = (props: Props) => {
           </motion.div>
         ) : (
           <motion.div
-            className="relative flex flex-col gap-24 lg:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 h-full pt-0 2xl:pt-0 min-h-[660px]"
+            className="relative flex flex-col gap-16 lg:gap-6 items-center justify-start 3xl:justify-center 3xl:gap-20 h-full pt-0 2xl:pt-0 min-h-[660px] pb-4"
             key="body"
             {...exitAnimation}
           >
             {/* content */}
-            <div className="max-width flex flex-col md:flex-row gap-10 md:gap-14 lg:gap-0 justify-center md:justify-between items-center md:items-end  pb-0 pt-10 md:pt-0 md:pb-6 lg:pb-12 md:w-full">
+            <div className="max-width flex flex-col md:flex-row gap-20 md:gap-14 lg:gap-0 justify-between md:justify-between items-center md:items-end  pb-0 pt-10 md:pt-0 md:pb-6 lg:pb-16 md:w-full">
               <Image
                 src="/images/logos/lg.svg"
                 height={162.04}
@@ -159,9 +151,9 @@ const Home: FC<Props> = (props: Props) => {
                 className="w-[110px] md:w-auto"
               />
 
-              <div className="flex flex-col lg:flex-row gap-">
+              <div className="flex flex-col lg:flex-row gap-2 lg:gap-6">
                 <div className="flex flex-row md:flex-col-reverse items-end md:items-start md:gap-3 justify-between md:justify-start">
-                  <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9 pb-2">
+                  <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9 pb-2 lg:mr-4">
                     {t("OUR_MISSION_TITLE")}
                   </h2>
                   <Image
@@ -184,7 +176,7 @@ const Home: FC<Props> = (props: Props) => {
               viewBox="0 0 60 60"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="hidden md:flex mb-4 animate-bounce"
+              className="hidden md:flex mt-8 animate-bounce"
             >
               <path
                 d="M19.4531 38.4375L28.5253 47.3081C29.3451 48.1096 30.6549 48.1096 31.4747 47.3081L40.5469 38.4375M19.4531 21.5625L28.5253 12.6919C29.3451 11.8904 30.6549 11.8904 31.4747 12.6919L40.5469 21.5625"

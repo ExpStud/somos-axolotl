@@ -171,7 +171,7 @@ html {
 }
 
 .inner-padding {
-  @apply px-6 md:px-[10vw] lg:px-[15vw] pt-[13svh] md:pt-[16svh] lg:pt-[14svh] 2xl:pt-[18svh] 3xl:pt-[15svh];
+  @apply px-6 md:px-[10vw] lg:px-[15vw] pt-16 md:pt-[16svh] lg:pt-[14svh] 2xl:pt-36 3xl:pt-[15svh] lg:pb-4;
 }
 .description-padding {
   @apply px-6 md:px-[10vw] lg:px-[15vw] pt-[15svh] md:pt-[24svh] lg:pt-[10svh] 2xl:pt-[18svh] 3xl:pt-[15svh];
