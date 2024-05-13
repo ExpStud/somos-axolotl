@@ -1,10 +1,11 @@
-import { FC, useState } from "react";
+import { FC, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import { ArrowIcon } from "@components";
 import { AnimatePresence, motion } from "framer-motion";
 import { fastExitAnimation } from "src/constants";
+import { useOutsideAlerter } from "src/hooks";
 interface Props {
   className?: string;
 }
@@ -30,14 +31,18 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
     setOpenMenu(false);
   };
 
+  const ref = useRef(null);
+  useOutsideAlerter(ref, () => setOpenMenu(false));
+
   return (
     <div
-      className={`relative flex justify-between items-center bg-[#323232] rounded-lg w-[93px] h-[30px] text-white text-xs px-1.5 overflow-visible cursor-pointer ${
+      className={`relative flex justify-between items-center bg-[#323232] rounded-lg w-[96px] h-[30px] text-white text-xs px-1.5 overflow-visible cursor-pointer ${
         className ?? ""
       }`}
       onClick={() => setOpenMenu(!openMenu)}
+      ref={ref}
     >
-      <div className="flex gap-1 items-center h-full">
+      <div className="flex gap-1.5 items-center h-full">
         {isEnglish ? (
           <>
             <Image
@@ -51,7 +56,7 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
         ) : (
           <>
             <Image
-              src="/images/icons/english.svg"
+              src="/images/icons/spain.svg"
               alt="English"
               width={16}
               height={11}
@@ -64,11 +69,11 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
       <AnimatePresence>
         {openMenu && (
           <motion.div
-            className="fixed top-14 lg:w-[87px] rounded-r-lg rounded-bl-lg  bg-[#323232] mt-0 z-50 flex flex-col py-1.5 gap-0"
+            className="fixed top-14 lg:w-[89px] rounded-r-lg rounded-bl-lg  bg-[#323232] mt-0 z-50 flex flex-col py-1.5 gap-0"
             {...fastExitAnimation}
           >
             <div
-              className="flex gap-1 items-center py-3 lg:py-1 px-6 lg:px-2 cursor-pointer transition-200 hover:bg-[#4A4A4A]"
+              className="flex gap-1.5 items-center py-3 lg:py-1 px-6 lg:px-2 cursor-pointer transition-200 hover:bg-[#4A4A4A]"
               onClick={() => handleLanguageChange("en")}
             >
               <Image
@@ -80,11 +85,11 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
               English
             </div>
             <div
-              className="flex gap-1 items-center py-3 lg:py-1 px-6 lg:px-2 cursor-pointer transition-200 hover:bg-[#4A4A4A]"
+              className="flex gap-1.5 items-center py-3 lg:py-1 px-6 lg:px-2 cursor-pointer transition-200 hover:bg-[#4A4A4A]"
               onClick={() => handleLanguageChange("es")}
             >
               <Image
-                src="/images/icons/english.svg"
+                src="/images/icons/spain.svg"
                 alt="English"
                 width={16}
                 height={11}
