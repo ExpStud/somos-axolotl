@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { IconBar, NavItem } from "@components";
+import { IconBar, LanguageSwitcher, NavItem } from "@components";
 import Image from "next/image";
 import { useWindowSize } from "@hooks";
 import { fadeVariants } from "@constants";
@@ -101,6 +101,9 @@ const Menu: FC<Props> = (props: Props) => {
             animate="open"
             exit="closed"
           >
+            <div className="lg:hidden absolute top-6 left-10 inset-x-0">
+              <LanguageSwitcher />
+            </div>
             <div
               className="flex flex-col items-start justify-start text-4xl sm:text-6xl gap-10 font-poppins-regular"
               onClick={() => toggleMenu(false)}

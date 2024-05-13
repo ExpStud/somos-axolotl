@@ -22,7 +22,8 @@ const HeaderContent: FC<Props> = (props: Props) => {
       ref={headerRef}
     >
       <Logo />
-      <div className="flex items-end gap-8">
+      <div className="flex items-center gap-8">
+        <LanguageSwitcher className="hidden lg:flex" />
         <AnimatePresence mode="wait">
           {!openMenu ? (
             <motion.div
@@ -60,12 +61,6 @@ const HeaderContent: FC<Props> = (props: Props) => {
             />
           )}
         </AnimatePresence>
-        {/* <Link
-          href="#donate"
-          className="teal-hover-dark col-centered text-sm md:text-base rounded-xl w-[98px] md:w-[124px] h-[36px] md:h-[40px] transition-200 font-poppins-semibold text-white "
-        >
-          💰 Donate
-        </Link> */}
       </div>
     </div>
   );
