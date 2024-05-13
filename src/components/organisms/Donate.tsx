@@ -62,15 +62,6 @@ const Donate: FC<Props> = (props: Props) => {
                   {...midExitAnimation}
                 >
                   ✅ {t("DONATE_COPIED")}
-                  {/* <Image
-                  src="/images/icons/copy.png"
-                  width={26}
-                  height={26}
-                  alt="Copy"
-                />
-                <p className="text-xs lg:text-sm font-poppins-regular">
-                  G4Qu1wAd6pm......9Z8U8ZnmqC
-                </p> */}
                 </motion.div>
               ) : (
                 <motion.div
@@ -88,7 +79,7 @@ const Donate: FC<Props> = (props: Props) => {
           alt="Donate"
           width={winWidth < 640 ? 307 : 721}
           height={winWidth < 640 ? 292 : 504}
-          className="rounded-[32px] aspect-[1.05/1] sm:aspect-[2.8/2] object-cover"
+          className="rounded-2xl lg:rounded-[32px] aspect-[1.05/1] sm:aspect-[2.8/2] object-cover"
         />
       </div>
     </div>

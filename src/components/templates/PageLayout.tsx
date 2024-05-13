@@ -53,7 +53,7 @@ const PageLayout: FC<Props> = (props: Props) => {
         }`}
       >
         <PageHead
-          title="Name"
+          title="Somos Axolotl"
           description="Description"
           url="https://addurl.xyz" // no backslash at the end
           twitter="twitterhandle"
