@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 const AboutDescription: FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col lg:flex-row gap-10 lg:gap-32 items-start lg:items-end mt-12 lg:mt-[20vh] px-6 md:px-10">
+    <div className="flex flex-col lg:flex-row gap-10 lg:gap-32 items-start lg:items-end mt-12 md:mt-16 xl:mt-[16vh] px-6 md:px-10">
       <div className="flex flex-col gap-6 max-w-[505px]">
         <Image
           src="/images/design/squares-yellow.svg"
