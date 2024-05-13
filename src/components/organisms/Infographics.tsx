@@ -14,7 +14,8 @@ const Infographics: FC<Props> = (props: Props) => {
 
   const infographicsData: InfographicsDataType[] = [
     {
-      title: t("INFO_TITLE_2"),
+      title: t("INFO_TITLE_1"),
+      short: t("INFO_SMALL_DESC_1"),
       content: [
         t("INFO_DESC_2_1"),
         t("INFO_DESC_2_2"),
@@ -27,7 +28,8 @@ const Infographics: FC<Props> = (props: Props) => {
       icon: "/images/icons/info-2.svg",
     },
     {
-      title: t("INFO_TITLE_1"),
+      title: t("INFO_TITLE_2"),
+      short: t("INFO_SMALL_DESC_2"),
       content: [
         t("INFO_DESC_1_1"),
         t("INFO_DESC_1_2"),
@@ -41,6 +43,7 @@ const Infographics: FC<Props> = (props: Props) => {
     },
     {
       title: t("INFO_TITLE_3"),
+      short: t("INFO_SMALL_DESC_3"),
       content: [
         t("INFO_DESC_3_1"),
         t("INFO_DESC_3_2"),
@@ -108,7 +111,7 @@ const InfographicsCard: FC<ICProps> = (props: ICProps) => {
         {data.title}
       </h3>
       <p className="text-white text-xs lg:text-base line-clamp-4">
-        {data.content[0]}
+        {data.short}
       </p>
       <Image
         src={data.displayImage}
