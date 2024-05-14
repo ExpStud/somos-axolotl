@@ -55,7 +55,8 @@ const PageLayout: FC<Props> = (props: Props) => {
         <PageHead
           title="Somos Axolotl"
           description="Somos Axolotl uses art and technology to help communities move toward sustainable resource and environmental management - first in Mexico, and then beyond."
-          url="https://addurl.xyz" // no backslash at the end
+          url="https://somosaxolotl.com" // no backslash at the end
+          twitter="SCUMSOL"
         />
         {/* header */}
         <Header
