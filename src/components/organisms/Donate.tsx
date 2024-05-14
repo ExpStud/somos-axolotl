@@ -14,7 +14,7 @@ const Donate: FC<Props> = (props: Props) => {
 
   const [copied, setCopied] = useState<boolean>(false);
   const [winWidth] = useWindowSize();
-  const address = "G4Qu1wAd6pmCVYc1WckS8dxffv9ooaAfW49Z8U8ZnmqC";
+  const address = "dZABythjt2x9myxjXeNFBWjoX59vzeZ34pYBBqFrPCe";
 
   const handleCopy = async () => {
     try {
