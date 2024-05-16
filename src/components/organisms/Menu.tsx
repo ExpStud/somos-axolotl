@@ -114,7 +114,7 @@ const Menu: FC<Props> = (props: Props) => {
             </div>
             <div className="flex flex-col gap-6">
               <Image
-                src="/images/logos/lg-white.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg-white.svg`}
                 width={122}
                 height={174}
                 alt="Somos"

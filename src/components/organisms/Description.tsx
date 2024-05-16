@@ -17,7 +17,7 @@ const Description: FC<Props> = (props: Props) => {
       <div className="max-width flex flex-col lg:flex-row no-wrap  pt-20 3xl:justify-between w-full">
         <div className="z-10 flex flex-col gap-2 max-w-[500px]">
           <Image
-            src="/images/design/squares-blue.svg"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-blue.svg`}
             width={111}
             height={18}
             alt="Blue Squares"
@@ -31,7 +31,7 @@ const Description: FC<Props> = (props: Props) => {
           />
         </div>
         <Image
-          src="/images/landing/axolotl-main.png"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/axolotl-main.png`}
           alt="Axolotl"
           width={1797 * 0.5}
           height={1714 * 0.5}

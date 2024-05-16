@@ -13,14 +13,14 @@ const TeamHeader: FC = () => {
         </p>
 
         <Image
-          src="/images/logos/text-black.svg"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/text-black.svg`}
           width={200}
           height={81.5}
           className="w-[98px] md:w-auto"
           alt="Somos Axolotl"
         />
         <Image
-          src="/images/design/red-stroke.png"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/design/red-stroke.png`}
           fill
           className="absolute"
           alt="Red Stroke"

@@ -15,13 +15,22 @@ const Gallery: React.FC = () => {
   const { t } = useTranslation();
 
   const images: ImageData[] = [
-    { src: "/images/landing/axolotls.jpg", caption: t("GALLERY_3") },
-    { src: "/images/landing/trees.jpg", caption: t("GALLERY_2") },
     {
-      src: "/images/landing/Axolotl Abystoma Mex vertical.jpg",
+      src: `${process.env.CLOUDFLARE_STORAGE}/images/landing/axolotls.jpg`,
+      caption: t("GALLERY_3"),
+    },
+    {
+      src: `${process.env.CLOUDFLARE_STORAGE}/images/landing/trees.jpg`,
+      caption: t("GALLERY_2"),
+    },
+    {
+      src: `${process.env.CLOUDFLARE_STORAGE}/images/landing/Axolotl Abystoma Mex vertical.jpg`,
       caption: t("GALLERY_1"),
     },
-    { src: "/images/landing/boats.jpg", caption: t("GALLERY_4") },
+    {
+      src: `${process.env.CLOUDFLARE_STORAGE}/images/landing/boats.jpg`,
+      caption: t("GALLERY_4"),
+    },
   ];
 
   const nextImage = () => {
@@ -49,7 +58,7 @@ const Gallery: React.FC = () => {
         className="hover-opacity absolute -top-6 md:-top-10 right-20 md:right-28 cursor-pointer py-2"
       >
         <Image
-          src="/images/icons/arrow-left.svg"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/arrow-left.svg`}
           height={2}
           width={40}
           alt="Back"
@@ -61,7 +70,7 @@ const Gallery: React.FC = () => {
         className="hover-opacity absolute -top-6 md:-top-10 right-2 cursor-pointer py-2"
       >
         <Image
-          src="/images/icons/arrow-right.svg"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/arrow-right.svg`}
           height={2}
           width={40}
           alt="Next"

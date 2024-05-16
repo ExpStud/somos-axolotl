@@ -17,7 +17,7 @@ const Goals: FC<Props> = (props: Props) => {
         max-w-[400px] sm:max-w-[500px] lg:max-w-[1245px]"
       >
         <Image
-          src="/images/landing/statue.jpg"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/statue.jpg`}
           alt="Donate"
           width={winWidth < 640 ? 344 : 562}
           height={winWidth < 640 ? 391 : 391}
@@ -25,7 +25,7 @@ const Goals: FC<Props> = (props: Props) => {
         />
         <div className="flex flex-col justify-center  gap-6 py-8 md:p-12 lg:min-w-[395px]">
           <Image
-            src="/images/design/squares-pink.svg"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-pink.svg`}
             width={111}
             height={18}
             alt="Brown Squares"

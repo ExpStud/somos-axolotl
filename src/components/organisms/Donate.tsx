@@ -75,7 +75,7 @@ const Donate: FC<Props> = (props: Props) => {
           </button>
         </div>
         <Image
-          src="/images/landing/boats-1.jpg"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/boats-1.jpg`}
           alt="Donate"
           width={winWidth < 640 ? 307 : 721}
           height={winWidth < 640 ? 292 : 504}

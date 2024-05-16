@@ -33,7 +33,7 @@ const HeaderContent: FC<Props> = (props: Props) => {
               // {...midExitAnimation}
             >
               <Image
-                src="/images/icons/menu.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/menu.svg`}
                 width={40}
                 height={40}
                 alt="menu"

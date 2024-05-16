@@ -46,7 +46,7 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
         {isEnglish ? (
           <>
             <Image
-              src="/images/icons/english.svg"
+              src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/english.svg`}
               alt="English"
               width={16}
               height={11}
@@ -56,7 +56,7 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
         ) : (
           <>
             <Image
-              src="/images/icons/spain.svg"
+              src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/spain.svg`}
               alt="English"
               width={16}
               height={11}
@@ -77,7 +77,7 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
               onClick={() => handleLanguageChange("en")}
             >
               <Image
-                src="/images/icons/english.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/english.svg`}
                 alt="English"
                 width={16}
                 height={11}
@@ -89,7 +89,7 @@ const LanguageSwitcher: FC<Props> = ({ className }) => {
               onClick={() => handleLanguageChange("es")}
             >
               <Image
-                src="/images/icons/spain.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/spain.svg`}
                 alt="English"
                 width={16}
                 height={11}

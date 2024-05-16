@@ -9,7 +9,7 @@ const nextConfig = {
     domains: ["images.somosaxolotl.com"],
   },
   env: {
-    cloudflareStorage: "https://images.somosaxolotl.com",
+    CLOUDFLARE_STORAGE: "https://images.somosaxolotl.com",
   },
 };
 

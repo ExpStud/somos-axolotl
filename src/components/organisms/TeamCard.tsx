@@ -72,7 +72,7 @@ const TeamCard: FC<Props> = (props: Props) => {
         {/* left column */}
         <div className="flex lg:flex-col items-center lg:items-start justify-start  gap-2 lg:gap-5 lg:w-1/3 lg:pt-24 -rotate-1 pb-4 lg:pb-0 mt-[350px] lg:mt-0">
           <Image
-            src="/images/design/pattern-brown.svg"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/pattern-brown.svg`}
             width={patternSize}
             height={patternSize}
             alt="Pattern"
@@ -84,7 +84,7 @@ const TeamCard: FC<Props> = (props: Props) => {
           <div className={`grid grid-cols-2 gap-1 lg:gap-3 pl-14 lg:pl-0`}>
             {/* <a href={"/"} rel="noreferrer" target="_blank">
               <Image
-                src="/images/icons/fb-brown.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/fb-brown.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Facebook"
@@ -96,7 +96,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src="/images/icons/ig-brown.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/ig-brown.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Instagram"
@@ -108,7 +108,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src="/images/icons/x-brown.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/x-brown.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Instagram"
@@ -119,7 +119,7 @@ const TeamCard: FC<Props> = (props: Props) => {
         {/* right column */}
         <div className="flex flex-col items-start justify-center gap-5 lg:w-1/3 lg:pt-24 -rotate-1 pb-8">
           <Image
-            src="/images/design/squares-brown.svg"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-brown.svg`}
             width={111}
             height={18}
             alt="Brown Squares"
@@ -148,7 +148,7 @@ const TeamCard: FC<Props> = (props: Props) => {
         {/* left column */}
         <div className="flex lg:flex-col items-center lg:items-start justify-start  gap-2 lg:gap-5 lg:w-1/3 lg:pt-24 pb-4 lg:pb-0  mt-[340px] lg:mt-0">
           <Image
-            src="/images/design/pattern-pink.svg"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/pattern-pink.svg`}
             width={patternSize}
             height={patternSize}
             alt="Pattern"
@@ -160,7 +160,7 @@ const TeamCard: FC<Props> = (props: Props) => {
           <div className={`grid grid-cols-2 gap-1 lg:gap-3 pl-8 lg:pl-0`}>
             {/* <a href={"/"} rel="noreferrer" target="_blank">
               <Image
-                src="/images/icons/fb-pink.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/fb-pink.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Facebook"
@@ -172,7 +172,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src="/images/icons/ig-pink.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/ig-pink.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Instagram"
@@ -184,7 +184,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src="/images/icons/globe-pink.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/globe-pink.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Website"
@@ -195,7 +195,7 @@ const TeamCard: FC<Props> = (props: Props) => {
         {/* right column */}
         <div className="flex flex-col items-start justify-center gap-5 lg:w-1/3 lg:pt-24 pb-8 pr-2 lg:pr-0">
           <Image
-            src="/images/design/squares-pink.svg"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-pink.svg`}
             width={111}
             height={18}
             alt="Brown Squares"
@@ -222,7 +222,7 @@ const TeamCard: FC<Props> = (props: Props) => {
       <div className="flex flex-col items-start justify-center gap-5 lg:pt-24 lg:pb-8 lg:w-[54%] pt-12 lg:rotate-1 pr-3 lg:pr-8  mt-[280px] lg:-mt-14">
         <div className="flex flex-row lg:flex-col items-start justify-center gap-1 lg:gap-5">
           <Image
-            src="/images/design/pattern-yellow.svg"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/pattern-yellow.svg`}
             width={patternSize}
             height={patternSize}
             alt="Pattern"
@@ -238,7 +238,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src="/images/icons/globe-yellow.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/globe-yellow.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Website"
@@ -250,7 +250,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src="/images/icons/link-yellow.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/link-yellow.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Linkedin"
@@ -262,7 +262,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src="/images/icons/x-yellow.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/x-yellow.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="X"
@@ -271,7 +271,7 @@ const TeamCard: FC<Props> = (props: Props) => {
           </div>
         </div>
         <Image
-          src="/images/design/squares-yellow.svg"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow.svg`}
           width={111}
           height={18}
           alt="Brown Squares"

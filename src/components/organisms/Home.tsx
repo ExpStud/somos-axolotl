@@ -97,7 +97,7 @@ const Home: FC<Props> = (props: Props) => {
       <div className="absolute inset-0 bg-black bg-opacity-75 -z-[5]"></div>
       <motion.video
         ref={videoRef}
-        src={`/videos/${
+        src={`${process.env.CLOUDFLARE_STORAGE}/videos/${
           isMobile ? "intro-video-xs.mp4" : "intro-video-sm.mp4"
         }`}
         autoPlay
@@ -109,7 +109,7 @@ const Home: FC<Props> = (props: Props) => {
         {...midEnterAnimation}
       />
       <Image
-        src="/images/landing/intro.jpg"
+        src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/intro.jpg`}
         fill
         className="absolute inset-0 w-full h-full object-cover -z-[9]"
         alt="Somos"
@@ -123,7 +123,7 @@ const Home: FC<Props> = (props: Props) => {
             className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140px] md:w-auto flex  flex-col items-center gap-2"
           >
             <Image
-              src="/images/logos/lg.svg"
+              src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg.svg`}
               height={162.04}
               width={230}
               alt="Somos Axolotl"
@@ -149,7 +149,7 @@ const Home: FC<Props> = (props: Props) => {
             {/* content */}
             <div className="max-width flex flex-col md:flex-row gap-20 md:gap-14 lg:gap-0 justify-between md:justify-between items-center md:items-end  pb-0 pt-10 md:pt-0 md:pb-6 lg:pb-16 md:w-full">
               <Image
-                src="/images/logos/lg.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg.svg`}
                 height={162.04}
                 width={230}
                 alt="Somos Axolotl"
@@ -163,7 +163,7 @@ const Home: FC<Props> = (props: Props) => {
                     {t("OUR_MISSION_TITLE")}
                   </h2>
                   <Image
-                    src="/images/design/squares-yellow.svg"
+                    src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow.svg`}
                     width={111}
                     height={18}
                     alt="Yellow Squares"

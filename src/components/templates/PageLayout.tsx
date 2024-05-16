@@ -72,7 +72,7 @@ const PageLayout: FC<Props> = (props: Props) => {
         >
           {children}
           <Image
-            src="/images/design/texture-lg.png"
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/texture-lg.png`}
             layout="fill"
             alt="texture"
             className="z-0 resize-none object-cover"
