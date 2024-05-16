@@ -9,19 +9,51 @@ type PartnersType = {
   href: string;
 };
 const partners: PartnersType[] = [
-  { name: "Slimes", image: "/images/partners/slimes.svg", href: "/" },
   {
-    name: "Santuario Ajolote",
-    image: "/images/partners/santuario.svg",
+    name: "Slimes",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/slimes.svg`,
     href: "/",
   },
-  { name: "Solana", image: "/images/partners/solana.svg", href: "/" },
-  { name: "Roel", image: "/images/partners/roel.svg", href: "/" },
-  { name: "Pontyx", image: "/images/partners/pontyx.svg", href: "/" },
-  { name: "Sphere", image: "/images/partners/sphere.svg", href: "/" },
-  { name: "Leap Lab", image: "/images/partners/leap.svg", href: "/" },
-  { name: "Maya Moon", image: "/images/partners/mayamoon.svg", href: "/" },
-  { name: "Brasil", image: "/images/partners/brasil.svg", href: "/" },
+  {
+    name: "Santuario Ajolote",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/santuario.svg`,
+    href: "/",
+  },
+  {
+    name: "Solana",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/solana.svg`,
+    href: "/",
+  },
+  {
+    name: "Roel",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/roel.svg`,
+    href: "/",
+  },
+  {
+    name: "Pontyx",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/pontyx.svg`,
+    href: "/",
+  },
+  {
+    name: "Sphere",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/sphere.svg`,
+    href: "/",
+  },
+  {
+    name: "Leap Lab",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/leap.svg`,
+    href: "/",
+  },
+  {
+    name: "Maya Moon",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/mayamoon.svg`,
+    href: "/",
+  },
+  {
+    name: "Brasil",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/brasil.svg`,
+    href: "/",
+  },
 ];
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
