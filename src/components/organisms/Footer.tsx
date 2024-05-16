@@ -26,7 +26,7 @@ const Footer: FC = () => {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://twitter.com/exp_studio_"
+            href="https://expstud.io/"
             className="text-sm"
           >
             ℗ {t("FOOTER_POWERED")}
@@ -74,7 +74,7 @@ const Footer: FC = () => {
         <a
           rel="noreferrer"
           target="_blank"
-          href="https://twitter.com/exp_studio_"
+          href="https://expstud.io/"
           className="text-sm"
         >
           ℗ {t("FOOTER_POWERED")}

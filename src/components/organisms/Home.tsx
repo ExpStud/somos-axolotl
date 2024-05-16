@@ -108,6 +108,12 @@ const Home: FC<Props> = (props: Props) => {
         className="absolute inset-0 w-full h-full object-cover -z-[8]"
         {...midEnterAnimation}
       />
+      <Image
+        src="/images/landing/intro.jpg"
+        fill
+        className="absolute inset-0 w-full h-full object-cover -z-[9]"
+        alt="Somos"
+      />
 
       <AnimatePresence mode="wait">
         {!showView ? (
