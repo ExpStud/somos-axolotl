@@ -57,7 +57,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           />
           <CoinflowPurchaseProtection
             coinflowEnv={"prod"}
-            merchantId={"Test10"}
+            merchantId={"ventura-county-science-center"}
           />
         </WalletModalProvider>
       </WalletProvider>
