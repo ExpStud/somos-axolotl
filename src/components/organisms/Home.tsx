@@ -6,11 +6,12 @@ import {
   useEffect,
   useState,
 } from "react";
-import { handleAssetLoad } from "@utils";
 import Image from "next/image";
 import Gallery from "../molecules/Gallery";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { exitAnimation, midExitAnimation } from "src/constants";
+import { exitAnimation, midEnterAnimation } from "src/constants";
+import { isMobile } from "react-device-detect";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
@@ -20,6 +21,8 @@ interface Props {
 const Home: FC<Props> = (props: Props) => {
   const { setAssets, handleViewChange } = props;
   const [showView, setShowView] = useState(false);
+
+  const { t } = useTranslation();
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -31,78 +34,144 @@ const Home: FC<Props> = (props: Props) => {
   }, [handleViewChange, isInView]);
 
   //show view timeout
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowView(true);
-    }, 1500);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowView(true);
+  //   }, 3000);
 
-    return () => {
-      clearTimeout(timer);
-    };
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setShowView(true);
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  // const isMobile = /* your condition for mobile devices */;
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
   }, []);
 
-  const transitionValues = {
-    duration: 0.8,
-    yoyo: Infinity,
-    ease: "easeOut",
-  };
+  // useEffect(() => {
+  //   if (showView) {
+  //     document.body.style.overflow = "";
+  //     document.body.style.paddingRight = "";
+  //   } else {
+  //     // Get the scrollbar width
+  //     const scrollbarWidth =
+  //       window.innerWidth - document.documentElement.clientWidth;
+
+  //     // Hide the scrollbar and compensate for the scrollbar width
+  //     document.body.style.overflow = "hidden";
+  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
+  //   }
+
+  //   // return () => {
+  //   //   // Show the scrollbar and remove the padding
+  //   //   document.body.style.overflow = "";
+  //   //   document.body.style.paddingRight = "";
+  //   // };
+  // }, [showView]);
 
   return (
     <div
       id="home"
-      className="inner-padding relative min-h-screen lg:h-screen w-screen bg-black overflow-hidden z-[1]"
+      className="inner-padding relative min-h-screen lg:h-screen w-screen bg-black overflow-hidden z-[1]  "
       ref={ref}
     >
-      {/* TODO: add bg video */}
-      <Image
-        src="/images/temp.png"
-        alt="EXP"
-        fill
-        className="object-cover opacity-20 overflow-hidden -z-10"
-        onLoad={() => handleAssetLoad(0, setAssets)}
+      {/* video */}
+      <div className="absolute inset-0 bg-black bg-opacity-75 -z-[5]"></div>
+      <motion.video
+        ref={videoRef}
+        src={`${process.env.CLOUDFLARE_STORAGE}/videos/${
+          isMobile ? "intro-video-xs.mp4" : "intro-video-sm.mp4"
+        }`}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover -z-[8]"
+        {...midEnterAnimation}
       />
+      <Image
+        src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/intro.jpg`}
+        fill
+        className="absolute inset-0 w-full h-full object-cover -z-[9]"
+        alt="Somos"
+      />
+
       <AnimatePresence mode="wait">
         {!showView ? (
-          <motion.div key="logo" {...exitAnimation}>
+          <motion.div
+            key="logo"
+            {...exitAnimation}
+            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140px] md:w-auto flex  flex-col items-center gap-2"
+          >
             <Image
-              src="/images/logos/lg.svg"
+              src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg.svg`}
               height={162.04}
               width={230}
               alt="Somos Axolotl"
               priority
-              className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 "
+              className="  p-2"
             />
+
+            <button
+              onClick={() => setShowView(true)}
+              className="hover-opacity  text-somos-white border border-somos-white rounded-sm px-9 lg:px-12 py-1.5 lg:py-2 mt-10 lg:text-xl"
+            >
+              {" "}
+              {t("ENTER")}
+            </button>
+            {/* <p className="text-white text-xs">{t("ENTER_1")}</p> */}
           </motion.div>
         ) : (
           <motion.div
-            className="relative flex flex-col md:gap-6 items-center justify-evenly 3xl:justify-center 3xl:gap-20 h-full"
+            className="relative flex flex-col gap-16 lg:gap-6 items-center justify-start 3xl:justify-center 3xl:gap-20 h-full pt-0 2xl:pt-0 min-h-[660px] pb-4"
             key="body"
             {...exitAnimation}
           >
             {/* content */}
-            <div className="max-width flex flex-col md:flex-row gap-10 md:gap-14 lg:gap-0 justify-center md:justify-between items-center md:items-end  pb-14 md:pb-6 lg:pb-12 md:w-full">
+            <div className="max-width flex flex-col md:flex-row gap-20 md:gap-14 lg:gap-0 justify-between md:justify-between items-center md:items-end  pb-0 pt-10 md:pt-0 md:pb-6 lg:pb-16 md:w-full">
               <Image
-                src="/images/logos/lg.svg"
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg.svg`}
                 height={162.04}
                 width={230}
                 alt="Somos Axolotl"
                 priority
                 className="w-[110px] md:w-auto"
               />
-              <div className="flex flex-col lg:flex-row gap-6">
+
+              <div className="flex flex-col lg:flex-row gap-2 lg:gap-6">
                 <div className="flex flex-row md:flex-col-reverse items-end md:items-start md:gap-3 justify-between md:justify-start">
-                  <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9">
-                    Our Project
+                  <h2 className="text-white text-[32px] md:text-[40px] w-[118px] md:w-[178px] leading-9 pb-2 lg:mr-4">
+                    {t("OUR_MISSION_TITLE")}
                   </h2>
-                  <div className="row-centered text-white border-[0.85px] border-white w-[103px] md:w-[74px] h-[27.6px] md:h-[24px] text-xs">
-                    Vision
-                  </div>
+                  <Image
+                    src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow.svg`}
+                    width={111}
+                    height={18}
+                    alt="Yellow Squares"
+                    className="self-start"
+                  />
                 </div>
                 <p className="text-white xs:max-w-[293px]">
-                  In publishing and graphic design, Lorem ipsum is a placeholder
-                  text commonly used to demonstrate the visual form of a
-                  document or a typeface In publishing and graphic design, Lorem
-                  ipsum is a placeholder text commonly used to
+                  {t("OUR_MISSION")}
                 </p>
               </div>
             </div>
@@ -113,16 +182,7 @@ const Home: FC<Props> = (props: Props) => {
               viewBox="0 0 60 60"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="hidden md:flex mb-4"
-              // animate={{ y: ["0%", "10%", "0%"] }}
-              transition={{
-                repeat: Infinity,
-                duration: 0.8,
-                ease: "easeIn",
-              }}
-              animate={{
-                y: ["0.4em", "0rem", "0.4em"],
-              }}
+              className="hidden md:flex mt-8 animate-bounce"
             >
               <path
                 d="M19.4531 38.4375L28.5253 47.3081C29.3451 48.1096 30.6549 48.1096 31.4747 47.3081L40.5469 38.4375M19.4531 21.5625L28.5253 12.6919C29.3451 11.8904 30.6549 11.8904 31.4747 12.6919L40.5469 21.5625"

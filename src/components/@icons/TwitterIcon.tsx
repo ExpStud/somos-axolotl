@@ -20,7 +20,7 @@ const TwitterIcon: FC<Props> = (props: Props) => {
       className="transition-all duration-300 opacity-80 hover:opacity-100"
     >
       <Image
-        src="/images/icons/twitter.svg"
+        src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/twitter.svg`}
         width={size}
         height={size}
         alt="Twitter"

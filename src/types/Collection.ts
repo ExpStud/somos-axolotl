@@ -1,6 +1,7 @@
 //somos
 export type InfographicsDataType = {
   title: string;
+  short: string;
   content: string[];
   displayImage: string;
   expandedImage: string;

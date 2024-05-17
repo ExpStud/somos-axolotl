@@ -10,9 +10,9 @@ const Logo: FC = () => {
       className="my-0 flex items-center gap-2 cursor-pointer"
       {...enterAnimation}
     >
-      <Link href="#home">
+      <Link href="/">
         <Image
-          src="/images/logos/sm.svg"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/sm-yellow.svg`}
           height={34.31}
           width={84}
           alt="Somos Axolotl"

@@ -1,19 +1,28 @@
 import { FC, useState } from "react";
-import { Variants, motion } from "framer-motion";
+import { AnimatePresence, Variants, motion } from "framer-motion";
+import { fastExitAnimation, midExitAnimation } from "src/constants";
+import { useTranslation } from "next-i18next";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   content: string;
+  openHeight?: string;
   closedHeight?: string;
 }
 
 const TextDropdown: FC<Props> = (props: Props) => {
-  const { content, className, closedHeight = "12em" } = props;
+  const {
+    content,
+    className,
+    openHeight = "30em",
+    closedHeight = "12em",
+  } = props;
 
   const [show, setShow] = useState<boolean>(false);
+  const { t } = useTranslation();
 
   const textVariants: Variants = {
     open: {
-      height: "30em",
+      height: openHeight,
       transition: {
         duration: 0.75,
         ease: "easeInOut",
@@ -49,7 +58,18 @@ const TextDropdown: FC<Props> = (props: Props) => {
         className="transition-200 hover:text-somos-brown hover:border-somos-brown active:opacity-80 flex w-full sm:w-[150px] h-[40px] row-centered gap-2 border border-somos-brown-dark text-somos-brown-dark rounded-[34px] cursor-pointer"
         onClick={() => setShow(!show)}
       >
-        Read {show ? "less" : "more"}
+        <AnimatePresence mode="wait">
+          {show ? (
+            <motion.p key="less" {...midExitAnimation} className="!text-lg">
+              {t("READ_LESS")}
+            </motion.p>
+          ) : (
+            <motion.p key="more" {...midExitAnimation} className="!text-lg">
+              {t("READ_MORE")}
+            </motion.p>
+          )}
+        </AnimatePresence>
+
         <svg
           width="8"
           height="14"

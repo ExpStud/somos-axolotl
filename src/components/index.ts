@@ -26,6 +26,9 @@ const SplashScreen = dynamic(() => import("./molecules/SplashScreen"));
 const HeaderContent = dynamic(() => import("./molecules/HeaderContent"));
 const Gallery = dynamic(() => import("./molecules/Gallery"));
 const TextDropdown = dynamic(() => import("./molecules/TextDropdown"));
+const TeamHeader = dynamic(() => import("./molecules/TeamHeader"));
+const Topography = dynamic(() => import("./molecules/Topography"));
+const LanguageSwitcher = dynamic(() => import("./molecules/LanguageSwitcher"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
@@ -37,9 +40,12 @@ const Infographics = dynamic(() => import("./organisms/Infographics"));
 const Partners = dynamic(() => import("./organisms/Partners"));
 const Donate = dynamic(() => import("./organisms/Donate"));
 const Goals = dynamic(() => import("./organisms/Goals"));
+const TeamCard = dynamic(() => import("./organisms/TeamCard"));
+const AboutDescription = dynamic(() => import("./organisms/AboutDescription"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
+const AboutView = dynamic(() => import("./templates/AboutView"));
 
 export {
   PageHead,
@@ -76,5 +82,11 @@ export {
   Infographics,
   Partners,
   Donate,
-  Goals
+  Goals,
+  AboutView,
+  TeamCard,
+  AboutDescription,
+  TeamHeader,
+  Topography,
+  LanguageSwitcher
 }

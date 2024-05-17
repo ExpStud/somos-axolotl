@@ -15,7 +15,7 @@ const DiscordIcon: FC<Props> = (props: Props) => {
       className="transition-all duration-300 opacity-80 hover:opacity-100"
     >
       <Image
-        src="/images/icons/discord.svg"
+        src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/discord.svg`}
         width={37}
         height={41}
         alt="discord"

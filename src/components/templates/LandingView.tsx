@@ -18,7 +18,7 @@ const LandingView: FC<Props> = (props: Props) => {
   const { setAssets, handleViewChange } = props;
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center  bg-somos-white">
+    <div className="z-[1] w-full h-full flex flex-col items-center justify-center ">
       <Home setAssets={setAssets} handleViewChange={handleViewChange} />
 
       <Description className="description-padding" />
@@ -30,7 +30,7 @@ const LandingView: FC<Props> = (props: Props) => {
       <Goals className="px-6 md:px-12 lg:px-10" />
       <PatternSVG className="my-20 lg:my-32" />
 
-      <Partners className="px-6" />
+      <Partners className="px-2" />
       <PatternSVG className="my-20 lg:my-32" />
 
       <Donate className="px-6 md:px-12 lg:px-0 pb-14 lg:pb-28" />

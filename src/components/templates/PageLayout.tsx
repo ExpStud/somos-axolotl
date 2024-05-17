@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from "react";
+import { FC, ReactNode, useRef, useState } from "react";
 import {
   PageHead,
   Header,
@@ -6,10 +6,11 @@ import {
   SplashScreen,
   ImageModal,
 } from "@components";
-import { enterAnimation, modalFadeAnimation } from "@constants";
+import { enterAnimation, midExitAnimation } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { ViewContext } from "@contexts";
 import { InfographicsDataType } from "@types";
+import Image from "next/image";
 
 interface Props {
   children: ReactNode;
@@ -32,6 +33,8 @@ const PageLayout: FC<Props> = (props: Props) => {
     headerBackground,
   } = props;
 
+  const headerRef = useRef(null);
+
   //context for splash screen & modals
   const [showView, setShowView] = useState<boolean>(false);
   const [showModal, setShowModal] = useState<InfographicsDataType | null>(null);
@@ -45,25 +48,35 @@ const PageLayout: FC<Props> = (props: Props) => {
   return (
     <ViewContext.Provider value={{ ...value, showModal: null }}>
       <div
-        className={`flex flex-col min-h-screen h-full justify-between overflow-none ${
+        className={`flex flex-col min-h-screen h-full justify-between  ${
           fixed ? "fixed inset-0" : absolute ? "absolute inset-0" : "relative"
         }`}
       >
         <PageHead
-          title="Name"
-          description="Description"
-          url="https://addurl.xyz" // no backslash at the end
-          twitter="twitterhandle"
+          title="Somos Axolotl"
+          description="Somos Axolotl uses art and technology to help communities move toward sustainable resource and environmental management - first in Mexico, and then beyond."
+          url="https://somosaxolotl.com" // no backslash at the end
+          twitter="SCUMSOL"
         />
         {/* header */}
-        <Header type={headerType} background={headerBackground} />
+        <Header
+          type={headerType}
+          background={headerBackground}
+          headerRef={headerRef}
+        />
 
         {/* body */}
         <motion.main
-          className={`flex flex-col h-full w-full overflow-x-clip`}
+          className={`relative flex flex-col h-full w-full overflow-x-hidden bg-somos-white`}
           {...enterAnimation}
         >
           {children}
+          <Image
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/texture-lg.png`}
+            layout="fill"
+            alt="texture"
+            className="z-0 resize-none object-cover"
+          />
         </motion.main>
 
         {/* footer */}
@@ -80,6 +93,16 @@ const PageLayout: FC<Props> = (props: Props) => {
               show={showModal !== null}
               data={showModal}
               close={() => setShowModal(null)}
+              headerRef={headerRef}
+            />
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {showModal && (
+            <motion.div
+              className="z-10 fixed inset-0 bg-[#030303] bg-opacity-70 "
+              onClick={() => setShowModal(null)}
+              {...midExitAnimation}
             />
           )}
         </AnimatePresence>

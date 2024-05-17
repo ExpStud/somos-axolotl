@@ -6,16 +6,19 @@ import {
   Variants,
 } from "framer-motion";
 import { HeaderContent } from "@components";
+import { useWindowSize } from "src/hooks";
 interface Props {
   showHeader?: boolean;
   type?: string;
   background?: string;
+  headerRef: React.RefObject<HTMLDivElement>;
 }
 
 const Header: FC<Props> = (props: Props) => {
-  const { type = "absolute", showHeader = true, background } = props;
+  const { type = "absolute", showHeader = true, background, headerRef } = props;
 
   const [animateHeader, setAnimateHeader] = useState<boolean>(true);
+  const [winWidth] = useWindowSize();
 
   //scroll variables
   const scrollRef = useRef<number>();
@@ -85,15 +88,15 @@ const Header: FC<Props> = (props: Props) => {
       `}
     >
       {type !== "scroll" ? (
-        <HeaderContent background={background} />
+        <HeaderContent background={background} headerRef={headerRef} />
       ) : (
-        <motion.aside
+        <motion.div
           variants={headerVariants}
           initial={showHeader ? "show" : "hidden"}
           animate={animateHeader ? "show" : "hidden"}
         >
-          <HeaderContent background={background} />
-        </motion.aside>
+          <HeaderContent background={background} headerRef={headerRef} />
+        </motion.div>
       )}
     </header>
   );

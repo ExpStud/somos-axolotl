@@ -1,30 +1,23 @@
-import { PageLayout, LandingView } from "@components";
+import { PageLayout, AboutView } from "@components";
 import { NextPage } from "next";
 import { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-const Home: NextPage = () => {
+const Team: NextPage = () => {
   const [assets, setAssets] = useState<boolean[]>([]);
-
-  const [isHomeInView, setIsHomeInView] = useState(true);
-
-  const handleViewChange = (value: boolean) => {
-    setIsHomeInView(value);
-  };
 
   return (
     <PageLayout
       footer
       assets={assets}
       headerType={"fixed"}
-      headerBackground={isHomeInView ? "bg-opacity-80" : "bg-opacity-100"}
+      // headerBackground={"bg-somos-blue"}
     >
-      <LandingView setAssets={setAssets} handleViewChange={handleViewChange} />
+      <AboutView setAssets={setAssets} />
     </PageLayout>
   );
 };
-
-export default Home;
+export default Team;
 
 export async function getStaticProps(context: { locale: any }) {
   // extract the locale identifier from the URL

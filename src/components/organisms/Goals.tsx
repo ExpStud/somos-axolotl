@@ -1,6 +1,7 @@
 import { FC, HTMLAttributes } from "react";
 import Image from "next/image";
 import { useWindowSize } from "@hooks";
+import { useTranslation } from "next-i18next";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -8,6 +9,7 @@ const Goals: FC<Props> = (props: Props) => {
   const { className } = props;
   const [winWidth, winHeight] = useWindowSize();
 
+  const { t } = useTranslation();
   return (
     <div className={`col-centered relative w-screen  ${className}`}>
       <div
@@ -15,43 +17,31 @@ const Goals: FC<Props> = (props: Props) => {
         max-w-[400px] sm:max-w-[500px] lg:max-w-[1245px]"
       >
         <Image
-          src="/images/temp.png"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/statue.jpg`}
           alt="Donate"
-          width={winWidth < 640 ? 344 : 610}
+          width={winWidth < 640 ? 344 : 562}
           height={winWidth < 640 ? 391 : 391}
-          className="rounded-[32px] aspect-[1.75/2] sm:aspect-[3.1/2] object-cover"
+          className="aspect-[1.75/2] sm:aspect-[3.1/2] object-cover rounded-bl-[40px] rounded-tr-[40px]"
         />
         <div className="flex flex-col justify-center  gap-6 py-8 md:p-12 lg:min-w-[395px]">
-          <div className="row-centered text-somos-teal-450 border-[0.85px] border-somos-teal-450 w-[114px] md:w-[104px] h-[24px] text-sm ">
-            the solution
-          </div>
-          <h2 className="">
-            The <br className="lg:hidden" />
-            Regeneration Goals
-          </h2>
+          <Image
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-pink.svg`}
+            width={111}
+            height={18}
+            alt="Brown Squares"
+          />
+          <h2 className="">{t("GOALS_TITLE")}</h2>
           <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex flex-col gap-2">
-              <p className="text-somos-brown-dark font-poppins-semibold text-base">
-                title here
-              </p>
-              <p className="">
-                The Axolotl is a species scientists are apprehensive about going
-                extinct soon; they estimate that there are only about 50 to
-                1,000 left in the wild.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2">
-              <p className="text-somos-brown-dark font-poppins-semibold text-base">
-                title here
-              </p>
-              <p className="">
-                The Axolotl is a species scientists are apprehensive about going
-                extinct soon; they estimate that there are only about 50 to
-                1,000 left in the wild.
-              </p>
+            <div className="flex flex-col gap-2 max-w-[520px]">
+              <p className="">{t("GOALS_DESC")}</p>
             </div>
           </div>
-          <div className="row-centered hover-brown gap-3 mt-4 text-sm  rounded-[34px] w-full sm:max-w-[268px] h-[40px] cursor-pointer text-white">
+          <a
+            href="https://www.instagram.com/somos_axolotl"
+            rel="noreferrer"
+            target="_blank"
+            className="row-centered hover-brown gap-3 mt-4 text-sm  rounded-[34px] w-full sm:max-w-[268px] h-[40px] cursor-pointer text-white"
+          >
             <svg
               width="18"
               height="18"
@@ -72,8 +62,8 @@ const Goals: FC<Props> = (props: Props) => {
                 fill="white"
               />
             </svg>
-            <p>Follow our latest updates</p>
-          </div>
+            <p>{t("GOALS_CTA")}</p>
+          </a>
         </div>
       </div>
     </div>

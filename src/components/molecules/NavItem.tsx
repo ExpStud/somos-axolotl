@@ -17,9 +17,6 @@ const NavItem: FC<Props> = (props: Props) => {
 
   const DisabledItem = () => (
     <div className="flex gap-2 justify-center items-center">
-      <div className={`opacity-0`}>
-        <Image src="/images/arrow.png" alt="arrow" width={14} height={22} />
-      </div>
       <div className={`py-5 opacity-10 cursor-default `}>{children}</div>
     </div>
   );
@@ -48,16 +45,15 @@ interface ItemProps {
 const Item: FC<ItemProps> = (props: ItemProps) => {
   const { children, isCurrent } = props;
   return (
-    <div className="flex gap-2 justify-center items-center">
-      <div
-        className={` transition-bg duration-300 my-5 p-0 ${
-          isCurrent
-            ? "text-red-600"
-            : " text-gray-400 hover:text-white cursor-pointer"
-        }`}
-      >
-        {children}
-      </div>
+    <div
+      className={` transition-200 flex gap-4 justify-center items-center ${
+        isCurrent
+          ? "text-somos-orange cursor-default"
+          : " text-white hover:text-somos-brown cursor-pointer"
+      }`}
+    >
+      <span className="text-sm">X</span>{" "}
+      <p className="text-[32px] ">{children}</p>
     </div>
   );
 };
