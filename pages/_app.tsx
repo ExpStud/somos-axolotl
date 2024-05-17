@@ -15,7 +15,7 @@ import {
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { useMemo } from "react";
 import { Toaster } from "react-hot-toast";
-import { CoinflowPurchaseProtection, CoinflowEnvs } from "@coinflowlabs/react";
+import { CoinflowPurchaseProtection } from "@coinflowlabs/react";
 import { appWithTranslation } from "next-i18next";
 
 // Default styles that can be overridden by your app

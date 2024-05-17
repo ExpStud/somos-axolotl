@@ -29,6 +29,7 @@ const TextDropdown = dynamic(() => import("./molecules/TextDropdown"));
 const TeamHeader = dynamic(() => import("./molecules/TeamHeader"));
 const Topography = dynamic(() => import("./molecules/Topography"));
 const LanguageSwitcher = dynamic(() => import("./molecules/LanguageSwitcher"));
+const CardPurchaseProtection = dynamic(() => import("./molecules/CardPurchaseProtection").then(mod => mod.CardPurchaseProtection));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
@@ -88,5 +89,6 @@ export {
   AboutDescription,
   TeamHeader,
   Topography,
-  LanguageSwitcher
+  LanguageSwitcher,
+  CardPurchaseProtection
 }

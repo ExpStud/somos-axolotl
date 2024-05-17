@@ -5,6 +5,7 @@ import {
   Footer,
   SplashScreen,
   ImageModal,
+  CardPurchaseProtection,
 } from "@components";
 import { enterAnimation, midExitAnimation } from "@constants";
 import { AnimatePresence, motion } from "framer-motion";
@@ -107,6 +108,7 @@ const PageLayout: FC<Props> = (props: Props) => {
           )}
         </AnimatePresence>
       </div>
+      <CardPurchaseProtection />
     </ViewContext.Provider>
   );
 };
