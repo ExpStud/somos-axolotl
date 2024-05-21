@@ -14,8 +14,7 @@ const Infographics: FC<Props> = (props: Props) => {
 
   const infographicsData: InfographicsDataType[] = [
     {
-      title: t("INFO_TITLE_1"),
-      short: t("INFO_SMALL_DESC_1"),
+      title: t("INFO_TITLE_2"),
       content: [
         t("INFO_DESC_2_1"),
         t("INFO_DESC_2_2"),
@@ -23,13 +22,14 @@ const Infographics: FC<Props> = (props: Props) => {
         t("INFO_DESC_2_4"),
         t("INFO_DESC_2_5"),
       ],
-      displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-2-sm.jpg`,
-      expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-2.jpg`,
-      icon: `${process.env.CLOUDFLARE_STORAGE}/images/icons/info-2.svg`,
+      short: t("INFO_SMALL_DESC_2"),
+      displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-1-sm.jpg`,
+      expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-1.jpg`,
+      icon: `${process.env.CLOUDFLARE_STORAGE}/images/icons/info-1.svg`,
     },
     {
-      title: t("INFO_TITLE_2"),
-      short: t("INFO_SMALL_DESC_2"),
+      title: t("INFO_TITLE_1"),
+      short: t("INFO_SMALL_DESC_1"),
       content: [
         t("INFO_DESC_1_1"),
         t("INFO_DESC_1_2"),
@@ -37,9 +37,9 @@ const Infographics: FC<Props> = (props: Props) => {
         t("INFO_DESC_1_4"),
         t("INFO_DESC_1_5"),
       ],
-      displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-1-sm.jpg`,
-      expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-1.jpg`,
-      icon: `${process.env.CLOUDFLARE_STORAGE}/images/icons/info-1.svg`,
+      displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-2-sm.jpg`,
+      expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-2.jpg`,
+      icon: `${process.env.CLOUDFLARE_STORAGE}/images/icons/info-2.svg`,
     },
     {
       title: t("INFO_TITLE_3"),

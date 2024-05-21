@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react";
 
 const applicationId = "9JBW2RHC7JNJN8ZQ";
 const sdkUrl = "https://sdk.nsureapi.com/sdk.js";
-const partnerId = "DRIPXX";
+const partnerId = "ventura-county-science-center";
 
 export function CardPurchaseProtection() {
   const initializeScript = useMemo(() => {
