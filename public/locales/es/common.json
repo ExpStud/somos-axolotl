@@ -2,7 +2,7 @@
   "ENTER": "bienvenido",
   "ENTER_1": "(hacer clic)",
   "OUR_MISSION_TITLE":"Nuestra Misión",
-  "OUR_MISSION": "Somos Axolotl utiliza el arte y la tecnología para apoyar a las comunidades a transformar hacia prácticas de gestión sostenible y ecoturismo, para la regeneración del ecosistema, primero en México y luego más allá.",
+  "OUR_MISSION": "Somos Axolotl utiliza el arte y la tecnología para apoyar  a las comunidades a transformar hacia prácticas de gestión sostenible  y ecoturismo, para la regeneración del ecosistema, primero en México y luego más allá.",
   
   "GALLERY_1": "Ajolote asomando",
   "GALLERY_2": "Lago Xochimilco",
@@ -10,7 +10,7 @@
   "GALLERY_4": "Barcos en el lago",
 
   "SOMOS_TITLE": "La historia de Somos Axolotl.",
-  "SOMOS_DESC": "<p class='!text-base'>Somos Axolotl es una iniciativa basada en arte y tecnología creada por un artista digital, un muralista y un activista medioambiental, tres individuos unidos en su deseo de resistir contra la posible extinción de uno de los animales más fascinantes del mundo, el salamandra axolotl.</p> </br> <p class='!text-base'>Dirigido por Matt “Scum” Martinez, Somos Axolotl trabaja en y con la vibrante comunidad de Xochimilco en la Ciudad de México para proteger y restaurar las poblaciones de axolotl a través del desarrollo de sistemas económicos sostenibles para agricultores locales, empresas y operadores turísticos. </p></br> <p class='!text-base'>No puede haber un camino hacia relaciones saludables y equilibradas con nuestro entorno natural sin relaciones sostenibles entre personas, lugares y otros habitantes de nuestro planeta. Somos Axolotl utiliza la tecnología y el arte para inspirar acción, crear soluciones y construir asociaciones que apoyen la simbiosis entre las poblaciones humanas y axolotl de Xochimilco. </p></br> <p class='!text-base'>A medida que este proyecto madura, las herramientas construidas y las lecciones aprendidas en Xochimilco estarán disponibles para comunidades de todo el mundo. </p>",
+  "SOMOS_DESC": "<p class='!text-base'>Somos Axolotl es una iniciativa basada en arte y la tecnología creada por un artista digital, una muralista y un activista medioambiental, tres individuos unidos en su deseo de resistir contra la posible extinción de uno de los animales más fascinantes del mundo, el axolotl.  </p> </br> <p class='!text-base'>Dirigido por Matt “Scum” Martinez, Somos Axolotl trabaja en y (remove) con la vibrante comunidad de Xochimilco en la Ciudad de México para proteger y restaurar las poblaciones de ajolotes a través del desarrollo de sistemas económicos circulares para agricultores locales, empresas, organizaciones y operadores turísticos.</p></br> <p class='!text-base'>No puede existir un camino donde existan relaciones saludables y equilibradas con nuestro entorno natural sin relaciones sostenibles entre personas, lugares y otros habitantes de nuestro planeta. Somos Axolotl utiliza la tecnología y el arte para inspirar acción, crear soluciones y construir vínculos que apoyen la simbiosis entre las poblaciones humanas y el ajolote de Xochimilco.</p></br> <p class='!text-base'>A medida que este proyecto madura, las herramientas construidas y las estrategias aplicadas en Xochimilco estarán disponibles para comunidades de todo el mundo.</p>",
   "READ_MORE": "Leer más",
   "READ_LESS": "Leer menos",
 
@@ -23,22 +23,22 @@
   "INFO_TITLE_2": "Ambiente",
   "INFO_TITLE_3": "Tecnología",
 
-  "INFO_SMALL_DESC_1": "Xochimilco representa una de las únicas áreas que quedan donde la huella de Tenochtitlán, la antigua capital azteca, no se ha desvanecido en la inmensidad de la Ciudad de México.",
+  "INFO_SMALL_DESC_1": "Xochimilco representa una de las únicas áreas donde aún queda la huella de la antigua Tenochtitlán, la capital del imperio Azteca.",
   "INFO_SMALL_DESC_2": "Sin embargo, a medida que la Ciudad de México creció y el área se industrializó, gran parte de Xochimilco fue drenada y absorbida por la creciente metrópolis, lo que provocó que las poblaciones locales de plantas y animales cayeran en picado.",
   "INFO_SMALL_DESC_3": "No hay camino hacia la conservación sin sostenibilidad económica. Lo que estamos construyendo juntos en los antiguos canales aztecas no es sólo para Xochimilco, es para el mundo entero.",
 
-  "INFO_DESC_1_1": "Durante milenios, el área ahora conocida como Xochimilco fue un lago amplio y poco profundo que albergaba una notable variedad de flora, incluyendo lirios de agua, primaveras flotantes, jacintos de agua, centavos y ranúnculos alcalinos. A lo largo de la orilla del lago había extensas áreas de ajuehote, un sauce nativo que se elevaba sobre el colorido enredo de plantas acuáticas del lago y que se ha convertido en emblemático de Xochimilco en general.", 
-  "INFO_DESC_1_2": "Entre estas plantas se podían encontrar innumerables ejemplos de fauna local. Ranas, serpientes, peces y aves de colores brillantes poblaban las aguas poco profundas del lago, viviendo junto a lo que indudablemente se ha convertido en el habitante más famoso de Xochimilco: Ambystoma mexicanum, la salamandra axolotl.",
-  "INFO_DESC_1_3": "Los primeros habitantes de la zona transformaron lentamente gran parte del lago en una red de canales de riego y parcelas de cultivo de mimbres y adobe conocidas como chinampas. Sin embargo, a medida que la Ciudad de México crecía y la zona se industrializaba, gran parte de Xochimilco fue drenada y absorbida por la metrópolis en crecimiento, lo que provocó que las poblaciones de plantas y animales locales se desplomaran.",
-  "INFO_DESC_1_4": "Hoy en día, las áreas de humedales que quedan de Xochimilco están bajo una fuerte presión de la urbanización, la contaminación y el desarrollo. Los trajineros surcan canales llenos de basura y contaminación. Las avistamientos de axolotl han pasado de ser frecuentes a casi inauditos. Sin una acción drástica y nuevas soluciones, la ecología de Xochimilco, así como los muchos medios de vida que dependen de ella, pueden perderse.",
-  "INFO_DESC_1_5": "Somos Axolotl está comprometido a trabajar con la comunidad de Xochimilco para revitalizar el medio ambiente local y reconstruir las poblaciones de axolotl en todo el lago.",
+  "INFO_DESC_1_1": "Xochimilco representa una de las únicas áreas donde aún queda la huella de la antigua Tenochtitlán, la capital del imperio Azteca. Muchas familias en Xochimilco todavía practican técnicas agrícolas desarrolladas hace siglos, transmitiendo su conocimiento milenario para cultivar especies endémicas como maíz chinampero, chile chicuarote, calabaza, frijoles y una asombrosa variedad de flores. De hecho, estas flores son las que dan nombre al lago; Xochimilco significa 'donde crecen las flores' en náhuatl.", 
+  "INFO_DESC_1_2": "La zona solía ser una red de canales de riego y parcelas de cultivo de mimbre y adobe conocidas como chinampas.  A medida que la Ciudad de México crecía y el área se industrializaba, gran parte de Xochimilco fue drenada y absorbida por la creciente metrópolis, causando una drástica disminución en las poblaciones locales de plantas y animales. Hoy en día, las áreas de humedales restantes en Xochimilco, un sitio del patrimonio mundial de la UNESCO y uno de los puntos turísticos más populares de la Ciudad de México, están bajo una garave presión por la urbanización, la contaminación y el desarrollo.",
+  "INFO_DESC_1_3": "El turismo mal gestionado que navega contaminando los canales y el crecimiento descontrolado sin un sistemas adecuados de tratamiento de agua residuales, ha afectado directamente al ajolote.  Sin una acción drástica y nuevas soluciones, el ecosistema de Xochimilco y la vasta cantidad de especies que dependen de él — podrían perderse.",
+  "INFO_DESC_1_4": "Somos Axolotl está comprometido a trabajar con la comunidad de Xochimilco para regenerar el sistema lacustre y reivindicar las poblaciones de ajolote en todo el lago.",
+  "INFO_DESC_1_5": "",
 
 
-  "INFO_DESC_2_1": "Xochimilco representa una de las pocas áreas restantes donde la huella de Tenochtitlan, la antigua capital azteca, no se ha disipado en la inmensidad de la Ciudad de México. Muchas familias en Xochimilco todavía practican técnicas agrícolas desarrolladas hace siglos, cultivando maíz, calabaza, frijoles y una asombrosa variedad de flores. De hecho, estas flores son las que le dan nombre al lago; Xochimilco significa 'donde crecen las flores' en la lengua náhuatl.",
-  "INFO_DESC_2_2": "Estas mismas flores sustentan una relación notable entre la comunidad de Xochimilco y el color. La expresión artística es un modo de vida a lo largo del lago, con los vivos colores de las flores reflejados en la pintura y la tela. Desde trajineras bellamente decoradas hasta flotantes adornados con flores a lo largo de las chinampas, uno no puede dejar de maravillarse ante el arte y la belleza que adornan los antiguos canales.",
-  "INFO_DESC_2_3": "En el espíritu de esta magnífica comunidad, Somos Axolotl es ante todo una iniciativa artística. Hemos creado un modelo de axolote que sirve como molde para la fabricación de un número creciente de esculturas. Artistas callejeros de México y de todo el mundo compiten por la oportunidad de pintar estas esculturas, creando interpretaciones vibrantes y cautivadoras del ajolote salamandra.",
-  "INFO_DESC_2_4": "Esta constelación de ajolotes pintados se distribuye estratégicamente por todo Xochimilco, aumentando la conciencia y el reconocimiento hacia las organizaciones y empresas que trabajan para proteger el lago y sus habitantes.",
-  "INFO_DESC_2_5": "A medida que Somos Axolotl crece, aspiramos a que nuestras esculturas emblemáticas aumenten en número e impacto, identificando y nutriendo una comunidad cada vez más grande comprometida con devolver al Lago de Xochimilco su antigua gloria.",
+  "INFO_DESC_2_1": "Durante miles de años, el área ahora conocida como Xochimilco fue un lago ancho y poco profundo que alberga una notable variedad de fauna, incluyendo ranas, serpientes, peces y aves de colores brillantes, viviendo junto a lo que indudablemente se ha convertido en el habitante más famoso de Xochimilco: el ajolote o Ambystoma mexicanum.",
+  "INFO_DESC_2_2": "Junto al ajolote y la fauna local, prospera todo un ecosistema con variedad de flora local, incluyendo lirios, ninfas, alcatraces, hoja de flecha y tule. Arboledas como el ahuejote que es un sauce nativo, se extiende sobre el colorido verde de vida vegetal  y sembradíos de flores, convirtiéndose en el emblemático Xochimilco.",
+  "INFO_DESC_2_3": "Estos sembradíos de flores representan una relación importante entre la comunidad de Xochimilco. Su tradición y color son parte de la expresión artística del lago, con los vívidos colores que se reflejan en la pintura de las trajineras, y los arcos adornados con flores,  uno no puede evitar maravillarse con el arte y la belleza que las trajineras adornadas traen alrededor de los antiguos canales.",
+  "INFO_DESC_2_4": "Somos Axolotl es, ante todo, una iniciativa artística. Hemos creado una serie de grandes esculturas de ajolotes. Artistas de México y de todo el mundo entusiasmados por la oportunidad de pintarlas, creando interpretaciones vibrantes y atractivas del ajolote.",
+  "INFO_DESC_2_5": "Esta colección de esculturas de ajolotes está estratégicamente ubicada a lo largo de Xochimilco, atrayendo la atención a la conciencia y el reconocimiento de las organizaciones y negocios que trabajan para proteger el lago y sus habitantes. A medida que Somos Axolotl crece, nuestro objetivo es que nuestras esculturas emblemáticas aumenten en número e impacto, fomentando la educación ambiental y una comunidad cada vez más consciente comprometida con proteger al Lago Xochimilco y regenerar su ecosistema.",
   
   "INFO_DESC_3_1": "Para lograr objetivos de conservación significativos y sostenibles, los miembros de la comunidad local deben tener un interés personal en participar.",
   "INFO_DESC_3_2": "Muchas de las maravillas naturales del mundo sostienen industrias turísticas, pero a menudo carecen de la red económica que permite a los turistas maximizar su apoyo. Los visitantes a menudo se preguntan cómo contribuir, sin estar seguros de cómo dejar propina, comprar o donar.",
@@ -57,9 +57,9 @@
 
   "DONATE_HEADER": "Donar y Salvar",
   "DONATE_TITLE": "Se parte del rescate de Xochimilco",
-  "DONATE_DESC": "Actualmente, las donaciones solo se admiten utilizando criptomonedas. Haga clic en el botón a continuación para copiar la dirección de su billetera Solana.",
+  "DONATE_DESC": "Si desea que su donación de criptomonedas sea un obsequio deducible de impuestos, envíenos un correo electrónico a info@somosaxolotl.com para recibir información.",
   "DONATE_CTA": "Donar",
-  "DONATE_COPIED": "Copiada",
+  "DONATE_CTA_2": "(haga clic para visitar nuestro sitio de donación)",
   
   "FOOTER_COPYRIGHT": "Derechos de autor. Todos los derechos reservados.",
   "FOOTER_POWERED": "Desarrollado por EXP",
@@ -69,7 +69,7 @@
   
   "MENU_CLOSE": "Cerrar X",
   "MENU_MISSION": "Misión",
-  "menu_team": "Equipo",
+  "menu_team": "Quienes Somos",
   "menu_donate": "Donar",
   
   "team_title_1": "Nuestra",
@@ -77,8 +77,8 @@
   "team_vision": "Creemos en un futuro donde conservar el medio ambiente y honrar la historia cultural sean más económicamente viables que su destrucción y explotación.",
   "team_caption": "El equipo detrás de todo.",
   "team_scum": "Matt \"Scum\" Martinez es un éxito de Solana: un artista digital que encontró su medio, inspiración y audiencia en el mundo de web3. Fue el artista más vendido del año 2023 y cree inequívocamente en el poder de la tecnología web3 para cambiar la vida de las personas.",
-  "team_gio": "Giovanna Gonzalez es una artista y activista mexicana que se especializa en producciones a gran escala que generan conciencia y catalizan la acción ambiental. Es conocida por sus innovadoras iniciativas de empoderamiento comunitario que han llevado a la adopción de prácticas de sostenibilidad de vanguardia en Vietnam, Marruecos, Sri Lanka y México.",
+  "team_gio": "Gio Mantis es un artista y activista mexicano que se especializa en producciones de gran escala que generan conciencia y catalizan la acción ambiental. Es conocida por sus innovadoras iniciativas de empoderamiento comunitario que han llevado a la adopción de prácticas de sostenibilidad de vanguardia.",
   "team_cass": "Casson Trenor es un activista ambiental de carrera y ganador del premio \"Héroe del Medio Ambiente\" de la revista TIME. Trabaja para apoyar causas de conservación en todo el mundo y se especializa en proyectos de impacto impulsados por el arte y la tecnología. Ha trabajado en el espacio web3 desde 2019 y ha producido numerosos proyectos que aprovechan el poder y la promesa de la cadena de bloques para hacer del mundo un lugar mejor.",
   "team_disc": "Descargo de responsabilidad",
-  "team_desc": "Somos Axolotl es un proyecto patrocinado fiscalmente por Leap Lab, una organización sin fines de lucro 501-(c)3 del Estado de California. Leap Lab está dedicado al avance de la ciencia y la educación en comunidades con recursos limitados en toda América del Norte."
-}
+  "team_desc": "Somos Axolotl es socio oficial de la Fundación Solana y un programa patrocinado fiscalmente por Leap Lab y el Centro de Ciencias del Condado de Ventura. una organización 501(c)3 registrada en Santa Paula, California, EE. UU. La misión de Leap Lab es promover el acceso a la ciencia, la educación y la tecnología en comunidades de bajos recursos en todo el mundo."
+, "team_desc_2": "Para obtener más información, visite www.leaplab.org."} 

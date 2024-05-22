@@ -17,12 +17,7 @@ const Donate: FC<Props> = (props: Props) => {
   const address = "dZABythjt2x9myxjXeNFBWjoX59vzeZ34pYBBqFrPCe";
 
   const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(address);
-      setCopied(true);
-    } catch (err) {
-      alert("Failed to copy text");
-    }
+    window.open("https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6", "_blank")
   };
 
   useEffect(() => {
@@ -49,30 +44,22 @@ const Donate: FC<Props> = (props: Props) => {
           </div>
           <h2 className="text-white max-w-[377px]">{t("DONATE_TITLE")}</h2>
           <p className="text-white">{t("DONATE_DESC")}</p>
-          <button
-            className="teal-hover-dark col-centered mt-4 text-sm md:text-base rounded-xl w-full max-w-[313px] h-[40px] md:h-[48px] transition-200  text-white font-poppins-semibold"
-            onClick={handleCopy}
-            disabled={copied}
-            id="donate"
-          >
-            <AnimatePresence mode="wait">
-              {copied ? (
-                <motion.div
-                  className="flex gap-2 items-center whitespace-nowrap"
-                  {...midExitAnimation}
-                >
-                  ✅ {t("DONATE_COPIED")}
-                </motion.div>
-              ) : (
-                <motion.div
-                  className="flex gap-2 items-center"
-                  {...midExitAnimation}
-                >
-                  💰 {t("DONATE_CTA")}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </button>
+          <div className="flex flex-col items-start gap-3  max-w-[313px]">
+            <button
+              className="teal-hover-dark col-centered mt-4 text-sm md:text-base rounded-xl w-full max-w-[313px] h-[40px] md:h-[48px] transition-200  text-white font-poppins-semibold"
+              onClick={handleCopy}
+              disabled={copied}
+              id="donate"
+            >
+            <motion.div
+              className="flex gap-2 items-center"
+              {...midExitAnimation}
+            >
+              💰 {t("DONATE_CTA")}
+            </motion.div>
+            </button>
+            <p className="text-white self-center">{t("DONATE_CTA_2")}</p>
+          </div>
         </div>
         <Image
           src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/boats-1.jpg`}

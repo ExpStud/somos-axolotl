@@ -24,7 +24,7 @@ const Gallery: React.FC = () => {
       caption: t("GALLERY_2"),
     },
     {
-      src: `${process.env.CLOUDFLARE_STORAGE}/images/landing/Axolotl Abystoma Mex vertical.jpg`,
+      src: `${process.env.CLOUDFLARE_STORAGE}/images/landing/axie_landing_small.jpg`,
       caption: t("GALLERY_1"),
     },
     {
