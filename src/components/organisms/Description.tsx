@@ -26,7 +26,7 @@ const Description: FC<Props> = (props: Props) => {
           <TextDropdown
             content={t("SOMOS_DESC")}
             openHeight={
-              winWidth < 400 ? "48rem" : winWidth < 768 ? "42rem" : "36rem"
+              winWidth < 400 ? "52rem" : winWidth < 768 ? "46rem" : "37rem"
             }
           />
         </div>
