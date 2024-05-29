@@ -54,6 +54,11 @@ const partners: PartnersType[] = [
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/brasil.svg`,
     href: "/",
   },
+  {
+    name: "EXP Studio",
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/exp.svg`,
+    href: "/",
+  },
 ];
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
@@ -114,7 +119,7 @@ const Partners: FC<Props> = (props: Props) => {
         {thirdRowPartners.map((partner, index) => (
           <div
             className={`text-center flex items-center h-[60px]  md:h-[120px] lg:h-[190px] ${
-              index < 1 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
+              index < 2 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
             }`}
             key={index + 3}
           >
@@ -123,7 +128,7 @@ const Partners: FC<Props> = (props: Props) => {
               alt={partner.name}
               height={size}
               width={size}
-              className={`${index === 0 ? "" : "p-3 md:p-10"}`}
+              className={`${index === 1 ? "p-3 md:p-10" : ""}`}
             />
           </div>
         ))}
