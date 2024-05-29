@@ -31,22 +31,22 @@ const partners: PartnersType[] = [
   },
   {
     name: "Pontyx",
-    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/pontyx.svg`,
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/pontyx.png`,
     href: "/",
   },
   {
     name: "Sphere",
-    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/sphere.svg`,
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/sphere.png`,
     href: "/",
   },
   {
     name: "Leap Lab",
-    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/leap.svg`,
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/leap.png`,
     href: "/",
   },
   {
     name: "Maya Moon",
-    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/mayamoon.svg`,
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/mayamoon.png`,
     href: "/",
   },
   {
