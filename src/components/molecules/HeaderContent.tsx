@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
-import { CloseIcon, LanguageSwitcher, Logo, Menu, MenuIcon } from "@components";
-import Link from "next/link";
+import { LanguageSwitcher, Logo, Menu } from "@components";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { midExitAnimation } from "src/constants";
@@ -30,7 +29,6 @@ const HeaderContent: FC<Props> = (props: Props) => {
               key="menu-icon"
               onClick={() => setOpenMenu(true)}
               className="cursor-pointer "
-              // {...midExitAnimation}
             >
               <Image
                 src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/menu.svg`}

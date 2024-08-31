@@ -47,6 +47,7 @@ const AboutDescription = dynamic(() => import("./organisms/AboutDescription"));
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
 const AboutView = dynamic(() => import("./templates/AboutView"));
+const DonateView = dynamic(() => import("./templates/DonateView"));
 
 export {
   PageHead,
@@ -90,5 +91,6 @@ export {
   TeamHeader,
   Topography,
   LanguageSwitcher,
-  CardPurchaseProtection
+  CardPurchaseProtection,
+  DonateView
 }
