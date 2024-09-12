@@ -1,12 +1,12 @@
 import { Dispatch, SetStateAction, FC } from "react";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
 }
 
-const AboutView: FC<Props> = (props: Props) => {
+const DonateView: FC<Props> = (props: Props) => {
   const { setAssets } = props;
 
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ const AboutView: FC<Props> = (props: Props) => {
     <div className="z-[1] w-full h-full flex flex-grow flex-col items-center justify-center my-[80px] pt-20 md:pt-[120px] ">
       <div className="flex flex-col max-w-[1000px] w-full h-full gap-12 md:gap-16">
         {/* top container */}
-        <div className="flex flex-col md:flex-row md:item-end gap-12 pl-6">
+        <div className="flex flex-col md:flex-row item-end gap-12 pl-6">
           <div className="flex flex-col">
             <Image
               src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow.svg`}
@@ -29,16 +29,28 @@ const AboutView: FC<Props> = (props: Props) => {
 
           <div
             dangerouslySetInnerHTML={{ __html: t("donate_desc") }}
-            className="max-w-[400px] text-sm h-min md:self-end"
+            className="max-w-[400px] text-sm h-min self-end"
           />
         </div>
         {/* bottom container */}
-        <div className="self-center flex gap-6 p-3 w-[90vw] lg:w-full bg-somos-blue rounded-[31px] min-h-[580px]">
-          <div className="flex flex-col bg-white"></div>
+        <div className="self-center flex justify-between gap-6 p-3 w-[90vw] md:w-full bg-somos-blue rounded-[31px] min-h-[580px]">
+          <div className="flex flex-col bg-white">hello there</div>
+          <div className="relative">
+            <p className="max-w-[350px] text-somos-white text-4xl lg:text-6xl absolute z-10 font-poppins-bold left-4 top-4">
+              {t("donate_ad")}
+            </p>
+            <Image
+              src={`${process.env.CLOUDFLARE_STORAGE}/images/donate/axie.png`}
+              width={519}
+              height={553}
+              alt="Axolotl"
+              className="mix-blend-luminosity"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default AboutView;
+export default DonateView;
