@@ -2,7 +2,7 @@ import { FC, HTMLAttributes, useEffect, useState } from "react";
 import Image from "next/image";
 import { useWindowSize } from "src/hooks";
 import { useTranslation } from "next-i18next";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { midExitAnimation } from "src/constants";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
@@ -17,7 +17,10 @@ const Donate: FC<Props> = (props: Props) => {
   const address = "dZABythjt2x9myxjXeNFBWjoX59vzeZ34pYBBqFrPCe";
 
   const handleCopy = async () => {
-    window.open("https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6", "_blank")
+    window.open(
+      "https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6",
+      "_blank"
+    );
   };
 
   useEffect(() => {
@@ -51,12 +54,12 @@ const Donate: FC<Props> = (props: Props) => {
               disabled={copied}
               id="donate"
             >
-            <motion.div
-              className="flex gap-2 items-center"
-              {...midExitAnimation}
-            >
-              💰 {t("DONATE_CTA")}
-            </motion.div>
+              <motion.div
+                className="flex gap-2 items-center"
+                {...midExitAnimation}
+              >
+                💰 {t("DONATE_CTA")}
+              </motion.div>
             </button>
             <p className="text-white self-center">{t("DONATE_CTA_2")}</p>
           </div>

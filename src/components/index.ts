@@ -30,6 +30,7 @@ const TeamHeader = dynamic(() => import("./molecules/TeamHeader"));
 const Topography = dynamic(() => import("./molecules/Topography"));
 const LanguageSwitcher = dynamic(() => import("./molecules/LanguageSwitcher"));
 const CardPurchaseProtection = dynamic(() => import("./molecules/CardPurchaseProtection").then(mod => mod.CardPurchaseProtection));
+const ConnectWallet = dynamic(() => import("./molecules/ConnectWallet"));
 //organisms
 const Header = dynamic(() => import("./organisms/Header"));
 const Footer = dynamic(() => import("./organisms/Footer"));
@@ -43,6 +44,7 @@ const Donate = dynamic(() => import("./organisms/Donate"));
 const Goals = dynamic(() => import("./organisms/Goals"));
 const TeamCard = dynamic(() => import("./organisms/TeamCard"));
 const AboutDescription = dynamic(() => import("./organisms/AboutDescription"));
+const DonateForm = dynamic(() => import("./organisms/DonateForm"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -92,5 +94,7 @@ export {
   Topography,
   LanguageSwitcher,
   CardPurchaseProtection,
-  DonateView
+  DonateView,
+  DonateForm,
+  ConnectWallet
 }

@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, FC } from "react";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import { DonateForm } from "@components";
 
 interface Props {
   setAssets: Dispatch<SetStateAction<boolean[]>>;
@@ -33,8 +34,8 @@ const DonateView: FC<Props> = (props: Props) => {
           />
         </div>
         {/* bottom container */}
-        <div className="self-center flex justify-between gap-6 p-3 w-[90vw] md:w-full bg-somos-blue rounded-[31px] min-h-[580px]">
-          <div className="flex flex-col bg-white">hello there</div>
+        <div className="self-center flex flex-col lg:flex-row justify-between items-center gap-5 p-2 md:p-3 mx-2 lg:w-full bg-somos-blue rounded-[31px] min-h-[580px]">
+          <DonateForm />
           <div className="relative">
             <p className="max-w-[350px] text-somos-white text-4xl lg:text-6xl absolute z-10 font-poppins-bold left-4 top-4">
               {t("donate_ad")}
@@ -44,7 +45,7 @@ const DonateView: FC<Props> = (props: Props) => {
               width={519}
               height={553}
               alt="Axolotl"
-              className="mix-blend-luminosity"
+              className="mix-blend-luminosity rounded-3xl"
             />
           </div>
         </div>
