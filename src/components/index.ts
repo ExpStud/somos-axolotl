@@ -46,6 +46,7 @@ const TeamCard = dynamic(() => import("./organisms/TeamCard"));
 const AboutDescription = dynamic(() => import("./organisms/AboutDescription"));
 const DonateForm = dynamic(() => import("./organisms/DonateForm"));
 const DonateFormCrypto = dynamic(() => import("./organisms/DonateFormCrypto"));
+const DonateFormCredit = dynamic(() => import("./organisms/DonateFormCredit"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -98,5 +99,6 @@ export {
   DonateView,
   DonateForm,
   ConnectWallet,
-  DonateFormCrypto
+  DonateFormCrypto,
+  DonateFormCredit
 }

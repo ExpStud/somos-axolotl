@@ -2,7 +2,7 @@ import { FC, HTMLAttributes, useState } from "react";
 import { useTranslation } from "next-i18next";
 import ConnectWallet from "../molecules/ConnectWallet";
 import { fastExitAnimation } from "src/constants";
-import { DonateFormCrypto } from "@components";
+import { DonateFormCredit, DonateFormCrypto } from "@components";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -72,7 +72,10 @@ const DonateForm: FC<Props> = (props: Props) => {
             inputValue={inputValue}
           />
         ) : (
-          <>CC</>
+          <DonateFormCredit
+            handleInputChange={handleInputChange}
+            inputValue={inputValue}
+          />
         )}
       </div>
     </div>
