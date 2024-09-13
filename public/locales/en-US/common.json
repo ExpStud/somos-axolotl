@@ -104,8 +104,9 @@
   "pay_network": "Network",
   "pay_token": "Token",
   "pay_solana": "Solana",
-  "pay_due": "Total due today",
+  "pay_due": "Enter Donation Amount",
   "pay_connect": "Connect Wallet",
-  "pay_qr": "Pay with QR"
+  "pay_qr": "Pay with QR",
+  "pay_pay": "Pay"
   
 }

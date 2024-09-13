@@ -5,6 +5,7 @@ import { fastExitAnimation } from "src/constants";
 import Image from "next/image";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
+import { NumberInput } from "@components";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -13,21 +14,28 @@ const DonateForm: FC<Props> = (props: Props) => {
   const [paymentStep, setPaymentStep] = useState<"info" | "confirmation">(
     "info"
   );
+  const [inputValue, setInputValue] = useState<number>(1);
 
   const { t } = useTranslation();
 
   const { setVisible, visible } = useWalletModal();
-  const { publicKey, connecting, disconnect } = useWallet();
+  const { publicKey, connected } = useWallet();
 
   const handleClick = () => {
     if (!publicKey) setVisible(true);
-    else disconnect();
+    else {
+      // TODO: Payment Logic
+    }
   };
   const handleQR = () => {
     if (!publicKey) setVisible(true);
     else {
       //TODO: QR Logic
     }
+  };
+
+  const handleInputChange = (value: number) => {
+    setInputValue(value);
   };
 
   return (
@@ -107,9 +115,13 @@ const DonateForm: FC<Props> = (props: Props) => {
               </div>
             </div>
             {/* due */}
-            <div className="flex justify-between gap-2">
+            <div className="flex justify-between gap-2 items-center">
               <p className="text-xs text-gray-500">{t("pay_due")}</p>
-              <div>TODO: add input field</div>
+              <NumberInput
+                supply={1000000}
+                handleInput={handleInputChange}
+                initialValue={inputValue}
+              />
             </div>
             {/* actions */}
             <div className="flex flex-col gap-2 flex-grow ">
@@ -117,7 +129,9 @@ const DonateForm: FC<Props> = (props: Props) => {
                 className="rounded-lg border row-centered gap-1 transition-200 font-poppins-regular h-12 text-white bg-blue-950  transition-200 hover:bg-gray-900"
                 onClick={() => handleClick()}
               >
-                {t("pay_connect")}
+                {publicKey && connected
+                  ? `${t("pay_pay")} ${inputValue} USDC`
+                  : t("pay_connect")}
               </button>
               <button
                 onClick={() => handleQR()}
@@ -195,12 +209,12 @@ const SolanaSVG = () => (
         y2="7.8681"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.08" stop-color="#9945FF" />
-        <stop offset="0.3" stop-color="#8752F3" />
-        <stop offset="0.5" stop-color="#5497D5" />
-        <stop offset="0.6" stop-color="#43B4CA" />
-        <stop offset="0.72" stop-color="#28E0B9" />
-        <stop offset="0.97" stop-color="#19FB9B" />
+        <stop offset="0.08" stopColor="#9945FF" />
+        <stop offset="0.3" stopColor="#8752F3" />
+        <stop offset="0.5" stopColor="#5497D5" />
+        <stop offset="0.6" stopColor="#43B4CA" />
+        <stop offset="0.72" stopColor="#28E0B9" />
+        <stop offset="0.97" stopColor="#19FB9B" />
       </linearGradient>
     </defs>
   </svg>

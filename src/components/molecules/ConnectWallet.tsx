@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 
 const ConnectWallet: FC = () => {
   const { setVisible, visible } = useWalletModal();
-  const { publicKey, connecting, disconnect } = useWallet();
+  const { publicKey, connecting, disconnect, connected } = useWallet();
   const { t } = useTranslation();
 
   const handleClick = () => {
@@ -37,7 +37,7 @@ const ConnectWallet: FC = () => {
       onClick={() => handleClick()}
       className="rounded-xl border text-black font-poppins-semibold text-xs w-[120px] h-[40px] transition-200  hover:border-gray-400"
     >
-      {publicKey
+      {publicKey && connected
         ? truncatePubKey(publicKey)
         : visible || connecting
         ? t("pay_wallet_connecting")
