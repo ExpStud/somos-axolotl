@@ -4,6 +4,18 @@ import ConnectWallet from "../molecules/ConnectWallet";
 import { fastExitAnimation } from "src/constants";
 import { DonateFormCredit, DonateFormCrypto } from "@components";
 
+export interface PaymentDetails {
+  email: string;
+  nameOnCard: string;
+  cardNumber: string;
+  cvv: string;
+  expiryDate: string;
+  addressLine1: string;
+  addressLine2?: string;
+  city: string;
+  zip: string;
+}
+
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const DonateForm: FC<Props> = (props: Props) => {
@@ -12,6 +24,17 @@ const DonateForm: FC<Props> = (props: Props) => {
     "info"
   );
   const [inputValue, setInputValue] = useState<number>(1);
+  const [paymentDetails, setPaymentDetails] = useState<PaymentDetails>({
+    email: "",
+    nameOnCard: "",
+    cardNumber: "",
+    cvv: "",
+    expiryDate: "",
+    addressLine1: "",
+    addressLine2: "",
+    city: "",
+    zip: "",
+  });
 
   const { t } = useTranslation();
 
@@ -20,7 +43,7 @@ const DonateForm: FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="flex flex-col bg-white rounded-3xl p-3 flex-grow sm:w-[519px] lg:w-[420px] h-[553px]">
+    <div className="flex flex-col bg-white rounded-3xl p-3 flex-grow w-full sm:w-[519px] lg:w-[420px] h-[553px]">
       <div className="min-h-[42px] self-end">
         {paymentType === "crypto" && <ConnectWallet />}
       </div>
@@ -64,7 +87,7 @@ const DonateForm: FC<Props> = (props: Props) => {
       {/* display payment type */}
       <div
         {...fastExitAnimation}
-        className="flex flex-col gap-5 justify-between h-full"
+        className="flex flex-col gap-5 justify-between h-full w-full flex-grow"
       >
         {paymentType === "crypto" ? (
           <DonateFormCrypto
@@ -75,6 +98,8 @@ const DonateForm: FC<Props> = (props: Props) => {
           <DonateFormCredit
             handleInputChange={handleInputChange}
             inputValue={inputValue}
+            paymentDetails={paymentDetails}
+            setPaymentDetails={setPaymentDetails}
           />
         )}
       </div>
