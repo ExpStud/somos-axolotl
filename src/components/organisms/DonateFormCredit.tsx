@@ -20,7 +20,8 @@ const DonateFormCredit: FC<DonateFormCreditProps> = ({
   const [errors, setErrors] = useState<Partial<PaymentDetails>>({});
 
   const handleInput = (field: keyof PaymentDetails, value: string) => {
-    setPaymentDetails((prevDetails) => ({
+    //@ts-ignore
+    setPaymentDetails((prevDetails: PaymentDetails) => ({
       ...prevDetails,
       [field]: value,
     }));
