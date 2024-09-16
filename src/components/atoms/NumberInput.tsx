@@ -1,5 +1,4 @@
 import { FC, InputHTMLAttributes, useEffect, useState } from "react";
-import debounce from "lodash.debounce";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   supply: number;
@@ -11,7 +10,6 @@ const NumberInput: FC<Props> = (props: Props) => {
   const { supply, handleInput, initialValue, className, ...componentProps } =
     props;
   const [value, setValue] = useState<number>(initialValue);
-  const debouncer = debounce((value) => handleInput(value), 1000);
 
   // Prevent non-numeric keys
   const onKeyPress = (event: React.KeyboardEvent): void => {
@@ -25,18 +23,18 @@ const NumberInput: FC<Props> = (props: Props) => {
     const inputValue = Number((event.target as HTMLInputElement).value);
     if (inputValue > supply) {
       setValue(supply);
+      console.log("1", supply);
       (event.target as HTMLInputElement).value = supply.toString();
     } else {
       setValue(inputValue);
-      debouncer(inputValue);
+
+      console.log("2", inputValue);
     }
   };
 
   useEffect(() => {
-    return () => {
-      debouncer.cancel();
-    };
-  }, [debouncer]);
+    handleInput(value);
+  }, [handleInput, value]);
 
   return (
     <input

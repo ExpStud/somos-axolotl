@@ -39,8 +39,11 @@ const DonateForm: FC<Props> = (props: Props) => {
   const { t } = useTranslation();
 
   const handleInputChange = (value: number) => {
+    console.log("handleInputChange", value);
     setInputValue(value);
   };
+
+  console.log("inputValue", inputValue);
 
   return (
     <div className="flex flex-col bg-white rounded-3xl p-3 flex-grow w-full sm:w-[519px] lg:w-[420px] h-[553px]">

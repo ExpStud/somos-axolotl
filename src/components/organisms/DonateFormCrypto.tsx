@@ -14,7 +14,7 @@ const DonateFormCrypto: FC<DonateFormCryptoProps> = ({
   handleInputChange,
   inputValue,
 }) => {
-  const { setVisible, visible } = useWalletModal();
+  const { setVisible } = useWalletModal();
   const { publicKey, connected } = useWallet();
   const { t } = useTranslation();
 
