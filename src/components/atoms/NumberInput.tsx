@@ -3,13 +3,22 @@ import { FC, InputHTMLAttributes, useEffect, useState } from "react";
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   supply: number;
   handleInput: (number: number) => void;
-  initialValue: number;
+  initialValue?: number;
+  error?: boolean;
+  maxDigits?: number;
 }
 
 const NumberInput: FC<Props> = (props: Props) => {
-  const { supply, handleInput, initialValue, className, ...componentProps } =
-    props;
-  const [value, setValue] = useState<number>(initialValue);
+  const {
+    supply,
+    handleInput,
+    initialValue,
+    error,
+    maxDigits,
+    className,
+    ...componentProps
+  } = props;
+  const [value, setValue] = useState<number>(initialValue ?? 0);
 
   // Prevent non-numeric keys
   const onKeyPress = (event: React.KeyboardEvent): void => {
@@ -21,6 +30,10 @@ const NumberInput: FC<Props> = (props: Props) => {
   // Add max length check
   const onInput = (event: React.FormEvent<HTMLInputElement>): void => {
     const inputValue = Number((event.target as HTMLInputElement).value);
+    if (maxDigits && inputValue.toString().length > maxDigits) {
+      event.preventDefault();
+      return;
+    }
     if (inputValue > supply) {
       setValue(supply);
       console.log("1", supply);
@@ -38,9 +51,9 @@ const NumberInput: FC<Props> = (props: Props) => {
 
   return (
     <input
-      className={`rounded-lg border transition-200 w-1/4 h-10 p-2 font-poppins-regular ${
-        className ?? ""
-      } ${
+      className={`rounded-lg border transition-200 w-1/4 h-10 p-2 font-poppins-regular  ${
+        error ? "text-red-500 placeholder:text-red-500" : ""
+      } ${className ?? ""} ${
         componentProps.disabled
           ? "cursor-not-allowed bg-custom-dark-gray border-custom-dark-gray"
           : "hover:border-gray-400 hover:text-gray-600 focus:border-blue-500 active:outline-none focus:outline-none border-dark"

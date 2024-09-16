@@ -19,6 +19,8 @@ const DonateFormCredit: FC<DonateFormCreditProps> = ({
   const { t } = useTranslation();
   const [errors, setErrors] = useState<Partial<PaymentDetails>>({});
 
+  // const { lineItems, pay } = useSphere();
+
   const handleInput = (field: keyof PaymentDetails, value: string) => {
     //@ts-ignore
     setPaymentDetails((prevDetails: PaymentDetails) => ({
