@@ -56,7 +56,7 @@ const partners: PartnersType[] = [
   },
   {
     name: "Sandbox Studio",
-    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/exp.svg`,
+    image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/sandbox.svg`,
     href: "/",
   },
 ];
@@ -128,7 +128,7 @@ const Partners: FC<Props> = (props: Props) => {
               alt={partner.name}
               height={size}
               width={size}
-              className={`${index === 1 ? "p-3 md:p-10" : ""}`}
+              className={`${index >= 1 ? "p-3 md:p-10" : ""}`}
             />
           </div>
         ))}
