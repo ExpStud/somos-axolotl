@@ -26,7 +26,7 @@ const Footer: FC = () => {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://expstud.io/"
+            href="https://sandboxstud.io/"
             className="text-sm"
           >
             ℗ {t("FOOTER_POWERED")}

@@ -55,7 +55,7 @@ const partners: PartnersType[] = [
     href: "/",
   },
   {
-    name: "EXP Studio",
+    name: "Sandbox Studio",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/exp.svg`,
     href: "/",
   },
