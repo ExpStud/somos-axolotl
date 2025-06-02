@@ -25,7 +25,7 @@ const Infographics: FC<Props> = (props: Props) => {
       short: t("INFO_SMALL_DESC_2"),
       displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-1-sm.jpg`,
       expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-1.jpg`,
-      icon: `${process.env.CLOUDFLARE_STORAGE}/images/icons/info-1.svg`,
+      icon: `${process.env.CLOUDFLARE_STORAGE}/images/design/info-1-new.svg`,
     },
     {
       title: t("INFO_TITLE_1"),
@@ -39,7 +39,7 @@ const Infographics: FC<Props> = (props: Props) => {
       ],
       displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-2-sm.jpg`,
       expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-2.jpg`,
-      icon: `${process.env.CLOUDFLARE_STORAGE}/images/icons/info-2.svg`,
+      icon: `${process.env.CLOUDFLARE_STORAGE}/images/design/info-2-new.svg`,
     },
     {
       title: t("INFO_TITLE_3"),
@@ -55,7 +55,7 @@ const Infographics: FC<Props> = (props: Props) => {
       ],
       displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-3-sm.jpg`,
       expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/pill-3.jpg`,
-      icon: `${process.env.CLOUDFLARE_STORAGE}/images/icons/info-3.svg`,
+      icon: `${process.env.CLOUDFLARE_STORAGE}/images/design/info-3-new.svg`,
     },
   ];
 

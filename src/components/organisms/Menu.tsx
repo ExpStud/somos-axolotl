@@ -114,11 +114,11 @@ const Menu: FC<Props> = (props: Props) => {
             </div>
             <div className="flex flex-col gap-6">
               <Image
-                src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg-white.svg`}
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg-white-new.svg`}
                 width={122}
                 height={174}
                 alt="Somos"
-                className="hidden lg:block opacity-10 "
+                className="hidden lg:block "
               />
               <div className="flex justify-between w-full">
                 <div className="flex flex-col md:flex-row justify-between md:justify-start md:items-start gap-8 md:gap-10 md:pb-2">

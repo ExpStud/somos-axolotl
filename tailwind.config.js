@@ -40,7 +40,7 @@ module.exports = {
           700: "#1B8883",
           800: "#187772",
         },
-        "somos-orange": "#FFB93E",
+        "somos-orange": "#FFC648",
         "somos-red": "#FE6375",
         "somos-blue": "#2A48AF",
         //template

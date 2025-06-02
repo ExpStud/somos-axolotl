@@ -13,10 +13,10 @@ const TeamHeader: FC = () => {
         </p>
 
         <Image
-          src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/text-black.svg`}
-          width={200}
-          height={81.5}
-          className="w-[98px] md:w-auto"
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/text-black-new.svg`}
+          width={176}
+          height={86}
+          className="w-[98px] md:w-[176px]"
           alt="Somos Axolotl"
         />
         <Image

@@ -33,59 +33,13 @@ const Home: FC<Props> = (props: Props) => {
     else handleViewChange(false);
   }, [handleViewChange, isInView]);
 
-  //show view timeout
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setShowView(true);
-  //   }, 3000);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setShowView(true);
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  // const isMobile = /* your condition for mobile devices */;
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play();
     }
   }, []);
-
-  // useEffect(() => {
-  //   if (showView) {
-  //     document.body.style.overflow = "";
-  //     document.body.style.paddingRight = "";
-  //   } else {
-  //     // Get the scrollbar width
-  //     const scrollbarWidth =
-  //       window.innerWidth - document.documentElement.clientWidth;
-
-  //     // Hide the scrollbar and compensate for the scrollbar width
-  //     document.body.style.overflow = "hidden";
-  //     document.body.style.paddingRight = `${scrollbarWidth}px`;
-  //   }
-
-  //   // return () => {
-  //   //   // Show the scrollbar and remove the padding
-  //   //   document.body.style.overflow = "";
-  //   //   document.body.style.paddingRight = "";
-  //   // };
-  // }, [showView]);
 
   return (
     <div
@@ -123,12 +77,12 @@ const Home: FC<Props> = (props: Props) => {
             className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[140px] md:w-auto flex  flex-col items-center gap-2"
           >
             <Image
-              src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg.svg`}
-              height={162.04}
-              width={230}
+              src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/square-new.svg`}
+              width={191}
+              height={290}
               alt="Somos Axolotl"
               priority
-              className="  p-2"
+              className="w-[110px] md:w-[191px] mb-4 md:mb-0"
             />
 
             <button
@@ -138,7 +92,6 @@ const Home: FC<Props> = (props: Props) => {
               {" "}
               {t("ENTER")}
             </button>
-            {/* <p className="text-white text-xs">{t("ENTER_1")}</p> */}
           </motion.div>
         ) : (
           <motion.div
@@ -149,9 +102,9 @@ const Home: FC<Props> = (props: Props) => {
             {/* content */}
             <div className="max-width flex flex-col md:flex-row gap-20 md:gap-14 lg:gap-0 justify-between md:justify-between items-center md:items-end  pb-0 pt-10 md:pt-0 md:pb-6 lg:pb-16 md:w-full">
               <Image
-                src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg.svg`}
-                height={162.04}
-                width={230}
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/square-new.svg`}
+                height={162}
+                width={245}
                 alt="Somos Axolotl"
                 priority
                 className="w-[110px] md:w-auto"
@@ -163,7 +116,7 @@ const Home: FC<Props> = (props: Props) => {
                     {t("OUR_MISSION_TITLE")}
                   </h2>
                   <Image
-                    src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow.svg`}
+                    src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow-new.svg`}
                     width={111}
                     height={18}
                     alt="Yellow Squares"

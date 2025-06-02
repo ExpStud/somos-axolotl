@@ -12,9 +12,9 @@ const Logo: FC = () => {
     >
       <Link href="/">
         <Image
-          src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/sm-yellow.svg`}
-          height={34.31}
-          width={84}
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/sm-yellow-new.svg`}
+          height={42}
+          width={85}
           alt="Somos Axolotl"
           priority
           className="w-[60px] md:w-auto hover-opacity hover:shadow-lg"

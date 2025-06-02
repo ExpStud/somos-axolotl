@@ -14,10 +14,10 @@ const Footer: FC = () => {
     >
       <div className="flex md:flex-col w-full md:w-auto h-min md:h-full justify-between md:justify items-center md:items-start">
         <Image
-          src={`${process.env.CLOUDFLARE_STORAGE}/images/logos/lg-brown.svg`}
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/design/lg-brown-new.svg`}
           alt="Somos"
-          width={winWidth < 768 ? 93 : 65}
-          height={winWidth < 768 ? 131 : 92}
+          width={winWidth < 768 ? 87 : 60}
+          height={winWidth < 768 ? 133 : 92}
         />
         <div className="text-xs hidden md:flex flex-col gap- -mb-4">
           <p>
