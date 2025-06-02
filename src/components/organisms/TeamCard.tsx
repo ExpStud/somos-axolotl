@@ -62,7 +62,7 @@ const TeamCard: FC<Props> = (props: Props) => {
       mobile: `${process.env.CLOUDFLARE_STORAGE}/images/about/cass-sm.png`,
       direction: "right",
       backgroundColor: "",
-      accentColor: "#FFB93E",
+      accentColor: "#FFC648",
     },
   ];
 
@@ -222,7 +222,7 @@ const TeamCard: FC<Props> = (props: Props) => {
       <div className="flex flex-col items-start justify-center gap-5 lg:pt-24 lg:pb-8 lg:w-[54%] pt-12 lg:rotate-1 pr-3 lg:pr-8  mt-[280px] lg:-mt-14">
         <div className="flex flex-row lg:flex-col items-start justify-center gap-1 lg:gap-5">
           <Image
-            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/pattern-yellow.svg`}
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/pattern-yellow-new.svg`}
             width={patternSize}
             height={patternSize}
             alt="Pattern"
@@ -238,7 +238,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/globe-yellow.svg`}
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/globe-yellow-new.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Website"
@@ -250,7 +250,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/link-yellow.svg`}
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/link-yellow-new.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="Linkedin"
@@ -262,7 +262,7 @@ const TeamCard: FC<Props> = (props: Props) => {
               target="_blank"
             >
               <Image
-                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/x-yellow.svg`}
+                src={`${process.env.CLOUDFLARE_STORAGE}/images/icons/x-yellow-new.svg`}
                 width={iconSize}
                 height={iconSize}
                 alt="X"
@@ -271,10 +271,10 @@ const TeamCard: FC<Props> = (props: Props) => {
           </div>
         </div>
         <Image
-          src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow.svg`}
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow-new.svg`}
           width={111}
           height={18}
-          alt="Brown Squares"
+          alt="Yellow Squares"
           className="lg:self-end lg:-mt-6"
         />
         <p className="text-xs lg:text-base text-white -mt-4">{team[2].text}</p>

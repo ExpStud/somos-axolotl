@@ -9,7 +9,7 @@ const AboutDescription: FC = () => {
     <div className="flex flex-col lg:flex-row gap-10 lg:gap-32 items-start lg:items-end mt-12 md:mt-16 xl:mt-[16vh] px-6 md:px-10">
       <div className="flex flex-col gap-6 max-w-[505px]">
         <Image
-          src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow.svg`}
+          src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-yellow-new.svg`}
           width={111}
           height={18}
           alt="Yellow Squares"
