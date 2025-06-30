@@ -80,5 +80,12 @@
   "team_gio": "Gio Mantis es un artista y activista mexicano que se especializa en producciones de gran escala que generan conciencia y catalizan la acción ambiental. Es conocida por sus innovadoras iniciativas de empoderamiento comunitario que han llevado a la adopción de prácticas de sostenibilidad de vanguardia.",
   "team_cass": "Casson Trenor es un activista ambiental de carrera y ganador del premio \"Héroe del Medio Ambiente\" de la revista TIME. Trabaja para apoyar causas de conservación en todo el mundo y se especializa en proyectos de impacto impulsados por el arte y la tecnología. Ha trabajado en el espacio web3 desde 2019 y ha producido numerosos proyectos que aprovechan el poder y la promesa de la cadena de bloques para hacer del mundo un lugar mejor.",
   "team_disc": "Descargo de responsabilidad",
-  "team_desc": "Somos Axolotl es socio oficial de la Fundación Solana y un programa patrocinado fiscalmente por Leap Lab y el Centro de Ciencias del Condado de Ventura. una organización 501(c)3 registrada en Santa Paula, California, EE. UU. La misión de Leap Lab es promover el acceso a la ciencia, la educación y la tecnología en comunidades de bajos recursos en todo el mundo."
-, "team_desc_2": "Para obtener más información, visite www.leaplab.org."} 
+  "team_desc": "Somos Axolotl es socio oficial de la Fundación Solana y un programa patrocinado fiscalmente por Leap Lab y el Centro de Ciencias del Condado de Ventura. una organización 501(c)3 registrada en Santa Paula, California, EE. UU. La misión de Leap Lab es promover el acceso a la ciencia, la educación y la tecnología en comunidades de bajos recursos en todo el mundo.", 
+  "team_desc_2": "Para obtener más información, visite www.leaplab.org.",
+
+  "vdtr_header": "Somos Axolotl: A Web 3 Marvel",
+  "vdtr_title": "Moving The Needle",
+  "vdtr_desc": "Somos Axolotl is based on a pioneering approach to philanthropy: one where our supporters are able to empower our work without needing to donate money. This is the story behind a high-performance computer in Mexico City that makes this possible. Somos Axolotl was born in the Solana blockchain ecosystem",
+  "vdt_cta": "Interested in making a donation?",
+  "vdt_modal_cta_": "Learn more"
+} 

@@ -7,6 +7,7 @@ import {
   Donate,
   Goals,
   PatternSVG,
+  Validator,
 } from "@components";
 
 interface Props {
@@ -28,6 +29,9 @@ const LandingView: FC<Props> = (props: Props) => {
       <PatternSVG className="my-20 lg:my-32" />
 
       <Goals className="px-6 md:px-12 lg:px-10" />
+      <PatternSVG className="my-20 lg:my-32" />
+
+      <Validator className="px-6 md:px-12 lg:px-10" />
       <PatternSVG className="my-20 lg:my-32" />
 
       <Partners className="px-2" />

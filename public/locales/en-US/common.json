@@ -82,5 +82,12 @@
   "team_gio": "Gio Mantis is a Mexican artist and activist who specializes in large-scale productions that drive awareness and catalyze environmental action. She is known for her innovative community empowerment initiatives which have led to the adoption of cutting-edge sustainability practices." ,
   "team_cass": "Casson Trenor is a career environmental activist and winner of the TIME Magazine “Hero of the Environment” award. He works to support conservation causes around the world, and specializes in art- and tech-driven impact projects. He has worked in the web3 space since 2019 and has produced numerous projects that harness the power and promise of blockchain to make the world a better place.  ",
   "team_disc": "Disclaimer",
-  "team_desc": "Somos Axolotl is an official partner of the Solana Foundation and a fiscally sponsored program of Leap Lab and the Ventura County Science Center, a 501(c)3 organization registered in Santa Paula, California, USA. The mission of Leap Lab is to promote access to science, education, and technology in under-resourced communities around the world."
-, "team_desc_2": "For more information, please visit www.leaplab.org."}
+  "team_desc": "Somos Axolotl is an official partner of the Solana Foundation and a fiscally sponsored program of Leap Lab and the Ventura County Science Center, a 501(c)3 organization registered in Santa Paula, California, USA. The mission of Leap Lab is to promote access to science, education, and technology in under-resourced communities around the world.", 
+  "team_desc_2": "For more information, please visit www.leaplab.org.",
+
+  "vdtr_header": "Somos Axolotl: A Web 3 Marvel",
+  "vdtr_title": "Moving The Needle",
+  "vdtr_desc": "Somos Axolotl is based on a pioneering approach to philanthropy: one where our supporters are able to empower our work without needing to donate money. This is the story behind a high-performance computer in Mexico City that makes this possible. Somos Axolotl was born in the Solana blockchain ecosystem",
+  "vdt_cta": "Interested in making a donation?",
+  "vdt_modal_cta_": "Learn more"
+}

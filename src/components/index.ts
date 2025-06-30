@@ -43,6 +43,7 @@ const Donate = dynamic(() => import("./organisms/Donate"));
 const Goals = dynamic(() => import("./organisms/Goals"));
 const TeamCard = dynamic(() => import("./organisms/TeamCard"));
 const AboutDescription = dynamic(() => import("./organisms/AboutDescription"));
+const Validator = dynamic(() => import("./organisms/Validator"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -90,5 +91,6 @@ export {
   TeamHeader,
   Topography,
   LanguageSwitcher,
-  CardPurchaseProtection
+  CardPurchaseProtection,
+  Validator
 }
