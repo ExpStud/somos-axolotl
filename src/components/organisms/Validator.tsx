@@ -2,6 +2,7 @@ import { FC, HTMLAttributes } from "react";
 import Image from "next/image";
 import { useWindowSize } from "@hooks";
 import { useTranslation } from "next-i18next";
+import { ValidatorCtaButton } from "@components";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}
 
@@ -13,7 +14,37 @@ const Validator: FC<Props> = (props: Props) => {
 
   if (winWidth > 1024) {
     return (
-      <div className={`col-centered relative w-screen  ${className}`}></div>
+      <div className={`col-centered relative w-screen ${className}`}>
+        {/* Responsive background image container, only visible on lg+ screens */}
+        <div
+          className="flex flex-col justify-end gap-4 w-full max-w-[1193px] aspect-[1193/529] bg-cover bg-center rounded-[32px] mx-auto px-10 pb-6"
+          style={{
+            backgroundImage: `url(${process.env.CLOUDFLARE_STORAGE}/images/landing/validator-lg.png)`,
+          }}
+        >
+          <Image
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/info-1-new.svg`}
+            alt="Icon"
+            width={72}
+            height={72}
+          />
+          <h3 className="text-white text-xs lg:text-xl font-poppins-semibold">
+            {t("vdtr_title")}
+          </h3>
+
+          <div className="flex flex-col gap-2 max-w-[600px] xl:max-w-[750px]">
+            <p className="text-white text-xs lg:text-base">{t("vdtr_desc")}</p>
+
+            <ValidatorCtaButton
+              variant="white"
+              onClick={() => alert("open modal")}
+              className="mr-6"
+            >
+              {t("vdt_modal_cta_")}
+            </ValidatorCtaButton>
+          </div>
+        </div>
+      </div>
     );
   }
   return (
@@ -27,7 +58,7 @@ const Validator: FC<Props> = (props: Props) => {
           alt="Donate"
           width={winWidth < 640 ? 344 : 562}
           height={winWidth < 640 ? 391 : 391}
-          className="aspect-[1.75/2] sm:aspect-[3.1/2] object-cover rounded-bl-[40px] rounded-tr-[40px]"
+          className="aspect-[1.75/2] sm:aspect-[3.1/2] object-cover rounded-[32px]"
         />
         <div className="flex flex-col justify-center  gap-6 py-8 md:p-12 lg:min-w-[395px]">
           <Image
@@ -38,44 +69,12 @@ const Validator: FC<Props> = (props: Props) => {
           />
           <div className="flex justify-between w-full">
             <h2>{t("vdtr_title")}</h2>
-            <div
-              className="flex items-center px-2 py-[3px] gap-[2px] h-[26px] text-somos-brown-dark border border-somos-brown-dark rounded-[3px]"
-              onClick={() => {
-                alert("open modal");
-              }}
+            <ValidatorCtaButton
+              variant="brown"
+              onClick={() => alert("open modal")}
             >
-              <p className="font-poppins-semibold text-[10px] pt-[2px]">
-                {t("vdt_modal_cta_")}
-              </p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 13 13"
-                fill="none"
-                className="pt-[1px]"
-              >
-                <g clip-path="url(#clip0_1441_1541)">
-                  <path
-                    d="M5.00195 9.42383L7.96403 6.46175L5.00195 3.49968"
-                    stroke="#41240F"
-                    stroke-width="0.987358"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1441_1541">
-                    <rect
-                      width="11.8483"
-                      height="11.8483"
-                      fill="white"
-                      transform="translate(0.558594 0.538086)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
+              {t("vdt_modal_cta_")}
+            </ValidatorCtaButton>
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex flex-col gap-2 max-w-[520px]">

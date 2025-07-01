@@ -17,6 +17,7 @@ const CheckBox = dynamic(() => import("./atoms/CheckBox"));
 const LoadCircle = dynamic(() => import("./atoms/LoadSpinner"));
 const ImageShimmer = dynamic(() => import("./atoms/ImageShimmer"));
 const Logo = dynamic(() => import("./atoms/Logo"));
+const ValidatorCtaButton = dynamic(() => import("./atoms/ValidatorCtaButton"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const NavItem = dynamic(() => import("./molecules/NavItem"));
@@ -92,5 +93,6 @@ export {
   Topography,
   LanguageSwitcher,
   CardPurchaseProtection,
-  Validator
+  Validator,
+  ValidatorCtaButton
 }
