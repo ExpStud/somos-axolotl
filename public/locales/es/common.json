@@ -86,6 +86,9 @@
   "vdtr_header": "Somos Axolotl: A Web 3 Marvel",
   "vdtr_title": "Moving The Needle",
   "vdtr_desc": "Somos Axolotl is based on a pioneering approach to philanthropy: one where our supporters are able to empower our work without needing to donate money. This is the story behind a high-performance computer in Mexico City that makes this possible. Somos Axolotl was born in the Solana blockchain ecosystem",
+  "vdtr_desc_1": "Somos Axolotl is based on a pioneering approach to philanthropy: one where our supporters are able to empower our work without needing to donate money. This is the story behind a high-performance computer in Mexico City that makes this possible.",
+  "vdtr_desc_2": "Somos Axolotl was born in the Solana blockchain ecosystem. As a native web3 environmental organization, we chose to use web3 tools to help create sustainable and effective impact. Front-and-center among these tools is our validator, lovingly known as Somos Validator.",
+  "vdtr_desc_3": "A Solana validator is a computer that helps to run the Solana network by verifying transactions and participating in the consensus process. They are crucial for maintaining the network's security, integrity, and functionality. Validators achieve this ",
   "vdt_cta": "Interested in making a donation?",
   "vdt_modal_cta_": "Learn more"
 } 

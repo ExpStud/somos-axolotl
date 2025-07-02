@@ -17,7 +17,7 @@ const Validator: FC<Props> = (props: Props) => {
       <div className={`col-centered relative w-screen ${className}`}>
         {/* Responsive background image container, only visible on lg+ screens */}
         <div
-          className="flex flex-col justify-end gap-4 w-full max-w-[1193px] aspect-[1193/529] bg-cover bg-center rounded-[32px] mx-auto px-10 pb-6"
+          className="flex flex-col justify-end gap-4 w-full max-w-[1193px] aspect-[1193/529] bg-cover bg-center rounded-[32px] mx-auto px-10 pb-10"
           style={{
             backgroundImage: `url(${process.env.CLOUDFLARE_STORAGE}/images/landing/validator-lg.png)`,
           }}
@@ -25,23 +25,31 @@ const Validator: FC<Props> = (props: Props) => {
           <Image
             src={`${process.env.CLOUDFLARE_STORAGE}/images/design/info-1-new.svg`}
             alt="Icon"
-            width={72}
-            height={72}
+            width={92}
+            height={92}
           />
           <h3 className="text-white text-xs lg:text-xl font-poppins-semibold">
             {t("vdtr_title")}
           </h3>
 
-          <div className="flex flex-col gap-2 max-w-[600px] xl:max-w-[750px]">
-            <p className="text-white text-xs lg:text-base">{t("vdtr_desc")}</p>
+          <div className="flex flex-col gap-4 max-w-[600px] xl:max-w-[750px] h-[200px] overflow-y-auto custom-scrollbar">
+            <p className="text-white text-xs lg:text-base">
+              {t("vdtr_desc_1")}
+            </p>
+            <p className="text-white text-xs lg:text-base">
+              {t("vdtr_desc_2")}
+            </p>
+            <p className="text-white text-xs lg:text-base">
+              {t("vdtr_desc_3")}
+            </p>
 
-            <ValidatorCtaButton
+            {/* <ValidatorCtaButton
               variant="white"
               onClick={() => alert("open modal")}
               className="mr-6"
             >
               {t("vdt_modal_cta_")}
-            </ValidatorCtaButton>
+            </ValidatorCtaButton> */}
           </div>
         </div>
       </div>
@@ -78,7 +86,7 @@ const Validator: FC<Props> = (props: Props) => {
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex flex-col gap-2 max-w-[520px]">
-              <p>{t("vdtr_desc")}</p>
+              <p>{t("vdtr_desc_long_1")}</p>
             </div>
           </div>
           <a

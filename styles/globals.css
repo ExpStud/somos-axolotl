@@ -216,3 +216,27 @@ html {
   display: none; /* For Chrome, Safari and Opera */
 }
 
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(0,0,0,0.18) transparent; /* Firefox */
+  /* fallback for browsers that don't support ::-webkit-scrollbar */
+}
+
+/* Chrome, Safari, Edge */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #A59D99;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #A59D99;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
