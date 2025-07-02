@@ -21,7 +21,11 @@ const Goals: FC<Props> = (props: Props) => {
           alt="Donate"
           width={winWidth < 640 ? 344 : 562}
           height={winWidth < 640 ? 391 : 391}
-          className="aspect-[1.75/2] sm:aspect-[3.1/2] object-cover rounded-bl-[40px] rounded-tr-[40px]"
+          className={`aspect-[1.75/2] sm:aspect-[3.1/2] object-cover ${
+            winWidth > 1024
+              ? "rounded-bl-[40px] rounded-tr-[40px]"
+              : "rounded-[32px]"
+          }`}
         />
         <div className="flex flex-col justify-center  gap-6 py-8 md:p-12 lg:min-w-[395px]">
           <Image

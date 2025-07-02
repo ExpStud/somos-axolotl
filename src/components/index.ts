@@ -17,6 +17,7 @@ const CheckBox = dynamic(() => import("./atoms/CheckBox"));
 const LoadCircle = dynamic(() => import("./atoms/LoadSpinner"));
 const ImageShimmer = dynamic(() => import("./atoms/ImageShimmer"));
 const Logo = dynamic(() => import("./atoms/Logo"));
+const ValidatorCtaButton = dynamic(() => import("./atoms/ValidatorCtaButton"));
 //molecules
 const PageHead = dynamic(() => import("./molecules/PageHead"));
 const NavItem = dynamic(() => import("./molecules/NavItem"));
@@ -43,6 +44,7 @@ const Donate = dynamic(() => import("./organisms/Donate"));
 const Goals = dynamic(() => import("./organisms/Goals"));
 const TeamCard = dynamic(() => import("./organisms/TeamCard"));
 const AboutDescription = dynamic(() => import("./organisms/AboutDescription"));
+const Validator = dynamic(() => import("./organisms/Validator"));
 //templates
 const PageLayout = dynamic(() => import("./templates/PageLayout"));
 const LandingView = dynamic(() => import("./templates/LandingView"));
@@ -90,5 +92,7 @@ export {
   TeamHeader,
   Topography,
   LanguageSwitcher,
-  CardPurchaseProtection
+  CardPurchaseProtection,
+  Validator,
+  ValidatorCtaButton
 }

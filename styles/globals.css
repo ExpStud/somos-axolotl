@@ -167,7 +167,7 @@ html {
   @apply transition-200 hover:opacity-90 active:opacity-80;
 }
 .hover-brown {
-  @apply bg-somos-brown-dark hover:bg-somos-brown transition-200 active:opacity-80;
+  @apply bg-somos-brown-dark hover:opacity-90 transition-200;
 }
 
 .inner-padding {
@@ -216,3 +216,26 @@ html {
   display: none; /* For Chrome, Safari and Opera */
 }
 
+.custom-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #A59D99 transparent; /* Firefox */
+}
+
+/* Chrome, Safari, Edge */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #A59D99;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #A59D99;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
