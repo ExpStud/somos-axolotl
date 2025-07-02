@@ -3,6 +3,8 @@ import { Modal } from "@components";
 import Image from "next/image";
 import { InfographicsDataType } from "src/types";
 import { useWindowSize } from "src/hooks";
+import { midEnterAnimation } from "@constants";
+import { motion } from "framer-motion";
 
 interface Props {
   show: boolean;
@@ -29,33 +31,17 @@ const ImageModal: FC<Props> = (props: Props) => {
           {data.title}
         </h3>
         <div
+          className={`px-5 h-full custom-scrollbar overflow-y-auto pb-10 ${
+            winWidth < 1024 ? "flex flex-col " : "columns-2"
+          }`}
           style={{
-            columnCount: winWidth < 1024 ? 1 : 2,
             columnGap: "1rem",
-            overflowY: "auto",
-            // paddingBottom: "10px",
-            /* Add these lines to customize the scrollbar */
-            scrollbarWidth: "thin", // For Firefox
-            scrollbarColor: "rgba(155, 155, 155, 0.7) transparent", // For Firefox
-            /* For Chrome, Safari and Edge */
-            /* @ts-ignore */
-            "&::-webkit-scrollbar": {
-              width: "12px",
-            },
-            "&::-webkit-scrollbar-track": {
-              background: "transparent",
-            },
-            "&::-webkit-scrollbar-thumb": {
-              backgroundColor: "896B56",
-              borderRadius: "20px",
-            },
           }}
-          className="px-5 h-full"
         >
           {data.content.map((content, index) => (
             <p
-              className="text-white text-sm"
-              style={{ breakInside: "avoid", padding: "0.5rem 0" }}
+              className="text-white text-sm py-3 leading-relaxed font-poppins-regular tracking-wide"
+              // style={{ padding: "0.5rem 0" }}
               key={index}
             >
               {content}
