@@ -35,7 +35,7 @@ const Validator: FC<Props> = (props: Props) => {
             alt="Pink Squares"
           />
           <div className="flex justify-between w-full">
-            <h2 className="leading-none"> {t("vdtr_title")}</h2>{" "}
+            <h2 className="leading-none"> {t("vdtr_header")}</h2>{" "}
             <a
               href="https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6"
               rel="noreferrer"
