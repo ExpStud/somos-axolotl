@@ -26,10 +26,29 @@ const Validator: FC<Props> = (props: Props) => {
 
   if (winWidth > 1024) {
     return (
-      <div className={`col-centered relative w-screen ${className}`}>
+      <div className={`col-centered gap-8 relative w-screen ${className}`}>
+        <div className="flex flex-col gap-6 w-full max-w-[1193px] mx-[125px]">
+          <Image
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-pink.svg`}
+            width={111}
+            height={18}
+            alt="Pink Squares"
+          />
+          <div className="flex justify-between w-full">
+            <h2 className="leading-none"> {t("vdtr_title")}</h2>{" "}
+            <a
+              href="https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6"
+              rel="noreferrer"
+              target="_blank"
+              className="row-centered hover-brown gap-3 text-sm rounded-[34px] w-full sm:max-w-[268px] h-[40px] cursor-pointer text-white justify-self-start"
+            >
+              <p>{t("vdt_cta")}</p>
+            </a>
+          </div>
+        </div>
         {/* Responsive background image container, only visible on lg+ screens */}
         <div
-          className="flex flex-col justify-end gap-4 w-full max-w-[1193px] aspect-[1193/529] bg-cover bg-center rounded-[32px] mx-auto px-10 pb-10"
+          className="flex flex-col justify-end gap-4 w-full max-w-[1193px] aspect-[1193/529] bg-cover bg-center rounded-bl-[40px] rounded-tr-[40px] mx-auto px-10 pb-10"
           style={{
             backgroundImage: `url(${process.env.CLOUDFLARE_STORAGE}/images/landing/validator-lg.png)`,
           }}
