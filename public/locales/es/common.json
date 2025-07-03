@@ -83,12 +83,16 @@
   "team_desc": "Somos Axolotl es socio oficial de la Fundación Solana y un programa patrocinado fiscalmente por Leap Lab y el Centro de Ciencias del Condado de Ventura. una organización 501(c)3 registrada en Santa Paula, California, EE. UU. La misión de Leap Lab es promover el acceso a la ciencia, la educación y la tecnología en comunidades de bajos recursos en todo el mundo.", 
   "team_desc_2": "Para obtener más información, visite www.leaplab.org.",
 
-  "vdtr_header": "Somos Axolotl: A Web 3 Marvel",
-  "vdtr_title": "Moving The Needle",
-  "vdtr_desc": "Somos Axolotl is based on a pioneering approach to philanthropy: one where our supporters are able to empower our work without needing to donate money. This is the story behind a high-performance computer in Mexico City that makes this possible. Somos Axolotl was born in the Solana blockchain ecosystem",
-  "vdtr_desc_1": "Somos Axolotl is based on a pioneering approach to philanthropy: one where our supporters are able to empower our work without needing to donate money. This is the story behind a high-performance computer in Mexico City that makes this possible.",
-  "vdtr_desc_2": "Somos Axolotl was born in the Solana blockchain ecosystem. As a native web3 environmental organization, we chose to use web3 tools to help create sustainable and effective impact. Front-and-center among these tools is our validator, lovingly known as Somos Validator.",
-  "vdtr_desc_3": "A Solana validator is a computer that helps to run the Solana network by verifying transactions and participating in the consensus process. They are crucial for maintaining the network's security, integrity, and functionality. Validators achieve this ",
-  "vdt_cta": "Interested in making a donation?",
-  "vdt_modal_cta_": "Learn more"
+  
+  "vdtr_header": "Somos Axolotl: Una maravilla de la Web 3",  
+  "vdtr_title": "Moviendo la Aguja", 
+  "vdtr_desc_1": "Somos Axolotl se basa en un enfoque pionero de filantropía: uno donde quienes nos apoyan pueden impulsar nuestra labor sin necesidad de donar dinero. Esta es la historia detrás de una computadora de alto rendimiento en la Ciudad de México que lo hace posible.",
+  "vdtr_desc_2": "Somos Axolotl nació en el ecosistema blockchain de Solana. Como organización ambiental nativa de web3, optamos por utilizar herramientas web3 para ayudar a crear un impacto sostenible y efectivo. Entre estas herramientas, destaca nuestro validador, conocido cariñosamente como Somos Validator.",
+  "vdtr_desc_3": "Un validador de Solana es una computadora que ayuda a operar la red Solana verificando transacciones y participando en el proceso de consenso. Son cruciales para mantener la seguridad, integridad y funcionalidad de la red. Los validadores logran esto procesando transacciones, creando nuevos bloques y votando sobre la validez de otros bloques.",
+  "vdtr_desc_4": "Somos Validator es nuestra forma de participar en el proceso. Realiza miles de operaciones cada segundo para ayudar a proteger la blockchain de Solana, generando ingresos que luego se destinan a nuestros objetivos de conservación del ajolote. Nuestros donantes pueden transferir su SOL a nuestro validador mediante un proceso conocido como staking. Este proceso les permite dirigir una parte de los ingresos de la cadena a Somos Axolotl y, al mismo tiempo, recibir una remuneración por su participación. A diferencia de los modelos de beneficencia convencionales, nuestros donantes no donan su dinero; de hecho, obtienen una ganancia.",
+  "vdtr_desc_5": "Te invitamos a unirte a nosotros para transformar la filantropía de impacto.",
+  "vdtr_desc_6": "Stake tu SOL al Validador de Somos. Protege a los axolotl. Recibe una remuneración. Todos ganan.",
+  "vdtr_desc_7": "", 
+  "vdt_cta": "Interesada en hacer una donación?",
+  "vdt_modal_cta_": "Más información"
 } 
