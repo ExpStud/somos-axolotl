@@ -18,15 +18,26 @@ const Validator: FC<Props> = (props: Props) => {
   const data: InfographicsDataType = {
     title: t("vdtr_title"),
     short: t("INFO_SMALL_DESC_1"),
-    content: [t("vdtr_desc_1"), t("vdtr_desc_2"), t("vdtr_desc_3")],
+    content: [
+      t("vdtr_desc_1"),
+      t("vdtr_desc_2"),
+      t("vdtr_desc_3"),
+      t("vdtr_desc_4"),
+      t("vdtr_desc_5"),
+      t("vdtr_desc_6"),
+      t("vdtr_desc_7"),
+    ],
     displayImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/vdtr-modal-bg.jpg`,
-    expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/vdtr-modal-bg.jpg`,
+    expandedImage: `${process.env.CLOUDFLARE_STORAGE}/images/landing/vdtr-modal-bglg.jpg`,
     icon: `${process.env.CLOUDFLARE_STORAGE}/images/design/info-1-new.svg`,
   };
 
   if (winWidth > 1024) {
     return (
-      <div className={`col-centered gap-8 relative w-screen ${className}`}>
+      <div
+        id="validator"
+        className={`col-centered gap-8 relative w-screen ${className}`}
+      >
         <div className="flex flex-col gap-6 w-full max-w-[1193px] mx-[125px]">
           <Image
             src={`${process.env.CLOUDFLARE_STORAGE}/images/design/squares-pink.svg`}
@@ -63,31 +74,28 @@ const Validator: FC<Props> = (props: Props) => {
             {t("vdtr_title")}
           </h3>
 
-          <div className="flex flex-col gap-4 max-w-[600px] xl:max-w-[750px] h-[200px] overflow-y-auto custom-scrollbar">
+          <div className="flex flex-col gap-0 max-w-[600px] xl:max-w-[750px]">
             <p className="text-white text-xs lg:text-base">
               {t("vdtr_desc_1")}
             </p>
-            <p className="text-white text-xs lg:text-base">
-              {t("vdtr_desc_2")}
-            </p>
-            <p className="text-white text-xs lg:text-base">
-              {t("vdtr_desc_3")}
-            </p>
 
-            {/* <ValidatorCtaButton
+            <ValidatorCtaButton
               variant="white"
-              onClick={() => alert("open modal")}
+              onClick={() => setShowModal(data)}
               className="mr-6"
             >
               {t("vdt_modal_cta_")}
-            </ValidatorCtaButton> */}
+            </ValidatorCtaButton>
           </div>
         </div>
       </div>
     );
   }
   return (
-    <div className={`col-centered relative w-screen  ${className}`}>
+    <div
+      id="validator"
+      className={`col-centered relative w-screen  ${className}`}
+    >
       <div
         className="flex flex-col lg:flex-row items-center justify-evenly     
         max-w-[400px] sm:max-w-[500px] lg:max-w-[1245px]"

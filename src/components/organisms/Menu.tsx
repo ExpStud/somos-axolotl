@@ -111,6 +111,7 @@ const Menu: FC<Props> = (props: Props) => {
               <NavItem href="/">{t("MENU_MISSION")}</NavItem>
               <NavItem href="/team">{t("menu_team")}</NavItem>
               <NavItem href="/#donate">{t("menu_donate")}</NavItem>
+              <NavItem href="/#validator">{t("menu_validator")}</NavItem>
             </div>
             <div className="flex flex-col gap-6">
               <Image
