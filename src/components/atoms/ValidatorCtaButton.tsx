@@ -14,7 +14,7 @@ const styles = {
     icon: 14,
   },
   white: {
-    container: "text-white border-white w-[106px] self-end",
+    container: "text-white border-white min-w-[106px] self-end",
     text: "text-[12px]",
     arrow: "#fff",
     icon: 16,
