@@ -17,7 +17,10 @@ const Donate: FC<Props> = (props: Props) => {
   const address = "dZABythjt2x9myxjXeNFBWjoX59vzeZ34pYBBqFrPCe";
 
   const handleCopy = async () => {
-    window.open("https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6", "_blank")
+    window.open(
+      "https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6",
+      "_blank"
+    );
   };
 
   useEffect(() => {
@@ -35,8 +38,8 @@ const Donate: FC<Props> = (props: Props) => {
   return (
     <div className={`col-centered relative w-screen ${className}`}>
       <div
-        className="flex flex-col-reverse xl:flex-row items-center justify-evenly rounded-[32px] bg-somos-blue p-4 md:p-0  
-        max-w-[345px] sm:max-w-[500px] xl:max-w-[1245px]"
+        className="flex flex-col-reverse xl:flex-row items-center justify-evenly rounded-[32px] bg-somos-blue p-4 xl:p-0  overflow-hidden   
+        max-w-[345px] sm:max-w-[500px] xl:max-w-[1245px] sm:"
       >
         <div className="flex flex-col justify-center gap-4 md:gap-6 p-8 md:p-12 lg:min-w-[395px]">
           <div className="row-centered text-white border-[0.85px] border-white w-[135px] h-[24px] md:h-[32px] text-sm md:rounded-[21px]">
@@ -51,23 +54,27 @@ const Donate: FC<Props> = (props: Props) => {
               disabled={copied}
               id="donate"
             >
-            <motion.div
-              className="flex gap-2 items-center"
-              {...midExitAnimation}
-            >
-              💰 {t("DONATE_CTA")}
-            </motion.div>
+              <motion.div
+                className="flex gap-2 items-center"
+                {...midExitAnimation}
+              >
+                💰 {t("DONATE_CTA")}
+              </motion.div>
             </button>
             <p className="text-white self-center">{t("DONATE_CTA_2")}</p>
           </div>
         </div>
-        <Image
-          src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/boats-1.jpg`}
-          alt="Donate"
-          width={winWidth < 640 ? 307 : 721}
-          height={winWidth < 640 ? 292 : 504}
-          className="rounded-2xl lg:rounded-[32px] aspect-[1.05/1] sm:aspect-[2.8/2] object-cover"
-        />
+        <div className="relative w-[307px] sm:w-[460px] xl:min-w-[721px] h-[292px] xl:h-[531px] rounded-2xl lg:rounded-[32px] overflow-hidden">
+          <Image
+            src={`${process.env.CLOUDFLARE_STORAGE}/images/landing/boats-1.jpg`}
+            alt="Donate"
+            // width={winWidth < 640 ? 307 : 721}
+            // height={winWidth < 640 ? 292 : 504}
+            // className="rounded-2xl lg:rounded-[32px] aspect-[1.05/1] sm:aspect-[2.8/2] object-cover"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
     </div>
   );
