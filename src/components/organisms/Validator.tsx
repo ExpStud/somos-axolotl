@@ -48,7 +48,7 @@ const Validator: FC<Props> = (props: Props) => {
           <div className="flex justify-between w-full">
             <h2 className="leading-none"> {t("vdtr_header")}</h2>{" "}
             <a
-              href="https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6"
+              href="https://jup.ag/swap/So11111111111111111111111111111111111111112-axso1MBZ8Hz3RdBGeyDcvc3xP5R3YNfLYqREHRvwY2t"
               rel="noreferrer"
               target="_blank"
               className="row-centered hover-brown gap-3 text-sm rounded-[34px] w-full sm:max-w-[268px] h-[40px] cursor-pointer text-white justify-self-start"
@@ -129,7 +129,7 @@ const Validator: FC<Props> = (props: Props) => {
             </div>
           </div>
           <a
-            href="https://spherepay.co/pay/paymentLink_ea7773f8e9ca45de8aa6072311fe31a6"
+            href="https://jup.ag/swap/So11111111111111111111111111111111111111112-axso1MBZ8Hz3RdBGeyDcvc3xP5R3YNfLYqREHRvwY2t"
             rel="noreferrer"
             target="_blank"
             className="row-centered hover-brown gap-3 mt-4 text-sm  rounded-[34px] w-full sm:max-w-[268px] h-[40px] cursor-pointer text-white"
