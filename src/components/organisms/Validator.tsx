@@ -74,7 +74,7 @@ const Validator: FC<Props> = (props: Props) => {
             {t("vdtr_title")}
           </h3>
 
-          <div className="flex flex-col gap-0 max-w-[600px] xl:max-w-[750px]">
+          <div className="flex flex-col gap-2 max-w-[600px] xl:max-w-[750px]">
             <p className="text-white text-xs lg:text-base">
               {t("vdtr_desc_1")}
             </p>
