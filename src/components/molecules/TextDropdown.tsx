@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import { AnimatePresence, Variants, motion } from "framer-motion";
 import { fastExitAnimation, midExitAnimation } from "src/constants";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   content: string;
@@ -41,13 +42,20 @@ const TextDropdown: FC<Props> = (props: Props) => {
     <div className={`flex flex-col gap-3 ${className}`}>
       <div className="relative">
         <motion.div
-          className="text-base overflow-hidden z-0"
+          className="text-base overflow-hidden"
           layout
           variants={textVariants}
           initial="closed"
           animate={show ? "open" : "closed"}
           dangerouslySetInnerHTML={{ __html: content }}
         />
+
+        <Link
+          href="/team"
+          className="z-10 hover:underline absolute bottom-0 left-0"
+        >
+          {t("see_our_team")}
+        </Link>
         <div
           className={`opaque-gradient w-full h-[110px] z-[1] absolute bottom-0 transition-opacity duration-700  ${
             show ? "opacity-0 " : "opacity-100"
