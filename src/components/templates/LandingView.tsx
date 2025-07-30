@@ -20,6 +20,10 @@ const LandingView: FC<Props> = (props: Props) => {
 
   return (
     <div className="z-[1] w-full h-full flex flex-col items-center justify-center ">
+      <h1 className="sr-only">
+        Somos Axolotl Home | Using technology and art to protect the ecosystem
+        of Lake Xochimilco
+      </h1>
       <Home setAssets={setAssets} handleViewChange={handleViewChange} />
 
       <Description className="description-padding" />

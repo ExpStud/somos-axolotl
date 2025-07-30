@@ -54,7 +54,7 @@ const PageLayout: FC<Props> = (props: Props) => {
         }`}
       >
         <PageHead
-          title="Somos Axolotl | Welcome to our convservation effort"
+          title="Somos Axolotl | Using technology and art to protect the ecosystem of Lake Xochimilco"
           description="Somos Axolotl uses art and technology to help communities move toward sustainable resource and environmental management - first in Mexico, and then beyond."
           url="https://somosaxolotl.com" // no backslash at the end
           twitter="SCUMSOL"
