@@ -6,58 +6,55 @@ import { useTranslation } from "next-i18next";
 type PartnersType = {
   name: string;
   image: string;
-  href: string;
+  href?: string;
 };
 const partners: PartnersType[] = [
   {
     name: "Slimes",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/slimes.svg`,
-    href: "/",
+    href: "https://scum.art/",
   },
   {
     name: "Santuario Ajolote",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/santuario.svg`,
-    href: "/",
+    href: "https://www.santuarioajolote.com/",
   },
   {
     name: "Solana",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/solana.svg`,
-    href: "/",
+    href: "https://solana.org/",
   },
   {
     name: "Roel",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/roel.svg`,
-    href: "/",
+    href: "",
   },
   {
     name: "Pontyx",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/pontyx.png`,
-    href: "/",
+    href: "",
   },
   {
     name: "Sphere",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/sphere.png`,
-    href: "/",
+    href: "https://spherepay.co/",
   },
   {
     name: "Leap Lab",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/leap.png`,
-    href: "/",
   },
   {
     name: "Maya Moon",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/mayamoon.png`,
-    href: "/",
   },
   {
     name: "Brasil",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/brasil.svg`,
-    href: "/",
   },
   {
     name: "Sandbox Studio",
     image: `${process.env.CLOUDFLARE_STORAGE}/images/partners/sandbox.svg`,
-    href: "/",
+    href: "https://sandboxstud.io/",
   },
 ];
 
@@ -75,6 +72,14 @@ const Partners: FC<Props> = (props: Props) => {
   const [winWidth] = useWindowSize();
   const size = winWidth >= 1024 ? 190 : winWidth >= 768 ? 120 : 60;
 
+  const handleClick = (href: string) => {
+    if (href) {
+      window.open(href, "_blank");
+    } else {
+      console.warn("No link provided for this partner.");
+    }
+  };
+
   return (
     <div
       className={`relative w-screen flex flex-col items-center gap-6  ${className}`}
@@ -86,8 +91,9 @@ const Partners: FC<Props> = (props: Props) => {
           <div
             className={`text-center flex items-center h-[60px]  md:h-[120px] lg:h-[190px] ${
               index < 2 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
-            }`}
+            } ${partner.href ? "cursor-pointer" : ""}`}
             key={index}
+            onClick={() => handleClick(partner.href || "")}
           >
             <Image
               src={partner.image}
@@ -103,8 +109,9 @@ const Partners: FC<Props> = (props: Props) => {
           <div
             className={`text-center ${
               index < 3 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
-            }`}
+            } ${partner.href ? "cursor-pointer" : ""}`}
             key={index + 3}
+            onClick={() => handleClick(partner.href || "")}
           >
             <Image
               src={partner.image}
@@ -120,8 +127,9 @@ const Partners: FC<Props> = (props: Props) => {
           <div
             className={`text-center flex items-center h-[60px]  md:h-[120px] lg:h-[190px] ${
               index < 2 ? "border-r border-black/20 pr-5 md:pr-10 lg:pr-20" : ""
-            }`}
+            }${partner.href ? "cursor-pointer" : ""}`}
             key={index + 3}
+            onClick={() => handleClick(partner.href || "")}
           >
             <Image
               src={partner.image}

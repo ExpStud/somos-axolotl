@@ -19,8 +19,8 @@ const AboutView: FC<Props> = (props: Props) => {
   return (
     <div className="z-[1] w-full min-h-[150vh] flex flex-col items-center justify-center mt-[80px]">
       <h1 className="sr-only">
-        Somos Axolotl About | Spearheaded by Matt “Scum” Martinez, Somos Axolotl
-        works alongside the vibrant Xochimilco community in Mexico City
+        The team behind it all. Spearheaded by Matt “Scum” Martinez, Somos
+        Axolotl works alongside the vibrant Xochimilco community in Mexico City
       </h1>
       <AboutDescription />
       <TeamHeader />

@@ -21,8 +21,9 @@ const LandingView: FC<Props> = (props: Props) => {
   return (
     <div className="z-[1] w-full h-full flex flex-col items-center justify-center ">
       <h1 className="sr-only">
-        Somos Axolotl Home | Using technology and art to protect the ecosystem
-        of Lake Xochimilco
+        Somos Axolotl uses technology and art to inspire action, create
+        solutions, and build partnerships supporting symbiosis between
+        Xochimilco&apos;s human and axolotl populations
       </h1>
       <Home setAssets={setAssets} handleViewChange={handleViewChange} />
 
