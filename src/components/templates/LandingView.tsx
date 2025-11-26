@@ -39,10 +39,10 @@ const LandingView: FC<Props> = (props: Props) => {
       <Validator className="px-6 md:px-12 lg:px-10" />
       <PatternSVG className="my-20 lg:my-32" />
 
-      <Partners className="px-2" />
-      <PatternSVG className="my-20 lg:my-32" />
+      <Partners className="px-2 pb-14 lg:pb-28" />
+      {/* <PatternSVG className="my-20 lg:my-32" /> */}
 
-      <Donate className="px-6 md:px-12 lg:px-0 pb-14 lg:pb-28" />
+      {/* <Donate className="px-6 md:px-12 lg:px-0 pb-14 lg:pb-28" /> */}
     </div>
   );
 };
